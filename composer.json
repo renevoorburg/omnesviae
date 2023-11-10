@@ -5,7 +5,8 @@
         }
     },
     "require": {
-        "fisharebest/algorithm": "*"
+        "ext-json": "*",
+        "ext-mbstring": "*"
     },
     "autoload": {
         "psr-4": {
