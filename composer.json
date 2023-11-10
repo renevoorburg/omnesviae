@@ -5,7 +5,11 @@
         }
     },
     "require": {
-        "slim/slim": "4.*",
-        "slim/psr7": "^1.5"
+        "fisharebest/algorithm": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "OmnesViae\\": "src/"
+        }
     }
 }
