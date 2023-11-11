@@ -2,60 +2,41 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+$urlParts = explode('/', $_SERVER['DOCUMENT_URI']);
 
-$data = new OmnesViae\Tabula();
+$action = $urlParts[1];
 
-//$route = new OmnesViae\Route($data->getRouteNetwork(), 'TPPlace558', 'TPPlace1203');
-//$route->getResults();
+if ($action == "api" && isset($urlParts[2])) {
+    $action = "api/" . $urlParts[2];
+}
 
-function normalize(string $name) : string
-{
-    $name = strtolower($name);
-    $name = mb_ereg_replace("'", '', $name);
-    $name = mb_ereg_replace('u', 'v', $name);
-    $name = mb_ereg_replace('j', 'i', $name);
-    $name = mb_ereg_replace('v̄', 'v', $name);
-
-    return $name;
+switch ($action) {
+    case "api/labels":
+        // returns matching place labels as json  for form autocomplete:
+        // example /api/labels/forum
+        $model = new OmnesViae\Tabula();
+        $view = new OmnesViae\LabelList($model);
+        $view->render($urlParts[3] ?? '');
+        break;
+    case "api/route":
+        // return the shortest route as json:
+        // example: /api/route/TPPlace558/TPPlace1203
+        $model = new OmnesViae\Tabula();
+        $route = new OmnesViae\Route($model->getRouteNetwork(), $urlParts[3] ?? '', $urlParts[4] ?? '');
+        $route->getResults();
+        break;
+    case "api/geofeatures":
+        $model = new OmnesViae\Tabula();
+        $view = new OmnesViae\GeoFeatures($model);
+//        $view->render();
+        break;
+    default:
+        echo "default";
+        break;
 }
 
 
-foreach ($data->data['@graph'] as $value) {
-    if ($value['@type'] === 'Place') {
-        if (!empty($value['label'])) {
-            $arr[normalize($value['label'])] = array('@id' => $value['@id'], 'display' => $value['label']);
-        }
-        if (!empty($value['classic'])) {
-            $arr[normalize($value['classic'])] = array('@id' => $value['@id'], 'display' => $value['classic']);
-        }
-        if (!empty($value['modern'])) {
-            $arr[normalize($value['modern'])] = array('@id' => $value['@id'], 'display' => $value['modern']);
-        }
-        if (!empty($value['alt'])) {
-            $arr[normalize($value['alt'])] = array('@id' => $value['@id'], 'display' => $value['alt']);
-        }
 
-    }
-}
 
-ksort($arr);
-//print_r($arr);
-$chars="aba";
 
-$filteredArray = array();
-$found = false;
-foreach ($arr as $key => $value) {
-    if (strpos($key, $chars) === 0) {
-        // Key starts with the given sequence of characters
-        $filteredArray[$key] = $value;
-        $found = true;
-    } elseif ($found === true) { break; }
-}
 
-echo "[";
-$sep = "";
-foreach ($filteredArray as $key => $value) {
-    echo $sep . '{ "label": "' . $value['display'] . ', "value": "' . $value['@id'] . '" }';
-    $sep = ",";
-}
-echo "]";

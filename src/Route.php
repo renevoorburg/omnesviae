@@ -7,7 +7,7 @@ class Route {
     protected array $visited;
     protected array $distance;
     protected array $previousNode;
-    protected $startnode =null;
+    protected $startnode = null;
 
     protected array $map;
     protected $bestPath = 0;
