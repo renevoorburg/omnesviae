@@ -2,6 +2,13 @@
 
 namespace OmnesViae;
 
+/**
+ * Class Tabula
+ *
+ * Represents the Tabula Peutingeriana (map) with places and routes.
+ * Reads the schema.org JSON-LD file and stores it in $data.
+ * Provides methods to extract places and routes from $data.
+ */
 class Tabula
 {
     const PLACE_KEYS = ['label', 'classic', 'modern', 'alt', 'lat', 'lng', 'symbol'];
@@ -16,12 +23,17 @@ class Tabula
      */
     public function __construct()
     {
-        $this->data = json_decode(file_get_contents('../public/data/omnesviae.json'), true);
+        try {
+            $this->data = json_decode(file_get_contents('../public/data/omnesviae.json'), true);
+        } catch (\Exception $e) {
+            echo 'Caught exception: ', $e->getMessage(), "\n";
+        }
+
     }
 
     /**
      * Build an indexed array of places
-     * @return array
+     * @return void
      */
     public function setupPlaces(): void
     {
@@ -39,8 +51,8 @@ class Tabula
     }
 
     /**
-     * Build a two-dimensional array of places and distances
-     * @return array
+     * Build a two-dimensional array of places and distances in between
+     * @return void
      */
     public function setupRouteNetwork(): void
     {
@@ -56,7 +68,7 @@ class Tabula
     }
 
     /**
-     * Return the indexed array of places
+     * Return the two-dimensional array of places and distances
      * @return array
      */
     public function getRouteNetwork() : array
@@ -71,9 +83,9 @@ class Tabula
      * Return the neighbouring place on the road, coming from $previousPlace
      * @param string $previousPlace
      * @param string $currentPlace
-     * return string the neighbouring place on the road, may be empty string when road diverges or ends.
+     * @return string the neighbouring place on the road, may be empty string when road diverges or ends.
      */
-    public function nextPlaceOnRoad(string $previousPlace, string $currentPlace) : string
+    private function nextPlaceOnRoad(string $previousPlace, string $currentPlace) : string
     {
         $routeNetwork = $this->getRouteNetwork();
         $nextPlace = '';
@@ -89,7 +101,7 @@ class Tabula
      * @param string $currentPlace
      * @return string the next place on the road that has a lat/lng , may be empty string when road diverges or ends.
      */
-    public function nextLocatedPlaceOnRoad(string $previousPlace, string $currentPlace) : string
+    private function nextLocatedPlaceOnRoad(string $previousPlace, string $currentPlace) : string
     {
         $foundLocatedPlace = '';
         while (true) {
@@ -134,6 +146,9 @@ class Tabula
                 $feature['properties']['name'] = $value['label'];
                 $feature['properties']['description'] = $value['modern'];
                 $feature['properties']['id'] = $localName;
+                if (isset($value['symbol'])) {
+                    $feature['properties']['symbol'] = $value['symbol'];
+                }
                 $geoFeatures['features'][] = $feature;
             }
         }
