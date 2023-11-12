@@ -3,9 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 $urlParts = explode('/', $_SERVER['DOCUMENT_URI']);
-
 $action = $urlParts[1];
-
 if ($action == "api" && isset($urlParts[2])) {
     $action = "api/" . $urlParts[2];
 }
@@ -27,7 +25,18 @@ switch ($action) {
         break;
     case "api/geofeatures":
         $model = new OmnesViae\Tabula();
+        $model->setupPlaces();
         $view = new OmnesViae\GeoFeatures($model);
+//        $view->render();
+        break;
+    case "test":
+        $model = new OmnesViae\Tabula();
+        $model->setupRouteNetwork();
+        $model->setupPlaces();
+        echo $model->nextLocatedPlaceOnRoad('TPPlace997', 'TPPlace998');
+//        echo count($network['TPPlace558']);
+//        print_r($network['TPPlace558']);
+
 //        $view->render();
         break;
     default:
