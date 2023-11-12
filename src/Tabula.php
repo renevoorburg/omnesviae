@@ -10,11 +10,19 @@ class Tabula
     private array $routeNetwork;
     private array $places;
 
+    /**
+     * Tabula constructor.
+     * Reads the schema.org JSON-LD file and stores it in $data
+     */
     public function __construct()
     {
         $this->data = json_decode(file_get_contents('../public/data/omnesviae.json'), true);
     }
 
+    /**
+     * Build an indexed array of places
+     * @return array
+     */
     public function setupPlaces(): void
     {
         $this->places = array();
@@ -30,6 +38,10 @@ class Tabula
         }
     }
 
+    /**
+     * Build a two-dimensional array of places and distances
+     * @return array
+     */
     public function setupRouteNetwork(): void
     {
         $this->routeNetwork = array();
@@ -43,6 +55,10 @@ class Tabula
         }
     }
 
+    /**
+     * Return the indexed array of places
+     * @return array
+     */
     public function getRouteNetwork() : array
     {
         if (!isset($this->routeNetwork)) {
@@ -51,7 +67,12 @@ class Tabula
         return $this->routeNetwork;
     }
 
-
+    /**
+     * Return the neighbouring place on the road, coming from $previousPlace
+     * @param string $previousPlace
+     * @param string $currentPlace
+     * return string the neighbouring place on the road, may be empty string when road diverges or ends.
+     */
     public function nextPlaceOnRoad(string $previousPlace, string $currentPlace) : string
     {
         $routeNetwork = $this->getRouteNetwork();
@@ -62,6 +83,12 @@ class Tabula
         return $nextPlace;
     }
 
+    /**
+     * Return the next place on the road that has a lat/lng, coming from $previousPlace
+     * @param string $previousPlace
+     * @param string $currentPlace
+     * @return string the next place on the road that has a lat/lng , may be empty string when road diverges or ends.
+     */
     public function nextLocatedPlaceOnRoad(string $previousPlace, string $currentPlace) : string
     {
         $foundLocatedPlace = '';
@@ -80,6 +107,10 @@ class Tabula
         return $foundLocatedPlace;
     }
 
+    /**
+     * Build a GeoJSON FeatureCollection of places and roads
+     * @return array
+     */
     public function getGeofeatures() : array
     {
         $placesIndexed = array();
@@ -110,27 +141,15 @@ class Tabula
             // process roads:
             if ($value['@type'] === 'TravelAction'
                 && isset($placesIndexed[self::getLocalName($value['from'][0]['@id'])])
-                && isset($placesIndexed[self::getLocalName($value['to'][0]['@id'])])
             ) {
-                $feature = array();
-                $feature['type'] = 'Feature';
-                $feature['geometry'] = array();
-                $feature['geometry']['type'] = 'LineString';
-                $feature['geometry']['coordinates'] = array();
-                $feature['geometry']['coordinates'][] =
-                    array($placesIndexed[self::getLocalName($value['from'][0]['@id'])]['lng'], $placesIndexed[self::getLocalName($value['from'][0]['@id'])]['lat']);
-                $feature['geometry']['coordinates'][] =
-                    array($placesIndexed[self::getLocalName($value['to'][0]['@id'])]['lng'], $placesIndexed[self::getLocalName($value['to'][0]['@id'])]['lat']);
-                $feature['properties'] = array();
-                $feature['properties']['id'] = $value['@id'];
-                $geoFeatures['features'][] = $feature;
-            } elseif  ($value['@type'] === 'TravelAction'
-                && isset($placesIndexed[self::getLocalName($value['from'][0]['@id'])])
-            ) {
-//                echo "hiet\n";
-                $nextPlace = $this->nextLocatedPlaceOnRoad(self::getLocalName($value['from'][0]['@id']), self::getLocalName($value['to'][0]['@id']));
+                if (!isset($placesIndexed[self::getLocalName($value['to'][0]['@id'])])) {
+                    $nextPlace = $this->nextLocatedPlaceOnRoad(self::getLocalName($value['from'][0]['@id']), self::getLocalName($value['to'][0]['@id']));
+                    $extrapolated = true;
+                } else {
+                    $nextPlace = self::getLocalName($value['to'][0]['@id']);
+                    $extrapolated = false;
+                }
                 if (!empty($nextPlace)) {
-//                    echo "nextPlace: $nextPlace\n";
                     $feature = array();
                     $feature['type'] = 'Feature';
                     $feature['geometry'] = array();
@@ -141,14 +160,23 @@ class Tabula
                     $feature['geometry']['coordinates'][] =
                         array($placesIndexed[$nextPlace]['lng'], $placesIndexed[$nextPlace]['lat']);
                     $feature['properties'] = array();
-                    $feature['properties']['id'] = $value['@id'];
+                    $feature['properties']['id'] = self::getLocalName($value['@id']);
+                    if ($extrapolated) {
+                        $feature['properties']['extrapolated'] = true;
+                    }
                     $geoFeatures['features'][] = $feature;
                 }
+
             }
         }
         return $geoFeatures;
     }
 
+    /**
+     * Return the local name of a URI
+     * @param string $uri the URI, assuming the local name is a fragment
+     * @return string
+     */
     public static function getLocalName(string $uri) : string
     {
         $parsedUri = parse_url($uri);
