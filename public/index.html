@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenLayers Map</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css" type="text/css">
+  <style>
+    /* Add your custom styles here */
+    #map {
+      width: 100%; /* Set your desired width */
+      height: 600px; /* Set your desired height */
+    }
+
+    .ol-popup {
+      position: absolute;
+      background-color: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #cccccc;
+      bottom: 12px;
+      left: -50px;
+      min-width: 200px;
+    }
+
+    .ol-popup-closer {
+      text-decoration: none;
+      color: #bababc;
+      position: absolute;
+      top: 2px;
+      right: 8px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .ol-popup-closer:hover {
+      color: #ff4242;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- Your map container -->
+<div id="map" class="map"></div>
+<div id="popup" class="ol-popup">
+  <a href="#" id="popup-closer" class="ol-popup-closer">X</a>
+  <div id="popup-content"></div>
+</div>
+
+<!-- OpenLayers library -->
+<script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
+
+<!-- Your map initialization script -->
+<script>
+  function getStyle(feature) {
+    var symbol = feature.get('symbol');
+    var defaultSymbol = '0';
+    var iconPath = 'http://novo.local/images/symbols/' + (symbol ? symbol.charAt(0) : defaultSymbol)  + '.png'; // Default icon path for points
+
+    if (symbol === 'custom_marker_1') {
+      // Customize the icon path for a specific symbol
+      iconPath = 'path/to/custom_marker_1.png';
+    } else if (symbol === 'custom_marker_2') {
+      // Customize the icon path for another symbol
+      iconPath = 'path/to/custom_marker_2.png';
+    }
+
+    return new ol.style.Style({
+      image: new ol.style.Icon({
+        src: iconPath,
+        anchor: [0.5, 1],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'fraction',
+        opacity: 1,
+        scale: 0.8 // Adjust the scale as needed
+      }),
+      stroke: new ol.style.Stroke({
+        color: 'red', // Set the color to red
+        width: 3 // Set the width to 3 pixels
+      })
+    });
+  }
+
+  // Overlay to display the popup
+  var overlay = new ol.Overlay({
+    element: document.getElementById('popup'),
+    autoPan: true,
+    autoPanAnimation: {
+      duration: 250
+    }
+  });
+
+
+  // Initialize the map
+  var map = new ol.Map({
+    target: 'map', // The ID of the map container
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM() // OpenStreetMap as the tile source
+      }),
+      // Add a GeoJSON layer
+      new ol.layer.Vector({
+        source: new ol.source.Vector({
+          format: new ol.format.GeoJSON(),
+          url: 'http://novo.local/api/geofeatures' // Specify the path to your GeoJSON file
+        }),
+        style: getStyle // Call the getStyle function to style the GeoJSON features
+      })
+    ],
+    overlays: [overlay],
+    view: new ol.View({
+      center: ol.proj.fromLonLat([0, 0]), // Center of the map, lon/lat
+      zoom: 2 // Initial zoom level
+    })
+  });
+
+  // Popup closer
+  var closer = document.getElementById('popup-closer');
+  closer.onclick = function () {
+    overlay.setPosition(undefined);
+    closer.blur();
+    return false;
+  };
+
+  // Display popup on click
+  map.on('click', function (event) {
+    map.forEachFeatureAtPixel(event.pixel, function (feature) {
+      var coordinates = feature.getGeometry().getCoordinates();
+      var content = '<p><b>' + feature.get('name') + '</b></p><p>' + feature.get('description') + '</p>';
+      overlay.setPosition(coordinates);
+      document.getElementById('popup-content').innerHTML = content;
+    });
+  });
+
+  map.on('pointermove', function (event) {
+    var pixel = map.getEventPixel(event.originalEvent);
+
+    // Check if there's a feature at the moved pixel
+    var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+      return feature;
+    });
+
+    // If a feature is found, change the mouse pointer
+    if (feature) {
+      map.getTargetElement().style.cursor = 'pointer';
+    } else {
+      map.getTargetElement().style.cursor = '';
+    }
+  });
+
+</script>
+</body>
+</html>

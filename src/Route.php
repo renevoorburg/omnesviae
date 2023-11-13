@@ -14,8 +14,8 @@ class Route {
 
     protected $to;
 
-    public function __construct($ourMap, $start, $to = null) {
-        $this->map = $ourMap;
+    public function __construct($map, $start, $to = null) {
+        $this->map = $map;
         $this->to = $to;
         $this->findShortestPath($start, $this->to);
     }
