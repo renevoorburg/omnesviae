@@ -59,27 +59,22 @@
     var symbol = feature.get('symbol');
     var defaultSymbol = '0';
     var iconPath = 'http://novo.local/images/symbols/' + (symbol ? symbol.charAt(0) : defaultSymbol)  + '.png'; // Default icon path for points
-
-    if (symbol === 'custom_marker_1') {
-      // Customize the icon path for a specific symbol
-      iconPath = 'path/to/custom_marker_1.png';
-    } else if (symbol === 'custom_marker_2') {
-      // Customize the icon path for another symbol
-      iconPath = 'path/to/custom_marker_2.png';
+    var linecolor = 'red';
+    if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
+      linecolor = 'rgba(255, 0, 0, 0.5)';
     }
-
     return new ol.style.Style({
       image: new ol.style.Icon({
         src: iconPath,
-        anchor: [0.5, 1],
+        anchor: [0.5, 0.5],
         anchorXUnits: 'fraction',
         anchorYUnits: 'fraction',
         opacity: 1,
         scale: 0.8 // Adjust the scale as needed
       }),
       stroke: new ol.style.Stroke({
-        color: 'red', // Set the color to red
-        width: 3 // Set the width to 3 pixels
+        color: linecolor,
+        width: 3
       })
     });
   }
@@ -105,9 +100,9 @@
       new ol.layer.Vector({
         source: new ol.source.Vector({
           format: new ol.format.GeoJSON(),
-          url: 'http://novo.local/api/geofeatures' // Specify the path to your GeoJSON file
+          url: 'http://novo.local/api/geofeatures'
         }),
-        style: getStyle // Call the getStyle function to style the GeoJSON features
+        style: getStyle
       })
     ],
     overlays: [overlay],
@@ -127,12 +122,19 @@
 
   // Display popup on click
   map.on('click', function (event) {
-    map.forEachFeatureAtPixel(event.pixel, function (feature) {
+    var feature = map.forEachFeatureAtPixel(event.pixel, function (feature) {
+      return feature;
+    });
+
+    if (feature && feature.getGeometry().getType() === 'Point') {
       var coordinates = feature.getGeometry().getCoordinates();
       var content = '<p><b>' + feature.get('name') + '</b></p><p>' + feature.get('description') + '</p>';
       overlay.setPosition(coordinates);
       document.getElementById('popup-content').innerHTML = content;
-    });
+    } else {
+      // If it's not a Point feature, hide the popup
+      overlay.setPosition(undefined);
+    }
   });
 
   map.on('pointermove', function (event) {
@@ -144,7 +146,7 @@
     });
 
     // If a feature is found, change the mouse pointer
-    if (feature) {
+    if (feature && feature.getGeometry().getType() === 'Point') {
       map.getTargetElement().style.cursor = 'pointer';
     } else {
       map.getTargetElement().style.cursor = '';
