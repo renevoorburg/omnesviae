@@ -36,7 +36,6 @@ switch ($action) {
         //echo $model->nextLocatedPlaceOnRoad('TPPlace997', 'TPPlace998');
 //        echo count($network['TPPlace558']);
 //        print_r($network['TPPlace558']);
-
 //        $view->render();
         break;
     default:
