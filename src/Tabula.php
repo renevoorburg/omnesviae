@@ -12,6 +12,7 @@ namespace OmnesViae;
 class Tabula
 {
     const PLACE_KEYS = ['label', 'classic', 'modern', 'alt', 'lat', 'lng', 'symbol'];
+    const OPTIONAL_ROAD_KEYS = ['overSea', 'isEstimatedDistance', 'crossesMountains', 'crossesRiver'];
 
     public array $data;
     private array $routeNetwork;
@@ -178,6 +179,11 @@ class Tabula
                     $feature['properties']['id'] = self::getLocalName($value['@id']);
                     if ($extrapolated) {
                         $feature['properties']['extrapolated'] = true;
+                    }
+                    foreach(self::OPTIONAL_ROAD_KEYS as $key) {
+                        if (isset($value[$key])) {
+                            $feature['properties'][$key] = $value[$key];
+                        }
                     }
                     $geoFeatures['features'][] = $feature;
                 }

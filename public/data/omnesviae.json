@@ -11,7 +11,11 @@
     "river": "http://www.schema.org/location",
     "from": "http://www.schema.org/fromLocation",
     "to": "http://www.schema.org/toLocation",
-    "dist": "http://www.schema.org/distamce"
+    "dist": "http://www.schema.org/distance",
+    "overSea": "http://omnesviae.org/def#overSea",
+    "isEstimatedDistance": "http://omnesviae.org/def#isEstimatedDistance",
+    "crossesMountains": "http://omnesviae.org/def#crossesMountains",
+    "crossesRiver": "http://omnesviae.org/def#crossesRiver"
   } ,
   "@graph": [
     {
@@ -24817,7 +24821,7 @@
       "dist": 14,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1776"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1931"}],
-      "river": "Fl. Escvs"
+      "crossesRiver": "Fl. Escvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1095_TPPlace1096",
@@ -24825,7 +24829,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1095"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1096"}],
-      "river": "Fl. Vmbro"
+      "crossesRiver": "Fl. Vmbro"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1931_TPPlace1932",
@@ -24903,7 +24907,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1095"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1097"}],
-      "river": "Fl. Vmbro"
+      "crossesRiver": "Fl. Vmbro"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1940_TPPlace1941",
@@ -25191,7 +25195,7 @@
       "dist": 42,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1973"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1974"}],
-      "river": "Fl. Tontvs"
+      "crossesRiver": "Fl. Tontvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1974_TPPlace1975",
@@ -25346,7 +25350,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1776"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1992"}],
-      "river": "Fl. Escvs"
+      "crossesRiver": "Fl. Escvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1992_TPPlace1993",
@@ -25396,7 +25400,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1101"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1102"}],
-      "river": "Fl. Aventia"
+      "crossesRiver": "Fl. Aventia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1995_TPPlace1997",
@@ -25453,7 +25457,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2001"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2002"}],
-      "river": "Fl. Ebr(vs)"
+      "crossesRiver": "Fl. Ebr(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2002_TPPlace2003",
@@ -25489,7 +25493,7 @@
       "dist": 27,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2001"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2005"}],
-      "river": "Fl. Ebr(vs)"
+      "crossesRiver": "Fl. Ebr(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2005_TPPlace2006",
@@ -25588,7 +25592,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2015"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2016"}],
-      "river": "Fl. Tontvs"
+      "crossesRiver": "Fl. Tontvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2016_TPPlace2017",
@@ -25631,7 +25635,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2019"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2020"}],
-      "river": "Fl. Ebr(vs)"
+      "crossesRiver": "Fl. Ebr(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2020_TPPlace2021",
@@ -25639,7 +25643,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2020"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2021"}],
-      "river": "Fl. Ebr(vs)"
+      "crossesRiver": "Fl. Ebr(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2021_TPPlace2022",
@@ -25654,7 +25658,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1104"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1105"}],
-      "river": "Fl. Vesidia"
+      "crossesRiver": "Fl. Vesidia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2022_TPPlace2023",
@@ -25879,7 +25883,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2021"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2049"}],
-      "river": "Fl. Ebr(vs)"
+      "crossesRiver": "Fl. Ebr(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2048_TPPlace2049",
@@ -26188,7 +26192,7 @@
       "dist": 2,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2082"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2084"}],
-      "overSea": "1"
+      "overSea": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2084_TPPlace2085",
@@ -26224,7 +26228,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2088"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2089"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace207_TPPlace208",
@@ -26316,7 +26320,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1111"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1112"}],
-      "river": "Fl. Vmbro"
+      "crossesRiver": "Fl. Vmbro"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace14_TPPlace20",
@@ -26394,7 +26398,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2106"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2107"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2084_TPPlace2108",
@@ -26430,7 +26434,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2089"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2110"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2109_TPPlace2110",
@@ -26473,7 +26477,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2107"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2114"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2114_TPPlace2115",
@@ -26663,7 +26667,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2134"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2135"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2135_TPPlace2136",
@@ -26762,7 +26766,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1116"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1117"}],
-      "river": "Fl. Vmbro"
+      "crossesRiver": "Fl. Vmbro"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2146_TPPlace2147",
@@ -26819,7 +26823,7 @@
       "dist": 35,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2151"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2152"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2152_TPPlace2153",
@@ -26953,7 +26957,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2152"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2167"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2167_TPPlace2168",
@@ -27010,7 +27014,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2152"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2172"}],
-      "river": "Fl. Sagar"
+      "crossesRiver": "Fl. Sagar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2172_TPPlace2173",
@@ -27025,7 +27029,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1119"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1120"}],
-      "river": "Fl. Albinia"
+      "crossesRiver": "Fl. Albinia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2173_TPPlace2174",
@@ -27124,7 +27128,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2184"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2185"}],
-      "river": "Fl. Hermon"
+      "crossesRiver": "Fl. Hermon"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2185_TPPlace2186",
@@ -27139,7 +27143,7 @@
       "dist": 34,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2186"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2187"}],
-      "river": "Fl. Castvr"
+      "crossesRiver": "Fl. Castvr"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2180_TPPlace2188",
@@ -27280,7 +27284,7 @@
       "dist": 33,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1040"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1123"}],
-      "river": "Fl. Medvacvm"
+      "crossesRiver": "Fl. Medvacvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2191_TPPlace2205",
@@ -27337,7 +27341,7 @@
       "dist": 40,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1123"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1124"}],
-      "river": "Fl. Licenna"
+      "crossesRiver": "Fl. Licenna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2210_TPPlace2211",
@@ -27352,7 +27356,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1011"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1012"}],
-      "river": "Fl. Afesia"
+      "crossesRiver": "Fl. Afesia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2211_TPPlace2212",
@@ -27444,7 +27448,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1124"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1125"}],
-      "river": "Fl. Tiliabinte"
+      "crossesRiver": "Fl. Tiliabinte"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2217_TPPlace2220",
@@ -27501,7 +27505,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2190"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2224"}],
-      "river": "Fl. Hermon"
+      "crossesRiver": "Fl. Hermon"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2190_TPPlace2226",
@@ -27509,7 +27513,7 @@
       "dist": 22,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2190"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2226"}],
-      "river": "Fl. Hermon"
+      "crossesRiver": "Fl. Hermon"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2226_TPPlace2227",
@@ -27524,7 +27528,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2187"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2228"}],
-      "river": "Fl. Castvr"
+      "crossesRiver": "Fl. Castvr"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2227_TPPlace2228",
@@ -27581,7 +27585,7 @@
       "dist": 22,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1040"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1126"}],
-      "river": "Fl. Medvacvm"
+      "crossesRiver": "Fl. Medvacvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2233_TPPlace2234",
@@ -27645,7 +27649,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1126"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1127"}],
-      "river": "Fl. Licenna"
+      "crossesRiver": "Fl. Licenna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2239_TPPlace2240",
@@ -28276,7 +28280,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2306"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2307"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2307_TPPlace2308",
@@ -28326,7 +28330,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1133"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1134"}],
-      "river": "Fl. Brintesia"
+      "crossesRiver": "Fl. Brintesia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2312_TPPlace2313",
@@ -28425,7 +28429,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2322"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2323"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2320_TPPlace2324",
@@ -28524,7 +28528,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2322"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2336"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2336_TPPlace2337",
@@ -28539,7 +28543,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2322"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2339"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace232_TPPlace233",
@@ -28589,7 +28593,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2322"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2343"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2343_TPPlace2344",
@@ -28674,7 +28678,7 @@
       "dist": 60,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2322"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2351"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2350_TPPlace2351",
@@ -28941,7 +28945,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1139"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1140"}],
-      "river": "Fl. Padvs"
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace236_TPPlace237",
@@ -28970,8 +28974,8 @@
       "dist": 85,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1047"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1140"}],
-      "estimatedDistance": "1",
-      "river": "Fl. Padvs"
+      "isEstimatedDistance": true,
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2354_TPPlace2382",
@@ -29126,7 +29130,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1013"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1014"}],
-      "river": "Fl. Ivaro"
+      "crossesRiver": "Fl. Ivaro"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2401_TPPlace2402",
@@ -29274,7 +29278,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1143"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1144"}],
-      "river": "Fl. Rvbicv̄"
+      "crossesRiver": "Fl. Rvbicv̄"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2418_TPPlace2419",
@@ -29450,7 +29454,7 @@
       "dist": 8,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1145"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1146"}],
-      "river": "Fl. Rvstvnv̄"
+      "crossesRiver": "Fl. Rvstvnv̄"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2438_TPPlace2439",
@@ -29605,7 +29609,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1147"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1148"}],
-      "river": "Fl. Isex"
+      "crossesRiver": "Fl. Isex"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2457_TPPlace2458",
@@ -29683,7 +29687,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1148"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1149"}],
-      "river": "Fl. Silarvm"
+      "crossesRiver": "Fl. Silarvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2466_TPPlace2467",
@@ -29866,7 +29870,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2486"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2488"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2488_TPPlace2489",
@@ -29951,7 +29955,7 @@
       "dist": 39,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2493"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2497"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2497_TPPlace2498",
@@ -30008,7 +30012,7 @@
       "dist": 39,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2464"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2502"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2502_TPPlace2503",
@@ -30128,7 +30132,7 @@
       "dist": 50,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2515"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2516"}],
-      "river": "Fl. Ganges"
+      "crossesRiver": "Fl. Ganges"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2415_TPPlace2517",
@@ -30339,7 +30343,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1144"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1156"}],
-      "river": "Fl. Rvbicv̄"
+      "crossesRiver": "Fl. Rvbicv̄"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1155_TPPlace1156",
@@ -30522,7 +30526,7 @@
       "dist": 8,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1157"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1158"}],
-      "river": "Fl. Matava"
+      "crossesRiver": "Fl. Matava"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace150_TPPlace255",
@@ -30810,7 +30814,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1159"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1160"}],
-      "river": "Fl. Miso"
+      "crossesRiver": "Fl. Miso"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace199_TPPlace258",
@@ -30986,7 +30990,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1161"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1162"}],
-      "river": "Fl. Aspia"
+      "crossesRiver": "Fl. Aspia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2606_TPPlace2607",
@@ -31001,7 +31005,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2607"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2608"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2608_TPPlace2609",
@@ -31044,7 +31048,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2612"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2613"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2580_TPPlace2614",
@@ -31157,7 +31161,7 @@
       "dist": 5,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1163"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1164"}],
-      "river": "Fl. Flosis"
+      "crossesRiver": "Fl. Flosis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2624_TPPlace2625",
@@ -31452,7 +31456,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2658"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2659"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace262_TPPlace265",
@@ -31495,7 +31499,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1167"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1168"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2662_TPPlace2663",
@@ -31615,7 +31619,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2675"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2676"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2676_TPPlace2677",
@@ -31623,7 +31627,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2676"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2677"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2677_TPPlace2678",
@@ -31673,7 +31677,7 @@
       "dist": 35,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2659"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2682"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2681_TPPlace2682",
@@ -31744,7 +31748,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2689"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2690"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1169_TPPlace1170",
@@ -31843,7 +31847,7 @@
       "dist": 56,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2699"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2700"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2700_TPPlace2702",
@@ -32019,7 +32023,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2516"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2720"}],
-      "river": "Fl. Ganges"
+      "crossesRiver": "Fl. Ganges"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2720_TPPlace2721",
@@ -32090,7 +32094,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2728"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2729"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace228_TPPlace272",
@@ -32147,7 +32151,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1175"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1176"}],
-      "river": "Fl. Aspia"
+      "crossesRiver": "Fl. Aspia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2735_TPPlace2736",
@@ -32197,7 +32201,7 @@
       "dist": 40,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2740"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2741"}],
-      "river": "Fl. Calincivs"
+      "crossesRiver": "Fl. Calincivs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2741_TPPlace2742",
@@ -32212,7 +32216,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2742"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2743"}],
-      "river": "Fl. Calincivs"
+      "crossesRiver": "Fl. Calincivs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2743_TPPlace2744",
@@ -32220,7 +32224,7 @@
       "dist": 50,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2743"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2744"}],
-      "river": "Fl. Calincivs"
+      "crossesRiver": "Fl. Calincivs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1176_TPPlace1177",
@@ -32228,7 +32232,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1176"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1177"}],
-      "river": "Fl. Flosis"
+      "crossesRiver": "Fl. Flosis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2742_TPPlace2745",
@@ -32236,7 +32240,7 @@
       "dist": 70,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2742"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2745"}],
-      "river": "Fl. Calincivs"
+      "crossesRiver": "Fl. Calincivs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2745_TPPlace2746",
@@ -32307,7 +32311,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1164"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1178"}],
-      "river": "Fl. Misiv"
+      "crossesRiver": "Fl. Misiv"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2753_TPPlace2754",
@@ -32315,7 +32319,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2753"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2754"}],
-      "river": "Fl. Ganges"
+      "crossesRiver": "Fl. Ganges"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2754_TPPlace2755",
@@ -32379,7 +32383,7 @@
       "dist": 250,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2760"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2761"}],
-      "river": "Fl. Ganges"
+      "crossesRiver": "Fl. Ganges"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2754_TPPlace2762",
@@ -32401,7 +32405,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2762"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2763"}],
-      "river": "Fl. Ganges"
+      "crossesRiver": "Fl. Ganges"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2763_TPPlace2764",
@@ -32465,7 +32469,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2770"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2771"}],
-      "river": "Fl. Indvs"
+      "crossesRiver": "Fl. Indvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace116_TPPlace117",
@@ -32613,7 +32617,7 @@
       "dist": 70,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2761"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2788"}],
-      "river": "Fl. Indvs"
+      "crossesRiver": "Fl. Indvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2787_TPPlace2788",
@@ -32642,7 +32646,7 @@
       "dist": 625,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2789"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2790"}],
-      "river": "Fl. Avnes"
+      "crossesRiver": "Fl. Avnes"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1180_TPPlace1181",
@@ -32650,7 +32654,7 @@
       "dist": 2,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1180"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1181"}],
-      "river": "Fl. Tinna"
+      "crossesRiver": "Fl. Tinna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2790_TPPlace2791",
@@ -32707,7 +32711,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace282"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace283"}],
-      "river": "Fl. Avsere"
+      "crossesRiver": "Fl. Avsere"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace283_TPPlace284",
@@ -32883,7 +32887,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace300"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace303"}],
-      "river": "Fl. Cynips"
+      "crossesRiver": "Fl. Cynips"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace303_TPPlace304",
@@ -32912,7 +32916,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1181"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1184"}],
-      "river": "Fl. Tinna"
+      "crossesRiver": "Fl. Tinna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1183_TPPlace1184",
@@ -32920,7 +32924,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1183"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1184"}],
-      "river": "Fl. Misiv"
+      "crossesRiver": "Fl. Misiv"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace305_TPPlace307",
@@ -33005,7 +33009,7 @@
       "dist": 25,
       "from": [{"@id": "https://omnesviae.org/#TPPlace313"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace314"}],
-      "river": "Fl. Be"
+      "crossesRiver": "Fl. Be"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace314_TPPlace315",
@@ -33013,7 +33017,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace314"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace315"}],
-      "river": "Fl. Be"
+      "crossesRiver": "Fl. Be"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1177_TPPlace1185",
@@ -33077,7 +33081,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace321"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace322"}],
-      "river": "TORRENS"
+      "crossesRiver": "TORRENS"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace322_TPPlace323",
@@ -33099,7 +33103,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1184"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1186"}],
-      "river": "Fl. Misiv"
+      "crossesRiver": "Fl. Misiv"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1185_TPPlace1186",
@@ -33198,7 +33202,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1186"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1187"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace334_TPPlace335",
@@ -33640,7 +33644,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2606"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3542"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2608_TPPlace3542",
@@ -33648,7 +33652,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2608"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3542"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace3541_TPPlace3542",
@@ -33656,7 +33660,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace3541"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3542"}],
-      "river": "Fl. Tygris"
+      "crossesRiver": "Fl. Tygris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2471_TPPlace3544",
@@ -33867,7 +33871,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1190"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1193"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace372_TPPlace374",
@@ -33994,7 +33998,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace396"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace397"}],
-      "river": "Fl. Nilvs qvi dividit asiam (et) libiam"
+      "crossesRiver": "Fl. Nilvs qvi dividit asiam (et) libiam"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace397_TPPlace398",
@@ -34030,7 +34034,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace396"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace400"}],
-      "river": "Fl. Nilvs qvi dividit asiam (et) libiam"
+      "crossesRiver": "Fl. Nilvs qvi dividit asiam (et) libiam"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace400_TPPlace401",
@@ -34192,7 +34196,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1196"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1197"}],
-      "river": "Fl. [ - ? - ]a[ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]a[ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace418_TPPlace419",
@@ -34235,7 +34239,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace387"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace423"}],
-      "river": "Fl. Nilvs qvi dividit asiam (et) libiam"
+      "crossesRiver": "Fl. Nilvs qvi dividit asiam (et) libiam"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace422_TPPlace424",
@@ -34250,7 +34254,7 @@
       "dist": 72,
       "from": [{"@id": "https://omnesviae.org/#TPPlace423"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace424"}],
-      "river": "Fl. Nilvs qvi dividit asiam (et) libiam"
+      "crossesRiver": "Fl. Nilvs qvi dividit asiam (et) libiam"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace423_TPPlace425",
@@ -34769,7 +34773,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace476"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace477"}],
-      "river": "Fl. Heromicas"
+      "crossesRiver": "Fl. Heromicas"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace477_TPPlace478",
@@ -34805,7 +34809,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace462"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace480"}],
-      "river": "Fl. Iordanis"
+      "crossesRiver": "Fl. Iordanis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace479_TPPlace480",
@@ -34827,7 +34831,7 @@
       "dist": 40,
       "from": [{"@id": "https://omnesviae.org/#TPPlace475"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace481"}],
-      "river": "Fl. Heromicas"
+      "crossesRiver": "Fl. Heromicas"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace481_TPPlace482",
@@ -34884,8 +34888,8 @@
       "dist": 32,
       "from": [{"@id": "https://omnesviae.org/#TPPlace487"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace489"}],
-      "acrossMountains": "1",
-      "river": "Fl. Iordanis"
+      "crossesMountains": true,
+      "crossesRiver": "Fl. Iordanis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace485_TPPlace490",
@@ -35173,7 +35177,7 @@
       "dist": 32,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1019"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1020"}],
-      "river": "Fl. Novaria"
+      "crossesRiver": "Fl. Novaria"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace518_TPPlace519",
@@ -35419,7 +35423,7 @@
       "dist": 14,
       "from": [{"@id": "https://omnesviae.org/#TPPlace546"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace547"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace547_TPPlace548",
@@ -35427,7 +35431,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace547"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace548"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace547_TPPlace549",
@@ -35554,7 +35558,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace552"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace563"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace563_TPPlace564",
@@ -35667,7 +35671,7 @@
       "dist": 3,
       "from": [{"@id": "https://omnesviae.org/#TPPlace562"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace576"}],
-      "river": "Fl. Patabvs"
+      "crossesRiver": "Fl. Patabvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace576_TPPlace577",
@@ -35794,7 +35798,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace580"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace592"}],
-      "river": "Fl. Patabvs"
+      "crossesRiver": "Fl. Patabvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace575_TPPlace593",
@@ -35823,7 +35827,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace585"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace595"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace594_TPPlace595",
@@ -35866,7 +35870,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace596"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace598"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1213_TPPlace1214",
@@ -35958,7 +35962,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1100"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1215"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace599_TPPlace607",
@@ -35987,7 +35991,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace608"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace609"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace241_TPPlace60",
@@ -36058,7 +36062,7 @@
       "dist": 25,
       "from": [{"@id": "https://omnesviae.org/#TPPlace614"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace615"}],
-      "river": "Fl. Patabvs"
+      "crossesRiver": "Fl. Patabvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace615_TPPlace616",
@@ -36087,7 +36091,7 @@
       "dist": 69,
       "from": [{"@id": "https://omnesviae.org/#TPPlace616"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace617"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1215_TPPlace1216",
@@ -36144,7 +36148,7 @@
       "dist": 26,
       "from": [{"@id": "https://omnesviae.org/#TPPlace601"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace624"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace623_TPPlace624",
@@ -36159,7 +36163,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#TPPlace620"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace625"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace625_TPPlace626",
@@ -36195,7 +36199,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace623"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace629"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace37_TPPlace62",
@@ -36245,7 +36249,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace633"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace634"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace634_TPPlace635",
@@ -36253,7 +36257,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace634"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace635"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1217_TPPlace1218",
@@ -36289,7 +36293,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace633"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace639"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace638_TPPlace639",
@@ -36304,7 +36308,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace608"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace640"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace635_TPPlace640",
@@ -36368,7 +36372,7 @@
       "dist": 50,
       "from": [{"@id": "https://omnesviae.org/#TPPlace628"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace647"}],
-      "river": "Fl. Riger"
+      "crossesRiver": "Fl. Riger"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace646_TPPlace647",
@@ -36376,7 +36380,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace646"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace647"}],
-      "river": "Fl. Riger"
+      "crossesRiver": "Fl. Riger"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace647_TPPlace648",
@@ -36405,7 +36409,7 @@
       "dist": 47,
       "from": [{"@id": "https://omnesviae.org/#TPPlace630"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace650"}],
-      "river": "Fl. Riger"
+      "crossesRiver": "Fl. Riger"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace649_TPPlace650",
@@ -36434,7 +36438,7 @@
       "dist": 26,
       "from": [{"@id": "https://omnesviae.org/#TPPlace633"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace653"}],
-      "river": "Fl. Riger"
+      "crossesRiver": "Fl. Riger"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace652_TPPlace653",
@@ -36463,8 +36467,8 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace636"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace655"}],
-      "estimatedDistance": "1",
-      "river": "Fl. Riger"
+      "isEstimatedDistance": true,
+      "crossesRiver": "Fl. Riger"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace654_TPPlace655",
@@ -36605,7 +36609,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace669"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace672"}],
-      "river": "Fl. Riger"
+      "crossesRiver": "Fl. Riger"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1220_TPPlace1221",
@@ -36704,7 +36708,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace679"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace680"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace658_TPPlace681",
@@ -36712,7 +36716,7 @@
       "dist": 21,
       "from": [{"@id": "https://omnesviae.org/#TPPlace658"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace681"}],
-      "river": "Fl. Arar"
+      "crossesRiver": "Fl. Arar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1221_TPPlace1222",
@@ -36769,7 +36773,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace688"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace689"}],
-      "river": "Fl. Riger"
+      "crossesRiver": "Fl. Riger"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace689_TPPlace690",
@@ -36826,7 +36830,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace693"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace694"}],
-      "river": "Fl. Garvnna"
+      "crossesRiver": "Fl. Garvnna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace694_TPPlace695",
@@ -36876,7 +36880,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace700"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace701"}],
-      "river": "Fl. Garvnna"
+      "crossesRiver": "Fl. Garvnna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1209_TPPlace1224",
@@ -36926,7 +36930,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace701"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace706"}],
-      "river": "Fl. Garvnna"
+      "crossesRiver": "Fl. Garvnna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace706_TPPlace707",
@@ -37039,7 +37043,7 @@
       "dist": 28,
       "from": [{"@id": "https://omnesviae.org/#TPPlace677"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace716"}],
-      "river": "Fl. Garvnna"
+      "crossesRiver": "Fl. Garvnna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace695_TPPlace716",
@@ -37089,8 +37093,8 @@
       "dist": 28,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1225"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1226"}],
-      "estimatedDistance": "1",
-      "river": "Fl. Pallia"
+      "isEstimatedDistance": true,
+      "crossesRiver": "Fl. Pallia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace715_TPPlace721",
@@ -37126,7 +37130,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace720"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace724"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace724_TPPlace725",
@@ -37141,7 +37145,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace682"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace726"}],
-      "river": "Fl. Garvnna"
+      "crossesRiver": "Fl. Garvnna"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace725_TPPlace726",
@@ -37520,7 +37524,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1229"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1230"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace767_TPPlace768",
@@ -37570,7 +37574,7 @@
       "dist": 4,
       "from": [{"@id": "https://omnesviae.org/#TPPlace773"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace774"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1121_TPPlace1231",
@@ -37676,7 +37680,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1231"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1232"}],
-      "river": "Fl. Pallia"
+      "crossesRiver": "Fl. Pallia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace784_TPPlace785",
@@ -38076,7 +38080,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace817"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace826"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace826_TPPlace827",
@@ -38091,7 +38095,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#TPPlace827"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace828"}],
-      "river": "Fl. Fevos"
+      "crossesRiver": "Fl. Fevos"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace828_TPPlace829",
@@ -38099,7 +38103,7 @@
       "dist": 22,
       "from": [{"@id": "https://omnesviae.org/#TPPlace828"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace829"}],
-      "river": "Fl. Latis"
+      "crossesRiver": "Fl. Latis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1236_TPPlace1237",
@@ -38128,7 +38132,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace829"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace830"}],
-      "river": "Fl. Iala"
+      "crossesRiver": "Fl. Iala"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace792_TPPlace831",
@@ -38269,7 +38273,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace845"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace846"}],
-      "river": "Fl. Varvm"
+      "crossesRiver": "Fl. Varvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace846_TPPlace847",
@@ -38277,7 +38281,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace846"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace847"}],
-      "river": "Fl. Vvlpis"
+      "crossesRiver": "Fl. Vvlpis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace122_TPPlace123",
@@ -38334,7 +38338,7 @@
       "dist": 29,
       "from": [{"@id": "https://omnesviae.org/#TPPlace852"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace853"}],
-      "river": "Fl. Lvcvs"
+      "crossesRiver": "Fl. Lvcvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace853_TPPlace854",
@@ -38356,7 +38360,7 @@
       "dist": 22,
       "from": [{"@id": "https://omnesviae.org/#TPPlace855"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace856"}],
-      "river": "Fl. Labonia"
+      "crossesRiver": "Fl. Labonia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1222_TPPlace1240",
@@ -38385,7 +38389,7 @@
       "dist": 35,
       "from": [{"@id": "https://omnesviae.org/#TPPlace830"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace858"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace857_TPPlace858",
@@ -38400,8 +38404,8 @@
       "dist": 34,
       "from": [{"@id": "https://omnesviae.org/#TPPlace830"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace859"}],
-      "estimatedDistance": "1",
-      "river": "Fl. Padvs"
+      "isEstimatedDistance": true,
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1055_TPPlace859",
@@ -38437,7 +38441,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace862"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace863"}],
-      "river": "Fl. Labonia"
+      "crossesRiver": "Fl. Labonia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace863_TPPlace864",
@@ -38459,7 +38463,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1073"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace866"}],
-      "river": "Fl. Tigtila"
+      "crossesRiver": "Fl. Tigtila"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace858_TPPlace867",
@@ -38474,7 +38478,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1235"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1241"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace867_TPPlace868",
@@ -38503,7 +38507,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1070"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace869"}],
-      "river": "Fl. Tigtila"
+      "crossesRiver": "Fl. Tigtila"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace84_TPPlace86",
@@ -38553,7 +38557,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace873"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace874"}],
-      "river": "Fl. Mvsalla"
+      "crossesRiver": "Fl. Mvsalla"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace874_TPPlace875",
@@ -38729,7 +38733,7 @@
       "dist": 3,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1243"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1244"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace894_TPPlace895",
@@ -38758,7 +38762,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace896"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace897"}],
-      "river": "Fl. Mvsalla"
+      "crossesRiver": "Fl. Mvsalla"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace897_TPPlace898",
@@ -38829,7 +38833,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace902"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace903"}],
-      "river": "Fl. Patabvs"
+      "crossesRiver": "Fl. Patabvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1244_TPPlace1245",
@@ -38837,7 +38841,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1244"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1245"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace903_TPPlace904",
@@ -38859,7 +38863,7 @@
       "dist": 67,
       "from": [{"@id": "https://omnesviae.org/#TPPlace902"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace907"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace905_TPPlace908",
@@ -38874,7 +38878,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace907"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace908"}],
-      "river": "Fl. Patabvs"
+      "crossesRiver": "Fl. Patabvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace89_TPPlace90",
@@ -38903,7 +38907,7 @@
       "dist": 14,
       "from": [{"@id": "https://omnesviae.org/#TPPlace911"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace912"}],
-      "river": "Fl. Mvsalla"
+      "crossesRiver": "Fl. Mvsalla"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace897_TPPlace913",
@@ -38974,7 +38978,7 @@
       "dist": 41,
       "from": [{"@id": "https://omnesviae.org/#TPPlace609"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace919"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace919_TPPlace920",
@@ -38989,7 +38993,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace907"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace921"}],
-      "river": "Fl. Patabvs"
+      "crossesRiver": "Fl. Patabvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace920_TPPlace921",
@@ -39053,7 +39057,7 @@
       "dist": 14,
       "from": [{"@id": "https://omnesviae.org/#TPPlace681"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace927"}],
-      "river": "Fl. Arar"
+      "crossesRiver": "Fl. Arar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace924_TPPlace928",
@@ -39068,7 +39072,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace927"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace928"}],
-      "river": "Fl. Arar"
+      "crossesRiver": "Fl. Arar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace681_TPPlace929",
@@ -39076,7 +39080,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace681"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace929"}],
-      "river": "Fl. Arar"
+      "crossesRiver": "Fl. Arar"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace86_TPPlace92",
@@ -39238,7 +39242,7 @@
       "dist": 4,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1248"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1249"}],
-      "river": "Fl. Pallia"
+      "crossesRiver": "Fl. Pallia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace941_TPPlace942",
@@ -39372,7 +39376,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace955"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace956"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace956_TPPlace957",
@@ -39394,7 +39398,7 @@
       "dist": 28,
       "from": [{"@id": "https://omnesviae.org/#TPPlace957"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace958"}],
-      "river": "Fl. Betvctelv̄̄"
+      "crossesRiver": "Fl. Betvctelv̄̄"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace809_TPPlace959",
@@ -39479,7 +39483,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace967"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace968"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace957_TPPlace969",
@@ -39494,7 +39498,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace968"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace969"}],
-      "river": "Fl. Orsvs"
+      "crossesRiver": "Fl. Orsvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace24_TPPlace96",
@@ -39530,7 +39534,7 @@
       "dist": 8,
       "from": [{"@id": "https://omnesviae.org/#TPPlace891"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace970"}],
-      "river": "Fl. Renvs"
+      "crossesRiver": "Fl. Renvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace970_TPPlace971",
@@ -39720,7 +39724,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1024"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1025"}],
-      "river": "Fl. Ticenvm"
+      "crossesRiver": "Fl. Ticenvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace990_TPPlace991",
@@ -39749,7 +39753,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace992"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace993"}],
-      "river": "Fl. Ivaro"
+      "crossesRiver": "Fl. Ivaro"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1512_TPPlace993",
@@ -39785,7 +39789,7 @@
       "dist": 43,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1045"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace995"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1017_TPPlace996",
@@ -39793,7 +39797,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1017"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace996"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace995_TPPlace996",
@@ -39815,7 +39819,7 @@
       "dist": 5,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1253"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1254"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace997_TPPlace998",
@@ -39823,7 +39827,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace997"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace998"}],
-      "river": "Fl. Renvs"
+      "crossesRiver": "Fl. Renvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace998_TPPlace999",
@@ -39866,7 +39870,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1254"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1255"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace7_TPPlace751",
@@ -39874,7 +39878,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#OVPlace7"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace751"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace4_OVPlace7",
@@ -39910,7 +39914,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1000"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1026"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1242_TPPlace1256",
@@ -39995,7 +39999,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1263"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1264"}],
-      "river": "Fl. [ - ? - ]a[ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]a[ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1264_TPPlace1265",
@@ -40024,7 +40028,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1265"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1267"}],
-      "river": "Fl. Cvmara"
+      "crossesRiver": "Fl. Cvmara"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1267_TPPlace1268",
@@ -40032,7 +40036,7 @@
       "dist": 5,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1267"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1268"}],
-      "river": "Fl. Sannvm"
+      "crossesRiver": "Fl. Sannvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1268_TPPlace1269",
@@ -40054,7 +40058,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1269"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1270"}],
-      "river": "Fl. Clocoris"
+      "crossesRiver": "Fl. Clocoris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1270_TPPlace1271",
@@ -40146,7 +40150,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1027"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1028"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1280_TPPlace1281",
@@ -40154,7 +40158,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1280"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1281"}],
-      "river": "Fl. Avfid(vs)"
+      "crossesRiver": "Fl. Avfid(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1281_TPPlace1282",
@@ -40162,7 +40166,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1281"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1282"}],
-      "river": "Fl. Aveldiv̄̄"
+      "crossesRiver": "Fl. Aveldiv̄̄"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1282_TPPlace1283",
@@ -40205,7 +40209,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1196"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1288"}],
-      "river": "Fl. [ - ? - ]a[ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]a[ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1288_TPPlace1289",
@@ -40227,7 +40231,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1028"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1029"}],
-      "river": "Fl. Ticenvm"
+      "crossesRiver": "Fl. Ticenvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1289_TPPlace1290",
@@ -40235,7 +40239,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1289"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1290"}],
-      "river": "Fl. Cvmara"
+      "crossesRiver": "Fl. Cvmara"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1290_TPPlace1291",
@@ -40243,7 +40247,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1290"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1291"}],
-      "river": "Fl. Sannvm"
+      "crossesRiver": "Fl. Sannvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1291_TPPlace1292",
@@ -40265,7 +40269,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1291"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1294"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1268_TPPlace1295",
@@ -40287,7 +40291,7 @@
       "dist": 5,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1296"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1297"}],
-      "river": "Fl. Clocoris"
+      "crossesRiver": "Fl. Clocoris"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1297_TPPlace1298",
@@ -40344,7 +40348,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1301"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1302"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1302_TPPlace1303",
@@ -40422,7 +40426,7 @@
       "dist": 3,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1306"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1310"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1203_TPPlace1311",
@@ -40528,7 +40532,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1318"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1321"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1320_TPPlace1321",
@@ -40683,7 +40687,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1337"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1338"}],
-      "river": "Fl. Avfid(vs)"
+      "crossesRiver": "Fl. Avfid(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1338_TPPlace1339",
@@ -40719,7 +40723,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1340"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1342"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1341_TPPlace1343",
@@ -41042,7 +41046,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1375"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1376"}],
-      "river": "Fl. Pastivm"
+      "crossesRiver": "Fl. Pastivm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1375_TPPlace1377",
@@ -41106,7 +41110,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1036"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1037"}],
-      "river": "Fl. Clevsis"
+      "crossesRiver": "Fl. Clevsis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1376_TPPlace1383",
@@ -41233,7 +41237,7 @@
       "dist": 26,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1396"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1397"}],
-      "river": "Fl. Crate / Grater Fl."
+      "crossesRiver": "Fl. Crate / Grater Fl."
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1397_TPPlace1398",
@@ -41290,7 +41294,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1401"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1402"}],
-      "river": "Fl. Tanno"
+      "crossesRiver": "Fl. Tanno"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1402_TPPlace1403",
@@ -41368,7 +41372,7 @@
       "dist": 33,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1039"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1040"}],
-      "river": "Fl. Afesia"
+      "crossesRiver": "Fl. Afesia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1410_TPPlace1411",
@@ -41453,7 +41457,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1025"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1041"}],
-      "river": "Fl. Vbartvm"
+      "crossesRiver": "Fl. Vbartvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1404_TPPlace1420",
@@ -41559,7 +41563,7 @@
       "dist": 35,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1041"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1042"}],
-      "river": "Fl. Vmatia"
+      "crossesRiver": "Fl. Vmatia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1430_TPPlace1431",
@@ -41630,7 +41634,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1329"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1439"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1438_TPPlace1439",
@@ -41638,7 +41642,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1438"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1439"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1039_TPPlace1044",
@@ -41646,7 +41650,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1039"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1044"}],
-      "river": "Fl. Clevsis"
+      "crossesRiver": "Fl. Clevsis"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace142_TPPlace143",
@@ -41703,7 +41707,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1334"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1445"}],
-      "river": "Fl. Avfid(vs)"
+      "crossesRiver": "Fl. Avfid(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1444_TPPlace1445",
@@ -41711,7 +41715,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1444"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1445"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1342_TPPlace1446",
@@ -41852,7 +41856,7 @@
       "dist": 33,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1039"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1047"}],
-      "river": "Fl. Padvs"
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1452_TPPlace1459",
@@ -41937,7 +41941,7 @@
       "dist": 35,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1024"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1048"}],
-      "river": "Fl. Ticenvm"
+      "crossesRiver": "Fl. Ticenvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1440_TPPlace1467",
@@ -42001,7 +42005,7 @@
       "dist": 2,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1466"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3564"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1473_TPPlace3564",
@@ -42079,7 +42083,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1048"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1049"}],
-      "river": "Fl. Ambrvm"
+      "crossesRiver": "Fl. Ambrvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1477_TPPlace1478",
@@ -42115,7 +42119,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1480"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1481"}],
-      "river": "Fl. Crate / Grater Fl."
+      "crossesRiver": "Fl. Crate / Grater Fl."
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1481_TPPlace1482",
@@ -42165,7 +42169,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1402"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1487"}],
-      "river": "Fl. Tanno"
+      "crossesRiver": "Fl. Tanno"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1486_TPPlace1487",
@@ -42222,7 +42226,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1493"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1494"}],
-      "river": "Fl. Nimera"
+      "crossesRiver": "Fl. Nimera"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1494_TPPlace1495",
@@ -42265,7 +42269,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1408"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1499"}],
-      "overSea": "1"
+      "overSea": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1498_TPPlace1499",
@@ -42294,7 +42298,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1493"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1500"}],
-      "river": "Fl. Nimera"
+      "crossesRiver": "Fl. Nimera"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1004_TPPlace1005",
@@ -42393,7 +42397,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1510"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1511"}],
-      "river": "Fl. Nirān̄vs"
+      "crossesRiver": "Fl. Nirān̄vs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1512_TPPlace1513",
@@ -42471,7 +42475,7 @@
       "dist": 22,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1052"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1053"}],
-      "river": "Fl. Vbartvm"
+      "crossesRiver": "Fl. Vbartvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1522_TPPlace1523",
@@ -42493,7 +42497,7 @@
       "dist": 14,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1013"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1525"}],
-      "river": "Fl. Ivaro"
+      "crossesRiver": "Fl. Ivaro"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1525_TPPlace1526",
@@ -42564,7 +42568,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1053"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1054"}],
-      "river": "Fl. Padvs"
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1532_TPPlace1533",
@@ -42572,7 +42576,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1532"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1533"}],
-      "river": "Fl. Frgido"
+      "crossesRiver": "Fl. Frgido"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1533_TPPlace1534",
@@ -42594,7 +42598,7 @@
       "dist": 14,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1535"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1536"}],
-      "river": "Fl. Frgido"
+      "crossesRiver": "Fl. Frgido"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1536_TPPlace1537",
@@ -42714,7 +42718,7 @@
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1055"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1056"}],
-      "river": "Fl. Victivm"
+      "crossesRiver": "Fl. Victivm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1550_TPPlace1551",
@@ -42792,7 +42796,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1056"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1057"}],
-      "river": "Fl. Novaria"
+      "crossesRiver": "Fl. Novaria"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1559_TPPlace1560",
@@ -42961,7 +42965,7 @@
       "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1058"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1059"}],
-      "river": "Fl. Padvs"
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1571_TPPlace1579",
@@ -43018,7 +43022,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1584"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1585"}],
-      "river": "Fl. [ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1585_TPPlace1586",
@@ -43026,7 +43030,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1585"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1586"}],
-      "river": "Fl. [ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1586_TPPlace1587",
@@ -43230,7 +43234,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1060"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1061"}],
-      "river": "Fl. Padvs"
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1606_TPPlace1607",
@@ -43308,7 +43312,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1051"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1062"}],
-      "river": "Fl. Padvs"
+      "crossesRiver": "Fl. Padvs"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1614_TPPlace1615",
@@ -43316,7 +43320,7 @@
       "dist": 8,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1614"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1615"}],
-      "river": "Fl. Arsia"
+      "crossesRiver": "Fl. Arsia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1615_TPPlace1616",
@@ -43401,7 +43405,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1062"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1063"}],
-      "river": "Fl. Rigonv̄"
+      "crossesRiver": "Fl. Rigonv̄"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1623_TPPlace1624",
@@ -43486,7 +43490,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1063"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1064"}],
-      "river": "Fl. Paala"
+      "crossesRiver": "Fl. Paala"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1558_TPPlace1634",
@@ -43564,7 +43568,7 @@
       "dist": 2,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1064"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1065"}],
-      "river": "Fl. Saternvm"
+      "crossesRiver": "Fl. Saternvm"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1643_TPPlace1644",
@@ -43726,7 +43730,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1066"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1067"}],
-      "river": "Fl. Animo"
+      "crossesRiver": "Fl. Animo"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1661_TPPlace1662",
@@ -43748,7 +43752,7 @@
       "dist": 25,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1662"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1663"}],
-      "river": "Fl. [ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1662_TPPlace1664",
@@ -43770,7 +43774,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1657"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1666"}],
-      "river": "Fl. [ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1665_TPPlace1666",
@@ -43778,7 +43782,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1665"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1666"}],
-      "river": "Fl. [ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1657_TPPlace1667",
@@ -43912,7 +43916,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1680"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1681"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1627_TPPlace1682",
@@ -43934,7 +43938,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1681"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1684"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1683_TPPlace1684",
@@ -43956,7 +43960,7 @@
       "dist": 22,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1686"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1687"}],
-      "river": "Fl. [ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1687_TPPlace1689",
@@ -44034,7 +44038,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1695"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1696"}],
-      "river": "Fl. [ - ? - ]"
+      "crossesRiver": "Fl. [ - ? - ]"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1696_TPPlace1697",
@@ -44147,8 +44151,8 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1070"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1071"}],
-      "acrossMountains": "1",
-      "river": "Fl. Odvbria"
+      "crossesMountains": true,
+      "crossesRiver": "Fl. Odvbria"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1633_TPPlace1709",
@@ -44548,7 +44552,7 @@
       "dist": 2,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1076"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1077"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1754_TPPlace1755",
@@ -44787,7 +44791,7 @@
       "dist": 40,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1079"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1080"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1781_TPPlace1782",
@@ -44872,7 +44876,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1080"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1081"}],
-      "river": "Fl. Macra"
+      "crossesRiver": "Fl. Macra"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1790_TPPlace1791",
@@ -44950,7 +44954,7 @@
       "dist": 8,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1081"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1082"}],
-      "river": "Fl. Aventia"
+      "crossesRiver": "Fl. Aventia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1800_TPPlace1801",
@@ -45042,7 +45046,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1082"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1084"}],
-      "river": "Fl. Vesidia"
+      "crossesRiver": "Fl. Vesidia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1809_TPPlace1810",
@@ -45218,7 +45222,7 @@
       "dist": 60,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1791"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1830"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1829_TPPlace1830",
@@ -45443,7 +45447,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1855"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1856"}],
-      "acrossMountains": "1"
+      "crossesMountains": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1080_TPPlace1089",
@@ -45451,7 +45455,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1080"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1089"}],
-      "river": "Fl. Macra"
+      "crossesRiver": "Fl. Macra"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1856_TPPlace1857",
@@ -45466,7 +45470,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1088"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1089"}],
-      "river": "Fl. Macra"
+      "crossesRiver": "Fl. Macra"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1852_TPPlace1858",
@@ -45628,7 +45632,7 @@
       "dist": 8,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1089"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1090"}],
-      "river": "Fl. Aventia"
+      "crossesRiver": "Fl. Aventia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1876_TPPlace1877",
@@ -45706,7 +45710,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1090"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1091"}],
-      "river": "Fl. Vesidia"
+      "crossesRiver": "Fl. Vesidia"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1885_TPPlace1886",
@@ -45784,7 +45788,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1086"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1092"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1893_TPPlace1894",
@@ -45855,7 +45859,7 @@
       "dist": 20,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1898"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1900"}],
-      "river": "Fl. Pamis(vs)"
+      "crossesRiver": "Fl. Pamis(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1900_TPPlace1901",
@@ -45870,7 +45874,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1086"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1093"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1902_TPPlace1903",
@@ -45976,7 +45980,7 @@
       "dist": 22,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1900"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1913"}],
-      "river": "Fl. Pamis(vs)"
+      "crossesRiver": "Fl. Pamis(vs)"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1902_TPPlace1913",
@@ -45984,7 +45988,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1902"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1913"}],
-      "river": "Fl. Bvrotas"
+      "crossesRiver": "Fl. Bvrotas"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1902_TPPlace1914",
@@ -45992,7 +45996,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1902"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1914"}],
-      "river": "Fl. Bvrotas"
+      "crossesRiver": "Fl. Bvrotas"
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1914_TPPlace1915",
@@ -46063,7 +46067,7 @@
       "dist": 56,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1094"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1095"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1921_TPPlace1922",
@@ -46078,7 +46082,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#OVPlace7"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace751"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace382_OVPlace56",
@@ -46261,7 +46265,7 @@
       "dist": 27,
       "from": [{"@id": "https://omnesviae.org/#OVPlace242"}],
       "to": [{"@id": "https://omnesviae.org/#OVPlace272"}],
-      "river": "Fl. Iberus"
+      "crossesRiver": "Fl. Iberus"
     },
     {
       "@id": "https://omnesviae.org/#OVPlace242_OVPlace269",
@@ -47746,7 +47750,7 @@
       "dist": 40,
       "from": [{"@id": "https://omnesviae.org/#OVPlace342"}],
       "to": [{"@id": "https://omnesviae.org/#OVPlace343"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace104_OVPlace343",
@@ -48230,7 +48234,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#OVPlace92"}],
       "to": [{"@id": "https://omnesviae.org/#OVPlace93"}],
-      "river": "Fl. Iberus"
+      "crossesRiver": "Fl. Iberus"
     },
     {
       "@id": "https://omnesviae.org/#OVPlace93_OVPlace94",
@@ -48308,7 +48312,7 @@
       "dist": 39,
       "from": [{"@id": "https://omnesviae.org/#OVPlace4"}],
       "to": [{"@id": "https://omnesviae.org/#OVPlace5"}],
-      "river": "Fl. Atur"
+      "crossesRiver": "Fl. Atur"
     },
     {
       "@id": "https://omnesviae.org/#OVPlace378_OVPlace4",
@@ -48379,7 +48383,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#OVPlace4"}],
       "to": [{"@id": "https://omnesviae.org/#OVPlace9"}],
-      "river": "Fl. Atur"
+      "crossesRiver": "Fl. Atur"
     },
     {
       "@id": "https://omnesviae.org/#OVPlace8_OVPlace9",
@@ -48401,7 +48405,7 @@
       "dist": 56,
       "from": [{"@id": "https://omnesviae.org/#TPPlace548"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace582"}],
-      "overSea": "1"
+      "overSea": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace390_OVPlace391",
@@ -49039,7 +49043,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#OVPlace470"}],
       "to": [{"@id": "https://omnesviae.org/#OVPlace471"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace471_OVPlace472",
@@ -49691,7 +49695,7 @@
       "dist": 1,
       "from": [{"@id": "https://omnesviae.org/#OVPlace560"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1294"}],
-      "estimatedDistance": "1"
+      "isEstimatedDistance": true
     }
   ]
 }

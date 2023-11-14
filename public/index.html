@@ -1,157 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenLayers Map</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css" type="text/css">
-  <style>
-    /* Add your custom styles here */
-    #map {
-      width: 100%; /* Set your desired width */
-      height: 600px; /* Set your desired height */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenLayers Map</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css" type="text/css">
+    <style>
+        /* Add your custom styles here */
+        #map {
+            width: 100%; /* Set your desired width */
+            height: 600px; /* Set your desired height */
+        }
 
-    .ol-popup {
-      position: absolute;
-      background-color: white;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-      padding: 15px;
-      border-radius: 10px;
-      border: 1px solid #cccccc;
-      bottom: 12px;
-      left: -50px;
-      min-width: 200px;
-    }
+        .ol-popup {
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            bottom: 12px;
+            left: -50px;
+            min-width: 200px;
+        }
 
-    .ol-popup-closer {
-      text-decoration: none;
-      color: #bababc;
-      position: absolute;
-      top: 2px;
-      right: 8px;
-      font-size: 18px;
-      font-weight: bold;
-    }
+        .ol-popup-closer {
+            text-decoration: none;
+            color: #bababc;
+            position: absolute;
+            top: 2px;
+            right: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-    .ol-popup-closer:hover {
-      color: #ff4242;
-    }
+        .ol-popup-closer:hover {
+            color: #ff4242;
+        }
 
 
-  </style>
+    </style>
 </head>
 <body>
 
-<!-- Your map container -->
+<div id="form">
+    <button onclick="myFunction()">Click me</button>
+</div>
+
 <div id="map" class="map"></div>
 <div id="popup" class="ol-popup">
-  <a href="#" id="popup-closer" class="ol-popup-closer">X</a>
-  <div id="popup-content"></div>
+    <a href="#" id="popup-closer" class="ol-popup-closer">X</a>
+    <div id="popup-content"></div>
 </div>
+
 
 <!-- OpenLayers library -->
 <script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
 
 <!-- Your map initialization script -->
 <script>
-  function getStyle(feature) {
-    var symbol = feature.get('symbol');
-    var defaultSymbol = '0';
-    var iconPath = 'http://novo.local/images/symbols/' + (symbol ? symbol.charAt(0) : defaultSymbol)  + '.png'; // Default icon path for points
-    var linecolor = 'red';
-    if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
-      linecolor = 'rgba(255, 0, 0, 0.5)';
+    function myFunction() {
+        var places = ["TPPlace558","TPPlace559", "TPPlace560","TPPlace561"]
+        // placesToLineString(["TPPlace558","TPPlace559"])
+        getCoordinatesById(places[0])
+        var coordinates = places.map(element => getCoordinatesById(element))
+        console.log (coordinates)
+
+        const lineStringStyle = new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: 'red', // Change this to the desired color
+                width: 3,      // Change this to the desired width
+            }),
+        });
+
+        const routeLineStringFeature = new ol.Feature({
+            geometry: new ol.geom.LineString(coordinates),
+        });
+
+// Add the LineString feature to a vector source
+        const vectorSource = new ol.source.Vector({
+            features: [routeLineStringFeature],
+        });
+
+// Create a vector layer
+        const vectorLayer = new ol.layer.Vector({
+            source: vectorSource,
+            style: new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: 'rgb(255,255,0, 0.5)', // Change this to the desired color
+                    width: 9,      // Change this to the desired width
+                }),
+            })
+        });
+
+// Add the vector layer to the map
+        map.addLayer(vectorLayer);
+
+        map.getView().fit(routeLineStringFeature.getGeometry(), {
+            padding: [30, 30, 30, 30],
+            duration: 1500,
+            maxZoom: 10
+        });
+
     }
-    return new ol.style.Style({
-      image: new ol.style.Icon({
-        src: iconPath,
-        anchor: [0.5, 0.5],
-        anchorXUnits: 'fraction',
-        anchorYUnits: 'fraction',
-        opacity: 1,
-        scale: 0.8 // Adjust the scale as needed
-      }),
-      stroke: new ol.style.Stroke({
-        color: linecolor,
-        width: 3
-      })
+
+
+    function getCoordinatesById(id) {
+        var features = geojson.getSource().getFeatures();
+        for (var i = 0; i < features.length; i++) {
+            var feature = features[i];
+            var properties = feature.getProperties();
+            if (properties.id === id) {
+                var geometry = feature.getGeometry();
+                var coordinates = geometry.getCoordinates();
+                return coordinates;
+            }
+        }
+        return null;
+    }
+
+    function getStyle(feature) {
+        var symbol = feature.get('symbol');
+        var defaultSymbol = '0';
+        var iconPath = 'http://novo.local/images/symbols/' + (symbol ? symbol.charAt(0) : defaultSymbol) + '.png'; // Default icon path for points
+        var linecolor = 'red';
+        if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
+            linecolor = 'rgba(255, 0, 0, 0.5)';
+        }
+        return new ol.style.Style({
+            image: new ol.style.Icon({
+                src: iconPath,
+                anchor: [0.5, 0.5],
+                anchorXUnits: 'fraction',
+                anchorYUnits: 'fraction',
+                opacity: 1,
+                scale: 0.8 // Adjust the scale as needed
+            }),
+            stroke: new ol.style.Stroke({
+                color: linecolor,
+                width: 3
+            })
+        });
+    }
+
+    // Overlay to display the popup
+    var overlay = new ol.Overlay({
+        element: document.getElementById('popup'),
+        autoPan: true,
+        autoPanAnimation: {
+            duration: 250
+        }
     });
-  }
-
-  // Overlay to display the popup
-  var overlay = new ol.Overlay({
-    element: document.getElementById('popup'),
-    autoPan: true,
-    autoPanAnimation: {
-      duration: 250
-    }
-  });
 
 
-  // Initialize the map
-  var map = new ol.Map({
-    target: 'map', // The ID of the map container
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM() // OpenStreetMap as the tile source
-      }),
-      // Add a GeoJSON layer
-      new ol.layer.Vector({
+    var geojson = new ol.layer.Vector({
         source: new ol.source.Vector({
-          format: new ol.format.GeoJSON(),
-          url: 'http://novo.local/api/geofeatures'
+            format: new ol.format.GeoJSON(),
+            url: 'http://novo.local/api/geofeatures'
         }),
         style: getStyle
-      })
-    ],
-    overlays: [overlay],
-    view: new ol.View({
-      center: ol.proj.fromLonLat([0, 0]), // Center of the map, lon/lat
-      zoom: 2 // Initial zoom level
-    })
-  });
-
-  // Popup closer
-  var closer = document.getElementById('popup-closer');
-  closer.onclick = function () {
-    overlay.setPosition(undefined);
-    closer.blur();
-    return false;
-  };
-
-  // Display popup on click
-  map.on('click', function (event) {
-    var feature = map.forEachFeatureAtPixel(event.pixel, function (feature) {
-      return feature;
     });
 
-    if (feature && feature.getGeometry().getType() === 'Point') {
-      var coordinates = feature.getGeometry().getCoordinates();
-      var content = '<p><b>' + feature.get('name') + '</b></p><p>' + feature.get('description') + '</p>';
-      overlay.setPosition(coordinates);
-      document.getElementById('popup-content').innerHTML = content;
-    } else {
-      // If it's not a Point feature, hide the popup
-      overlay.setPosition(undefined);
-    }
-  });
-
-  map.on('pointermove', function (event) {
-    var pixel = map.getEventPixel(event.originalEvent);
-
-    // Check if there's a feature at the moved pixel
-    var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
-      return feature;
+    // Initialize the map
+    var map = new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: new ol.source.OSM() // OpenStreetMap as the tile source
+            }),
+            geojson
+        ],
+        overlays: [overlay],
+        view: new ol.View({
+            center: ol.proj.fromLonLat([0, 0]), // Center of the map, lon/lat
+            zoom: 2 // Initial zoom level
+        })
     });
 
-    // If a feature is found, change the mouse pointer
-    if (feature && feature.getGeometry().getType() === 'Point') {
-      map.getTargetElement().style.cursor = 'pointer';
-    } else {
-      map.getTargetElement().style.cursor = '';
-    }
-  });
+    // Popup closer
+    var closer = document.getElementById('popup-closer');
+    closer.onclick = function () {
+        overlay.setPosition(undefined);
+        closer.blur();
+        return false;
+    };
+
+    // Display popup on click
+    map.on('click', function (event) {
+        var feature = map.forEachFeatureAtPixel(event.pixel, function (feature) {
+            return feature;
+        });
+
+        if (feature && feature.getGeometry().getType() === 'Point') {
+            var coordinates = feature.getGeometry().getCoordinates();
+            var content = '<p><b>' + feature.get('name') + '</b></p><p>' + feature.get('description') + '</p>';
+            overlay.setPosition(coordinates);
+            document.getElementById('popup-content').innerHTML = content;
+        } else {
+            // If it's not a Point feature, hide the popup
+            overlay.setPosition(undefined);
+        }
+    });
+
+    map.on('pointermove', function (event) {
+        var pixel = map.getEventPixel(event.originalEvent);
+
+        // Check if there's a feature at the moved pixel
+        var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+            return feature;
+        });
+
+        // If a feature is found, change the mouse pointer
+        if (feature && feature.getGeometry().getType() === 'Point') {
+            map.getTargetElement().style.cursor = 'pointer';
+        } else {
+            map.getTargetElement().style.cursor = '';
+        }
+    });
 
 </script>
 </body>

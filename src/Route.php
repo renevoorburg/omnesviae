@@ -38,7 +38,7 @@ class Route {
             }
             $ourShortestPath[$i] = array_reverse($ourShortestPath[$i]);
 
-            print_r($ourShortestPath[$i]);
+            echo json_encode($ourShortestPath[$i], false);
         }
     }
 
