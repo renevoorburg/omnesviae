@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenLayers Map</title>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css" type="text/css">
     <style>
         /* Add your custom styles here */
@@ -43,8 +45,23 @@
 </head>
 <body>
 
+
+
 <div id="form">
-    <button onclick="myFunction()">Click me</button>
+
+    <form action="#" method="post" onsubmit="submitForm(event)">
+        <label for="place1">Place 1:</label>
+        <input type="text" id="place1" name="place1" required>
+
+        <br>
+
+        <label for="place2">Place 2:</label>
+        <input type="text" id="place2" name="place2" required>
+
+        <br>
+
+        <input type="submit" value="Submit" onclick="testRouteButtonClicked()">
+    </form>
 </div>
 
 <div id="map" class="map"></div>
@@ -54,12 +71,11 @@
 </div>
 
 
-<!-- OpenLayers library -->
-<script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
+
 
 <!-- Your map initialization script -->
 <script>
-    function myFunction() {
+    function testRouteButtonClicked() {
         var places = ["TPPlace558","TPPlace559", "TPPlace560","TPPlace561"]
         // placesToLineString(["TPPlace558","TPPlace559"])
         getCoordinatesById(places[0])
@@ -90,7 +106,8 @@
                     color: 'rgb(255,255,0, 0.5)', // Change this to the desired color
                     width: 9,      // Change this to the desired width
                 }),
-            })
+            }),
+            zIndex: 1
         });
 
 // Add the vector layer to the map
@@ -106,27 +123,27 @@
 
 
     function getCoordinatesById(id) {
-        var features = geojson.getSource().getFeatures();
-        for (var i = 0; i < features.length; i++) {
-            var feature = features[i];
-            var properties = feature.getProperties();
+        const features = geojson.getSource().getFeatures();
+        for (const feature of features) {
+            const properties = feature.getProperties();
             if (properties.id === id) {
-                var geometry = feature.getGeometry();
-                var coordinates = geometry.getCoordinates();
-                return coordinates;
+                const geometry = feature.getGeometry();
+                return geometry.getCoordinates();
             }
         }
         return null;
     }
 
     function getStyle(feature) {
-        var symbol = feature.get('symbol');
-        var defaultSymbol = '0';
-        var iconPath = 'http://novo.local/images/symbols/' + (symbol ? symbol.charAt(0) : defaultSymbol) + '.png'; // Default icon path for points
-        var linecolor = 'red';
+        const symbol = feature.get('symbol');
+        const defaultSymbol = '0';
+        const iconPath = `http://novo.local/images/symbols/${symbol ? symbol.charAt(0) : defaultSymbol}.png`;
+
+        let lineColor = 'red';
         if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
-            linecolor = 'rgba(255, 0, 0, 0.5)';
+            lineColor = 'rgba(255, 0, 0, 0.5)';
         }
+
         return new ol.style.Style({
             image: new ol.style.Icon({
                 src: iconPath,
@@ -134,12 +151,12 @@
                 anchorXUnits: 'fraction',
                 anchorYUnits: 'fraction',
                 opacity: 1,
-                scale: 0.8 // Adjust the scale as needed
+                scale: 0.8,
             }),
             stroke: new ol.style.Stroke({
-                color: linecolor,
-                width: 3
-            })
+                color: lineColor,
+                width: 3,
+            }),
         });
     }
 
@@ -158,7 +175,8 @@
             format: new ol.format.GeoJSON(),
             url: 'http://novo.local/api/geofeatures'
         }),
-        style: getStyle
+        style: getStyle,
+        zIndex: 2
     });
 
     // Initialize the map
@@ -178,8 +196,8 @@
     });
 
     // Popup closer
-    var closer = document.getElementById('popup-closer');
-    closer.onclick = function () {
+    const closer = document.getElementById('popup-closer');
+    closer.onclick = () => {
         overlay.setPosition(undefined);
         closer.blur();
         return false;

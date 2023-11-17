@@ -26,7 +26,11 @@ class LabelList
         $found = false;
         foreach ($this->labels as $key => $value) {
             if (strpos($key, $chars) === 0) {
-                $filteredArray[] = array('label' => $value['display'], 'value' => $value['@id']);
+                if ($key === $chars) {
+                    $filteredArray[] = array('label' => $value['display'], 'value' => $value['@id'], 'exact' => true);
+                } else {
+                    $filteredArray[] = array('label' => $value['display'], 'value' => $value['@id']);
+                }
                 $found = true;
             } elseif ($found === true) { break; }
         }
