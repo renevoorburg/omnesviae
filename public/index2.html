@@ -111,6 +111,7 @@
                         inputField.value = item.label;
                         hiddenField.value = item.value;
                         suggestionsContainer.style.display = 'none';
+                        inputField.classList.remove('error-text');
                         updateSubmitButton();
                     });
                     suggestionsContainer.appendChild(suggestionDiv);
