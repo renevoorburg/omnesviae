@@ -132,6 +132,22 @@
                     console.error("Error fetching suggestions:", error);
                     // Handle errors as needed
                 });
+
+            document.addEventListener('click', handleOutsideClick);
+        }
+
+        function handleOutsideClick(event) {
+            // Check if the click was outside the suggestion box and input field
+            if (!event.target.closest('.autocomplete-container')) {
+                hideSuggestions();
+            }
+        }
+
+        function hideSuggestions() {
+            // Hide suggestion boxes
+            document.querySelectorAll('.suggestions').forEach(suggestionsContainer => {
+                suggestionsContainer.style.display = 'none';
+            });
         }
 
         function submitForm(event) {

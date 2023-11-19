@@ -6,13 +6,117 @@
     <title>OpenLayers Map</title>
     <script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v8.1.0/ol.css" type="text/css">
+    <link rel="stylesheet" href="/css/ol.css" type="text/css">
     <style>
-        /* Add your custom styles here */
-        #map {
-            width: 100%; /* Set your desired width */
-            height: 600px; /* Set your desired height */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /*background-color: #333;*/
+            background-color: #b43636;
+            color: #fff;
+            padding: 0.5em 1em;
+            height: 1.3em;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.3em;
+            order: 1; /* Set the order to 1 to move it to the right */
+        }
+
+        h2 {
+            margin: 0.5em 0;
+            font-size: 1.2em;
+            color: #b43636;
+        }
+
+        nav {
+            order: 0; /* Set the order to 0 to keep it on the left */
+        }
+
+        #map {
+            /*flex: 1;*/
+            /*box-sizing: border-box;*/
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: calc(100vh - 2.3em);
+            z-index: 1;
+        }
+
+        #route {
+            z-index: 2;
+            position: absolute;
+            top: 2.8em;
+            left: 0.5em;
+            width: 280px;
+            bottom: 1em;
+            background-color: white;
+            padding: 1em;
+            border-radius: 1em;
+            opacity: 0.9;
+            border-color: #666;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        input[type="text"] {
+            padding: 8px; /* Adjust padding as needed */
+            margin-top: 5px;
+            border: 1px solid #ccc; /* Optional: Add border for better visibility */
+            border-radius: 5px; /* Add rounded corners */
+            width: 93%;
+        }
+
+        .suggestions {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            border: 1px solid #d4d4d4;
+            max-height: 150px;
+            overflow-y: auto;
+            z-index: 1;
+            width: 88%;
+        }
+
+        .suggestion {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .suggestion:hover {
+            background-color: #ddd;
+        }
+
+        .error-text {
+            color: #b43636;
+        }
+
+
 
         .ol-popup {
             position: absolute;
@@ -37,32 +141,64 @@
         }
 
         .ol-popup-closer:hover {
-            color: #ff4242;
+            color: #b43636;
         }
-
 
     </style>
 </head>
 <body>
 
+<header>
+    <h1>OmnesViae</h1>
+    <nav>
+        <ul>
+        <li><a href="#">Iter</a></li>
+        <li><a href="#">Tabula</a></li>
+        <li><a href="#">De Nobis</a></li>
+        </ul>
+    </nav>
+</header>
 
-
-<div id="form">
-
-    <form action="#" method="post" onsubmit="submitForm(event)">
-        <label for="place1">Place 1:</label>
-        <input type="text" id="place1" name="place1" required>
-
+<div id="route">
+    <h2>Iter vestrum</h2>
+    <form action="#" method="post" onsubmit="submitForm()">
+        <div class="autocomplete-container">
+            <label for="place1">Origo:</label><br>
+            <input type="text" id="place1" name="place1" required autocomplete="off"
+                   oninput="handleInput(this.value, 'place1', 'place1Value')">
+            <div id="suggestions-place1" class="suggestions"></div>
+            <input type="hidden" id="place1Value" name="place1Value">
+        </div>
         <br>
-
-        <label for="place2">Place 2:</label>
-        <input type="text" id="place2" name="place2" required>
-
+        <div class="autocomplete-container">
+            <label for="place2">Destinatio:</label><br>
+            <input type="text" id="place2" name="place2" required autocomplete="off"
+                   oninput="handleInput(this.value, 'place2', 'place2Value')">
+            <div id="suggestions-place2" class="suggestions"></div>
+            <input type="hidden" id="place2Value" name="place2Value">
+        </div>
         <br>
-
-        <input type="submit" value="Submit" onclick="testRouteButtonClicked()">
+        <input type="submit" id="submitBtn" value="Ostende" disabled>
     </form>
 </div>
+
+
+<!--<div id="form">-->
+
+<!--    <form action="#" method="post" onsubmit="submitForm(event)">-->
+<!--        <label for="place1">Place 1:</label>-->
+<!--        <input type="text" id="place1" name="place1" required>-->
+
+<!--        <br>-->
+
+<!--        <label for="place2">Place 2:</label>-->
+<!--        <input type="text" id="place2" name="place2" required>-->
+
+<!--        <br>-->
+
+<!--        <input type="submit" value="Submit" onclick="testRouteButtonClicked()">-->
+<!--    </form>-->
+<!--</div>-->
 
 <div id="map" class="map"></div>
 <div id="popup" class="ol-popup">
@@ -141,7 +277,7 @@
 
         let lineColor = 'red';
         if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
-            lineColor = 'rgba(255, 0, 0, 0.5)';
+            lineColor = 'rgba(180, 54, 54, 0.5)';
         }
 
         return new ol.style.Style({
@@ -190,8 +326,8 @@
         ],
         overlays: [overlay],
         view: new ol.View({
-            center: ol.proj.fromLonLat([0, 0]), // Center of the map, lon/lat
-            zoom: 2 // Initial zoom level
+            center: ol.proj.fromLonLat([12.5, 41.9]), // Center of the map, lon/lat
+            zoom: 7.8 // Initial zoom level
         })
     });
 
@@ -237,5 +373,99 @@
     });
 
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const submitBtn = document.getElementById('submitBtn');
+
+        function handleInput(inputValue, inputId, hiddenFieldId) {
+            const suggestionsContainer = document.getElementById(`suggestions-${inputId}`);
+            const hiddenField = document.getElementById(hiddenFieldId);
+            const inputField = document.getElementById(inputId);
+
+            function handleApiResponse(data) {
+                const hasExactMatch = data.some(item => item.exact);
+
+                if (!hasExactMatch) {
+                    inputField.classList.add('error-text');
+                    hiddenField.value = '';
+                } else {
+                    const exactMatch = data.find(item => item.exact);
+                    hiddenField.value = exactMatch.value;
+                    inputField.classList.remove('error-text');
+                }
+
+                if (data.length === 1 && hasExactMatch) {
+                    suggestionsContainer.style.display = 'none';
+                } else if (data.length >= 1) {
+                    suggestionsContainer.style.display = 'block';
+                    populateSuggestions(data, inputField, hiddenField, suggestionsContainer);
+                } else {
+                    suggestionsContainer.style.display = 'none';
+                }
+                updateSubmitButton();
+            }
+
+            function populateSuggestions(data) {
+                suggestionsContainer.innerHTML = '';
+
+                data.forEach(item => {
+                    const suggestionDiv = document.createElement("div");
+                    suggestionDiv.classList.add("suggestion");
+                    suggestionDiv.textContent = item.label;
+                    suggestionDiv.addEventListener("click", () => {
+                        inputField.value = item.label;
+                        hiddenField.value = item.value;
+                        suggestionsContainer.style.display = 'none';
+                        inputField.classList.remove('error-text');
+                        updateSubmitButton();
+                    });
+                    suggestionsContainer.appendChild(suggestionDiv);
+                });
+            }
+
+            function updateSubmitButton() {
+                const place1Value = document.getElementById('place1Value').value;
+                const place2Value = document.getElementById('place2Value').value;
+                submitBtn.disabled = !(place1Value && place2Value);
+            }
+
+            // Example fetch call
+            fetch(`/api/labels/${inputValue}`)
+                .then(response => response.json())
+                .then(data => handleApiResponse(data))
+                .catch(error => {
+                    console.error("Error fetching suggestions:", error);
+                    // Handle errors as needed
+                });
+
+            document.addEventListener('click', handleOutsideClick);
+        }
+
+        function handleOutsideClick(event) {
+            // Check if the click was outside the suggestion box and input field
+            if (!event.target.closest('.autocomplete-container')) {
+                hideSuggestions();
+            }
+        }
+
+        function hideSuggestions() {
+            // Hide suggestion boxes
+            document.querySelectorAll('.suggestions').forEach(suggestionsContainer => {
+                suggestionsContainer.style.display = 'none';
+            });
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            // Your existing form submission logic goes here
+        }
+
+        window.handleInput = handleInput; // Expose handleInput globally for the oninput attribute in the HTML
+        window.submitForm = submitForm; // Expose submitForm globally for the onsubmit attribute in the HTML
+    });
+
+</script>
+
 </body>
 </html>
