@@ -79,7 +79,7 @@
             padding: 1em;
             border-radius: 1em;
             opacity: 0.9;
-            border-color: #666;
+            border-color: #999;
             border-style: solid;
             border-width: 1px;
         }
@@ -161,7 +161,7 @@
 
 <div id="route">
     <h2>Iter vestrum</h2>
-    <form action="#" method="post" onsubmit="submitForm()">
+    <form action="#" method="post">
         <div class="autocomplete-container">
             <label for="place1">Origo:</label><br>
             <input type="text" id="place1" name="place1" required autocomplete="off"
@@ -178,27 +178,10 @@
             <input type="hidden" id="place2Value" name="place2Value">
         </div>
         <br>
-        <input type="submit" id="submitBtn" value="Ostende" disabled>
+        <input type="submit" id="submitBtn" value=" Iter Faciam " disabled">
     </form>
 </div>
 
-
-<!--<div id="form">-->
-
-<!--    <form action="#" method="post" onsubmit="submitForm(event)">-->
-<!--        <label for="place1">Place 1:</label>-->
-<!--        <input type="text" id="place1" name="place1" required>-->
-
-<!--        <br>-->
-
-<!--        <label for="place2">Place 2:</label>-->
-<!--        <input type="text" id="place2" name="place2" required>-->
-
-<!--        <br>-->
-
-<!--        <input type="submit" value="Submit" onclick="testRouteButtonClicked()">-->
-<!--    </form>-->
-<!--</div>-->
 
 <div id="map" class="map"></div>
 <div id="popup" class="ol-popup">
@@ -207,34 +190,31 @@
 </div>
 
 
-
-
-<!-- Your map initialization script -->
 <script>
+    // map related code:
     function testRouteButtonClicked() {
-        var places = ["TPPlace558","TPPlace559", "TPPlace560","TPPlace561"]
-        // placesToLineString(["TPPlace558","TPPlace559"])
-        getCoordinatesById(places[0])
-        var coordinates = places.map(element => getCoordinatesById(element))
-        console.log (coordinates)
 
-        const lineStringStyle = new ol.style.Style({
-            stroke: new ol.style.Stroke({
-                color: 'red', // Change this to the desired color
-                width: 3,      // Change this to the desired width
-            }),
-        });
+        console.log('testRouteButtonClicked');
+        const place1Value = document.getElementById('place1Value').value;
+        const place2Value = document.getElementById('place2Value').value;
 
+
+        fetch(`/api/route/${place1Value}/${place2Value}`)
+            .then(response => response.json())
+            .then(data => handleRoute(data))
+            .catch(error => {
+                console.error("Error fetching route:", error);
+            });
+    }
+
+    function handleRoute(places) {
+        var coordinates = places.map(element => getCoordinatesById(element)).filter(coord => coord !== null)
         const routeLineStringFeature = new ol.Feature({
             geometry: new ol.geom.LineString(coordinates),
         });
-
-// Add the LineString feature to a vector source
         const vectorSource = new ol.source.Vector({
             features: [routeLineStringFeature],
         });
-
-// Create a vector layer
         const vectorLayer = new ol.layer.Vector({
             source: vectorSource,
             style: new ol.style.Style({
@@ -246,15 +226,12 @@
             zIndex: 1
         });
 
-// Add the vector layer to the map
         map.addLayer(vectorLayer);
-
         map.getView().fit(routeLineStringFeature.getGeometry(), {
             padding: [30, 30, 30, 30],
             duration: 1500,
             maxZoom: 10
         });
-
     }
 
 
@@ -275,7 +252,7 @@
         const defaultSymbol = '0';
         const iconPath = `http://novo.local/images/symbols/${symbol ? symbol.charAt(0) : defaultSymbol}.png`;
 
-        let lineColor = 'red';
+        let lineColor = 'rgba(180, 54, 54, 1)';
         if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
             lineColor = 'rgba(180, 54, 54, 0.5)';
         }
@@ -372,9 +349,12 @@
         }
     });
 
+    window.testRouteButtonClicked = testRouteButtonClicked;
+
 </script>
 
 <script>
+    // code for the autocomplete:
     document.addEventListener('DOMContentLoaded', function () {
         const submitBtn = document.getElementById('submitBtn');
 
@@ -459,11 +439,19 @@
         function submitForm(event) {
             event.preventDefault();
             // Your existing form submission logic goes here
+
+            testRouteButtonClicked("TPPlace558","TPPlace561");
         }
+
+        const form = document.querySelector('form');
+        form.addEventListener('submit', submitForm);
+
 
         window.handleInput = handleInput; // Expose handleInput globally for the oninput attribute in the HTML
         window.submitForm = submitForm; // Expose submitForm globally for the onsubmit attribute in the HTML
     });
+
+
 
 </script>
 
