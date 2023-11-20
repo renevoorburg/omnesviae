@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenLayers Map</title>
     <script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/ol.css" type="text/css">
     <style>
 
@@ -178,7 +177,7 @@
             <input type="hidden" id="place2Value" name="place2Value">
         </div>
         <br>
-        <input type="submit" id="submitBtn" value=" Iter Faciam " disabled">
+        <input type="submit" id="submitBtn" value=" Iter Faciam " disabled>
     </form>
 </div>
 
@@ -191,47 +190,21 @@
 
 
 <script>
-    // map related code:
-    function testRouteButtonClicked() {
 
-        console.log('testRouteButtonClicked');
-        const place1Value = document.getElementById('place1Value').value;
-        const place2Value = document.getElementById('place2Value').value;
-
-
-        fetch(`/api/route/${place1Value}/${place2Value}`)
-            .then(response => response.json())
-            .then(data => handleRoute(data))
-            .catch(error => {
-                console.error("Error fetching route:", error);
+    function showRouteOnMap(places) {
+        const coordinates = places.map(element => getCoordinatesById(element)).filter(coord => coord !== null);
+        routeVectorSource.clear();
+        if (coordinates.length > 1) {
+            const routeLineStringFeature = new ol.Feature({
+                geometry: new ol.geom.LineString(coordinates),
             });
-    }
-
-    function handleRoute(places) {
-        var coordinates = places.map(element => getCoordinatesById(element)).filter(coord => coord !== null)
-        const routeLineStringFeature = new ol.Feature({
-            geometry: new ol.geom.LineString(coordinates),
-        });
-        const vectorSource = new ol.source.Vector({
-            features: [routeLineStringFeature],
-        });
-        const vectorLayer = new ol.layer.Vector({
-            source: vectorSource,
-            style: new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: 'rgb(255,255,0, 0.5)', // Change this to the desired color
-                    width: 9,      // Change this to the desired width
-                }),
-            }),
-            zIndex: 1
-        });
-
-        map.addLayer(vectorLayer);
-        map.getView().fit(routeLineStringFeature.getGeometry(), {
-            padding: [30, 30, 30, 30],
-            duration: 1500,
-            maxZoom: 10
-        });
+            routeVectorSource.addFeature(routeLineStringFeature);
+            map.getView().fit(routeLineStringFeature.getGeometry(), {
+                padding: [30, 30, 30, 50],
+                duration: 1500,
+                maxZoom: 12
+            });
+        }
     }
 
 
@@ -247,16 +220,15 @@
         return null;
     }
 
-    function getStyle(feature) {
+    function getFeatureStyle(feature) {
         const symbol = feature.get('symbol');
         const defaultSymbol = '0';
-        const iconPath = `http://novo.local/images/symbols/${symbol ? symbol.charAt(0) : defaultSymbol}.png`;
+        const iconPath = `/images/symbols/${symbol ? symbol.charAt(0) : defaultSymbol}.png`;
 
         let lineColor = 'rgba(180, 54, 54, 1)';
         if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
             lineColor = 'rgba(180, 54, 54, 0.5)';
         }
-
         return new ol.style.Style({
             image: new ol.style.Icon({
                 src: iconPath,
@@ -274,7 +246,7 @@
     }
 
     // Overlay to display the popup
-    var overlay = new ol.Overlay({
+    const overlay = new ol.Overlay({
         element: document.getElementById('popup'),
         autoPan: true,
         autoPanAnimation: {
@@ -282,18 +254,17 @@
         }
     });
 
-
-    var geojson = new ol.layer.Vector({
+    const geojson = new ol.layer.Vector({
         source: new ol.source.Vector({
             format: new ol.format.GeoJSON(),
-            url: 'http://novo.local/api/geofeatures'
+            url: '/api/geofeatures'
         }),
-        style: getStyle,
+        style: getFeatureStyle,
         zIndex: 2
     });
 
     // Initialize the map
-    var map = new ol.Map({
+    const map = new ol.Map({
         target: 'map',
         layers: [
             new ol.layer.Tile({
@@ -308,6 +279,20 @@
         })
     });
 
+    // Create vector source and layer outside showRouteOnMap, so that it's not re-created every time
+    const routeVectorSource = new ol.source.Vector();
+    const routeVectorLayer = new ol.layer.Vector({
+        source: routeVectorSource,
+        style: new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: 'rgb(255, 255, 0, 0.5)', // Change this to the desired color
+                width: 9, // Change this to the desired width
+            }),
+        }),
+        zIndex: 1
+    });
+    map.addLayer(routeVectorLayer);
+
     // Popup closer
     const closer = document.getElementById('popup-closer');
     closer.onclick = () => {
@@ -318,13 +303,12 @@
 
     // Display popup on click
     map.on('click', function (event) {
-        var feature = map.forEachFeatureAtPixel(event.pixel, function (feature) {
+        const feature = map.forEachFeatureAtPixel(event.pixel, function (feature) {
             return feature;
         });
-
         if (feature && feature.getGeometry().getType() === 'Point') {
-            var coordinates = feature.getGeometry().getCoordinates();
-            var content = '<p><b>' + feature.get('name') + '</b></p><p>' + feature.get('description') + '</p>';
+            const coordinates = feature.getGeometry().getCoordinates();
+            const content = '<p><b>' + feature.get('name') + '</b></p><p>' + feature.get('description') + '</p>';
             overlay.setPosition(coordinates);
             document.getElementById('popup-content').innerHTML = content;
         } else {
@@ -333,23 +317,18 @@
         }
     });
 
+    // Set pointer cursor when hovering over a point feature
     map.on('pointermove', function (event) {
-        var pixel = map.getEventPixel(event.originalEvent);
-
-        // Check if there's a feature at the moved pixel
-        var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+        const pixel = map.getEventPixel(event.originalEvent);
+        const feature = map.forEachFeatureAtPixel(pixel, function (feature) {
             return feature;
         });
-
-        // If a feature is found, change the mouse pointer
         if (feature && feature.getGeometry().getType() === 'Point') {
             map.getTargetElement().style.cursor = 'pointer';
         } else {
             map.getTargetElement().style.cursor = '';
         }
     });
-
-    window.testRouteButtonClicked = testRouteButtonClicked;
 
 </script>
 
@@ -438,14 +417,20 @@
 
         function submitForm(event) {
             event.preventDefault();
-            // Your existing form submission logic goes here
 
-            testRouteButtonClicked("TPPlace558","TPPlace561");
+            const place1Value = document.getElementById('place1Value').value;
+            const place2Value = document.getElementById('place2Value').value;
+
+            fetch(`/api/route/${place1Value}/${place2Value}`)
+                .then(response => response.json())
+                .then(data => showRouteOnMap(data))
+                .catch(error => {
+                    console.error("Error fetching route:", error);
+                });
         }
 
         const form = document.querySelector('form');
         form.addEventListener('submit', submitForm);
-
 
         window.handleInput = handleInput; // Expose handleInput globally for the oninput attribute in the HTML
         window.submitForm = submitForm; // Expose submitForm globally for the onsubmit attribute in the HTML
