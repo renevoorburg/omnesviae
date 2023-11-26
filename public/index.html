@@ -67,7 +67,7 @@
             z-index: 1;
         }
 
-        #route {
+        .routebox {
             z-index: 2;
             position: absolute;
             top: 2.8em;
@@ -81,15 +81,32 @@
             border-color: #999;
             border-style: solid;
             border-width: 1px;
-
             overflow:auto;
+
+            transition: top 0.3s;
         }
 
-        /*#result {*/
-        /*    position: absolute;*/
-        /*    bottom: 0;*/
-        /*    overflow:none;*/
-        /*}*/
+
+        .routebox.moved-down {
+            top: calc(100% - 3.5em);
+            bottom: 0px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            /*top: 400px;*/
+        }
+
+        #handle {
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width:  80px;
+            height: 4px;
+            background-color: #999;
+            border-radius: 2px;
+            cursor: pointer;
+        }
 
         input[type="text"] {
             padding: 8px; /* Adjust padding as needed */
@@ -166,7 +183,8 @@
     </nav>
 </header>
 
-<div id="route">
+<div id="route" class="routebox">
+    <div id="handle" onclick="moveRoutebox()"></div>
     <h2>Iter vestrum</h2>
     <form action="#" method="get">
         <div class="autocomplete-container">
@@ -456,6 +474,14 @@
                 })
         }
 
+
+        function moveRoutebox() {
+            console.log('move');
+            var routebox = document.getElementById('route');
+            routebox.classList.toggle('moved-down');
+        }
+
+        window.moveRoutebox = moveRoutebox; // Expose handleInput globally for the oninput attribute in the HTML
         window.handleInput = handleInput; // Expose handleInput globally for the oninput attribute in the HTML
     });
 
