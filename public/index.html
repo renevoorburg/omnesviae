@@ -112,6 +112,10 @@
             cursor: pointer;
         }
 
+        #handle:hover {
+            background-color: #b43636;
+        }
+
         input[type="text"] {
             padding: 8px; /* Adjust padding as needed */
             margin-top: 5px;
@@ -137,10 +141,71 @@
             margin: 0;
         }
 
+        #results-container ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
         li {
             line-height: 1.5;
         }
 
+        #results-container li {
+            /*line-height: 3;*/
+        }
+
+        #results-container li span:hover {
+            cursor: pointer;
+            color: #b43636;
+        }
+
+        li.symbol0 {
+            background: url("/images/symbols/0.png") no-repeat left center;
+            padding-left: 21px;
+            margin-left: 14px;
+        }
+
+        li.symbol1 {
+            background: url("/images/symbols/1.png") no-repeat left center;
+            padding-left: 21px;
+            margin-left: 14px;
+        }
+
+        li.symbolA {
+            background: url("/images/symbols/A.png") no-repeat left center;
+            padding-left: 34px;
+            margin-left: 2px;
+        }
+
+        li.symbolO {
+            background: url("/images/symbols/O.png") no-repeat left center;
+            padding-left: 34px;
+            margin-left: 2px;
+        }
+
+        li.symbolB {
+            background: url("/images/symbols/B.png") no-repeat left center;
+            padding-left: 36px;
+        }
+
+        li.symbolC {
+            background: url("/images/symbols/C.png") no-repeat left center;
+            padding-left: 56px;
+            line-height: 2.5;
+        }
+
+        li.symbolQ {
+            background: url("/images/symbols/Q.png") no-repeat left center;
+            padding-left: 56px;
+            line-height: 2.5;
+        }
+
+        li.symbolD {
+            background: url("/images/symbols/D.png") no-repeat left center;
+            padding-left: 56px;
+            line-height: 3;
+        }
 
         .suggestion {
             padding: 8px;
@@ -154,9 +219,6 @@
         .error-text {
             color: #b43636;
         }
-
-
-
 
         .ol-popup {
             position: absolute;
@@ -225,8 +287,8 @@
     <div>
         <h3>Explicatio Clavium</h3>
         <ul id="legenda">
-            <li><img src="/images/symbols/0.png"> Fons: Tabula Peutingeriana</li>
-            <li><img src="/images/symbols/1.png"> Fons principalis: Itinerarium Antonini</li>
+            <li><img src="/images/symbols/0.png"> fons Tabula Peutingeriana</li>
+            <li><img src="/images/symbols/1.png"> fons principalis Itinerarium Antonini</li>
 
         </ul>
     </div>
@@ -255,13 +317,41 @@
             });
         }
 
+        showRoutelist(places);
+    }
+
+    function showRoutelist(places) {
         const resultBox = document.getElementById("results-container");
-        resultBox.innerHTML = '<br><h2>Iter brevissimum</h2>';
+        let htmlString = '<br><h2>Iter brevissimum</h2>';
+        htmlString += '<p>Iter facere potes per:</p>';
+        htmlString += '<ul>';
         for (const place of places) {
             var placeName = getPropertyById(place, 'name');
-            resultBox.innerHTML += `<p>${placeName}</p>`;
+            var symbolChar = getSymbolChar(place);
+            htmlString += `<li class="symbol${symbolChar}"><span onclick="showPlace('${place}')">${placeName}</span></li>`;
         }
+        htmlString += '</ul>';
+        resultBox.innerHTML = htmlString
+    }
 
+    function showPlace(placeId) {
+        const coordinates = getCoordinatesById(placeId);
+        if (coordinates !== null) {
+            map.getView().animate({
+                center: coordinates,
+                duration: 1500,
+                // zoom: 11
+            });
+        }
+    }
+
+    function getSymbolChar(id) {
+        const defaultSymbolChar = id.charAt(0) === 'O' ? '1' : '0';
+        const symbol = getPropertyById(id, 'symbol');
+        if (symbol === undefined || symbol === null) {
+            return defaultSymbolChar;
+        }
+        return symbol.charAt(0);
     }
 
     function getPropertyById(id, property) {
@@ -269,7 +359,10 @@
         for (const feature of features) {
             const properties = feature.getProperties();
             if (properties.id === id) {
-                return properties[property];
+                if (properties.hasOwnProperty(property)) {
+                    return properties[property];
+                }
+                return null;
             }
         }
         return null;
@@ -289,14 +382,9 @@
     }
 
     function getFeatureStyle(feature) {
-        const symbol = feature.get('symbol');
         const id = feature.get('id');
-        const defaultSymbol = '0';
-        let iconPath = `/images/symbols/${symbol ? symbol.charAt(0) : defaultSymbol}.png`;
-
-        if (id.charAt(0) === 'O' && typeof symbol === 'undefined') {
-            iconPath = `/images/symbols/1.png`;
-        }
+        const symbolChar = getSymbolChar(id);
+        const iconPath = `/images/symbols/${symbolChar}.png`;
 
         let lineColor = 'rgba(180, 54, 54, 1)';
         if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
