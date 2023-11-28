@@ -152,7 +152,7 @@
         }
 
         #results-container li {
-            /*line-height: 3;*/
+            line-height: 2;
         }
 
         #results-container li span:hover {
@@ -224,10 +224,10 @@
             position: absolute;
             background-color: white;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 10px;
+            padding: 1em ;
+            border-radius: 1em;
             border: 1px solid #cccccc;
-            bottom: 12px;
+            bottom: 1em;
             left: -50px;
             min-width: 200px;
         }
@@ -238,12 +238,35 @@
             position: absolute;
             top: 2px;
             right: 8px;
-            font-size: 18px;
+            font-size: 1.5em;
             font-weight: bold;
         }
 
         .ol-popup-closer:hover {
             color: #b43636;
+        }
+
+        #popup-content {
+            margin-top: -1em;
+            max-height: 40vh; /* Set the percentage of the device height you want */
+            max-width: 60vw; /* Set the percentage of the device width you want */
+            overflow: hidden;
+        }
+
+        #popup-content h2  {
+            margin-bottom: 0.1em;
+        }
+
+        #popup-content p {
+            margin: 0.5em 0 0 0;
+        }
+
+        #popup-content img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Scale the image to cover the container without clipping */
+                display: block;
+            }
         }
 
     </style>
@@ -285,7 +308,7 @@
     </form>
     <div id="results-container"></div>
     <div>
-        <h3>Explicatio Clavium</h3>
+        <h3>Explicatio clavium</h3>
         <ul id="legenda">
             <li><img src="/images/symbols/0.png"> fons Tabula Peutingeriana</li>
             <li><img src="/images/symbols/1.png"> fons principalis Itinerarium Antonini</li>
@@ -302,6 +325,7 @@
 
 <script>
 
+    let storedZoom = 7.8;
     function showRouteOnMap(places) {
         const coordinates = places.map(element => getCoordinatesById(element)).filter(coord => coord !== null);
         routeVectorSource.clear();
@@ -335,14 +359,27 @@
     }
 
     function showPlace(placeId) {
+        if (!popupOverlay.getPosition()) {
+            storedZoom = map.getView().getZoom();
+        }
+
         const coordinates = getCoordinatesById(placeId);
         if (coordinates !== null) {
             map.getView().animate({
                 center: coordinates,
                 duration: 1500,
-                // zoom: 11
+                zoom: 11
             });
         }
+
+        const feature = getFeatureById(placeId);
+        // const coordinates = feature.getGeometry().getCoordinates();
+        let content = '<h2>' + feature.get('name') + '</h2>';
+        content += '<img src="/images/TPP/' + placeId + '.jpg">';
+        content += '<p>' + feature.get('description') + '</p>';
+        popupOverlay.setPosition(coordinates);
+        document.getElementById('popup-content').innerHTML = content;
+
     }
 
     function getSymbolChar(id) {
@@ -354,29 +391,33 @@
         return symbol.charAt(0);
     }
 
-    function getPropertyById(id, property) {
+    function getFeatureById(id) {
         const features = geojson.getSource().getFeatures();
         for (const feature of features) {
             const properties = feature.getProperties();
             if (properties.id === id) {
-                if (properties.hasOwnProperty(property)) {
-                    return properties[property];
-                }
-                return null;
+                return feature;
             }
         }
         return null;
     }
 
+    function getPropertyById(id, property) {
+        const feature = getFeatureById(id);
+        if (feature != null) {
+            const properties = feature.getProperties();
+            if (properties.hasOwnProperty(property)) {
+                return properties[property];
+            }
+        }
+        return null;
+    }
 
     function getCoordinatesById(id) {
-        const features = geojson.getSource().getFeatures();
-        for (const feature of features) {
-            const properties = feature.getProperties();
-            if (properties.id === id) {
-                const geometry = feature.getGeometry();
-                return geometry.getCoordinates();
-            }
+        const feature = getFeatureById(id);
+        if (feature != null) {
+            const geometry = feature.getGeometry();
+            return geometry.getCoordinates();
         }
         return null;
     }
@@ -407,7 +448,7 @@
     }
 
     // Overlay to display the popup
-    const overlay = new ol.Overlay({
+    const popupOverlay = new ol.Overlay({
         element: document.getElementById('popup'),
         autoPan: true,
         autoPanAnimation: {
@@ -433,7 +474,7 @@
             }),
             geojson
         ],
-        overlays: [overlay],
+        overlays: [popupOverlay],
         view: new ol.View({
             center: ol.proj.fromLonLat([12.5, 41.9]), // Center of the map, lon/lat
             zoom: 7.8 // Initial zoom level
@@ -457,10 +498,20 @@
     // Popup closer
     const closer = document.getElementById('popup-closer');
     closer.onclick = () => {
-        overlay.setPosition(undefined);
-        closer.blur();
+        hidePopup();
         return false;
     };
+
+    function hidePopup() {
+        popupOverlay.setPosition(undefined);
+        closer.blur();
+        // map.getView().setZoom(storedZoom);
+        map.getView().animate({
+            zoom: storedZoom,
+        }, {
+            duration: 1000,
+        });
+    }
 
     // Display popup on click
     map.on('click', function (event) {
@@ -468,13 +519,7 @@
             return feature;
         });
         if (feature && feature.getGeometry().getType() === 'Point') {
-            const coordinates = feature.getGeometry().getCoordinates();
-            const content = '<p><b>' + feature.get('name') + '</b></p><p>' + feature.get('description') + '</p>';
-            overlay.setPosition(coordinates);
-            document.getElementById('popup-content').innerHTML = content;
-        } else {
-            // If it's not a Point feature, hide the popup
-            overlay.setPosition(undefined);
+            showPlace(feature.get('id'));
         }
     });
 
@@ -497,7 +542,6 @@
     // code for the autocomplete and form handling:
     document.addEventListener('DOMContentLoaded', function () {
         const submitBtn = document.getElementById('submitBtn');
-
         document.addEventListener('click', handleOutsideClick);
         document.querySelector('form').addEventListener('submit', submitForm);
 
