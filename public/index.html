@@ -373,12 +373,12 @@
         }
 
         const feature = getFeatureById(placeId);
-        // const coordinates = feature.getGeometry().getCoordinates();
         let content = '<h2>' + feature.get('name') + '</h2>';
         content += '<img src="/images/TPP/' + placeId + '.jpg">';
         content += '<p>' + feature.get('description') + '</p>';
         popupOverlay.setPosition(coordinates);
         document.getElementById('popup-content').innerHTML = content;
+        window.location = '#' + placeId;
 
     }
 
@@ -465,6 +465,16 @@
         zIndex: 2
     });
 
+    geojson.getSource().on('change', function (event) {
+        if (event.target.getState() === 'ready') {
+            const place1 = window.location.hash.substring(1);
+            if (place1) {
+                showPlace(place1);
+            }
+        }
+    });
+
+
     // Initialize the map
     const map = new ol.Map({
         target: 'map',
@@ -505,7 +515,7 @@
     function hidePopup() {
         popupOverlay.setPosition(undefined);
         closer.blur();
-        // map.getView().setZoom(storedZoom);
+        window.location = '#';
         map.getView().animate({
             zoom: storedZoom,
         }, {
@@ -535,6 +545,7 @@
             map.getTargetElement().style.cursor = '';
         }
     });
+
 
 </script>
 
