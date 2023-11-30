@@ -12,7 +12,7 @@ namespace OmnesViae;
 class Tabula
 {
     const PLACE_KEYS = ['label', 'classic', 'modern', 'alt', 'lat', 'lng', 'symbol'];
-    const OPTIONAL_ROAD_KEYS = ['overSea', 'isEstimatedDistance', 'crossesMountains', 'crossesRiver'];
+    const OPTIONAL_ROAD_KEYS = ['dist', 'overSea', 'isEstimatedDistance', 'crossesMountains', 'crossesRiver'];
 
     public array $data;
     private array $routeNetwork;
