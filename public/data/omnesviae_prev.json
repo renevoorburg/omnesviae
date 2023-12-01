@@ -35422,14 +35422,16 @@
       "@type": "TravelAction",
       "dist": 14,
       "from": [{"@id": "https://omnesviae.org/#TPPlace546"}],
-      "to": [{"@id": "https://omnesviae.org/#TPPlace547"}]
+      "to": [{"@id": "https://omnesviae.org/#TPPlace547"}],
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace547_TPPlace548",
       "@type": "TravelAction",
       "dist": 13,
       "from": [{"@id": "https://omnesviae.org/#TPPlace547"}],
-      "to": [{"@id": "https://omnesviae.org/#TPPlace548"}]
+      "to": [{"@id": "https://omnesviae.org/#TPPlace548"}],
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace547_TPPlace549",
@@ -46079,7 +46081,8 @@
       "@type": "TravelAction",
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#OVPlace7"}],
-      "to": [{"@id": "https://omnesviae.org/#TPPlace751"}]
+      "to": [{"@id": "https://omnesviae.org/#TPPlace751"}],
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace382_OVPlace56",
@@ -47746,7 +47749,8 @@
       "@type": "TravelAction",
       "dist": 40,
       "from": [{"@id": "https://omnesviae.org/#OVPlace342"}],
-      "to": [{"@id": "https://omnesviae.org/#OVPlace343"}]
+      "to": [{"@id": "https://omnesviae.org/#OVPlace343"}],
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace104_OVPlace343",
@@ -49038,7 +49042,8 @@
       "@type": "TravelAction",
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#OVPlace470"}],
-      "to": [{"@id": "https://omnesviae.org/#OVPlace471"}]
+      "to": [{"@id": "https://omnesviae.org/#OVPlace471"}],
+      "isEstimatedDistance": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace471_OVPlace472",
@@ -49689,7 +49694,8 @@
       "@type": "TravelAction",
       "dist": 1,
       "from": [{"@id": "https://omnesviae.org/#OVPlace560"}],
-      "to": [{"@id": "https://omnesviae.org/#TPPlace1294"}]
+      "to": [{"@id": "https://omnesviae.org/#TPPlace1294"}],
+      "isEstimatedDistance": true
     }
   ]
 }
