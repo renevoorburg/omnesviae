@@ -25214,7 +25214,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1975_TPPlace1977",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1975"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1977"}]
     },
@@ -25277,7 +25276,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1981_TPPlace1984",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1981"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1984"}]
     },
@@ -25347,7 +25345,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1776_TPPlace1992",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1776"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1992"}],
       "crossesRiver": "Fl. Escvs"
@@ -25376,7 +25373,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1089_TPPlace1101",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1089"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1101"}]
     },
@@ -25412,7 +25408,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1996_TPPlace1997",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1996"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1997"}]
     },
@@ -25433,7 +25428,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace198_TPPlace199",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace198"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace199"}]
     },
@@ -25533,7 +25527,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace169_TPPlace200",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace169"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace200"}]
     },
@@ -25747,7 +25740,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1105_TPPlace1106",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1105"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1106"}]
     },
@@ -25817,7 +25809,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2040_TPPlace2041",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2040"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2041"}]
     },
@@ -25979,7 +25970,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace205_TPPlace206",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace205"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace206"}]
     },
@@ -26140,7 +26130,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace206_TPPlace207",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace206"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace207"}]
     },
@@ -26168,7 +26157,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2081_TPPlace2082",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2081"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2082"}]
     },
@@ -26197,7 +26185,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2084_TPPlace2085",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2084"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2085"}]
     },
@@ -26275,7 +26262,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2093_TPPlace2094",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2093"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2094"}]
     },
@@ -26395,7 +26381,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2106_TPPlace2107",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2106"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2107"}],
       "crossesRiver": "Fl. Sagar"
@@ -26403,7 +26388,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2084_TPPlace2108",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2084"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2108"}]
     },
@@ -26742,7 +26726,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2143_TPPlace2144",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2143"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2144"}]
     },
@@ -26954,7 +26937,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2152_TPPlace2167",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2152"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2167"}],
       "crossesRiver": "Fl. Sagar"
@@ -26983,7 +26965,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace215_TPPlace216",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace215"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace216"}]
     },
@@ -27118,7 +27099,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2180_TPPlace2184",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2180"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2184"}]
     },
@@ -27218,7 +27198,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2196_TPPlace2197",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2196"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2197"}]
     },
@@ -27232,7 +27211,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2198_TPPlace2199",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2198"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2199"}]
     },
@@ -27303,7 +27281,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2206_TPPlace2207",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2206"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2207"}]
     },
@@ -27368,7 +27345,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2204_TPPlace2213",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2204"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2213"}]
     },
@@ -27382,7 +27358,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2195_TPPlace2214",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2195"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2214"}]
     },
@@ -27481,7 +27456,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2190_TPPlace2223",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2190"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2223"}]
     },
@@ -27495,14 +27469,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2186_TPPlace2224",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2186"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2224"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2190_TPPlace2224",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2190"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2224"}],
       "crossesRiver": "Fl. Hermon"
@@ -27540,7 +27512,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2182_TPPlace2229",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2182"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2229"}]
     },
@@ -27561,14 +27532,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2230_TPPlace2231",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2230"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2231"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2231_TPPlace2232",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2231"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2232"}]
     },
@@ -27675,7 +27644,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2242_TPPlace2243",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2242"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2243"}]
     },
@@ -27801,7 +27769,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2242_TPPlace2258",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2242"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2258"}]
     },
@@ -27892,7 +27859,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2266_TPPlace2267",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2266"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2267"}]
     },
@@ -27962,7 +27928,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2273_TPPlace2274",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2273"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2274"}]
     },
@@ -28221,7 +28186,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2283_TPPlace2302",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2283"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2302"}]
     },
@@ -28398,7 +28362,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2297_TPPlace2321",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2297"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2321"}]
     },
@@ -28490,7 +28453,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1135_TPPlace1136",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1135"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1136"}]
     },
@@ -28540,7 +28502,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2322_TPPlace2339",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2322"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2339"}],
       "crossesMountains": true
@@ -28590,7 +28551,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2322_TPPlace2343",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2322"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2343"}],
       "crossesMountains": true
@@ -28619,7 +28579,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2175_TPPlace2347",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2175"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2347"}]
     },
@@ -28704,7 +28663,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2354_TPPlace2355",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2354"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2355"}]
     },
@@ -28725,7 +28683,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2357_TPPlace2358",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2357"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2358"}]
     },
@@ -28753,14 +28710,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2345_TPPlace2360",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2345"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2360"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2353_TPPlace2360",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2353"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2360"}]
     },
@@ -28781,7 +28736,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2361_TPPlace2362",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2361"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2362"}]
     },
@@ -28879,7 +28833,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2333_TPPlace2371",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2333"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2371"}]
     },
@@ -28900,7 +28853,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2372_TPPlace2374",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2372"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2374"}]
     },
@@ -28987,7 +28939,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2381_TPPlace2382",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2381"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2382"}]
     },
@@ -29043,7 +28994,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace236_TPPlace238",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace236"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace238"}]
     },
@@ -29381,7 +29331,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2426_TPPlace2430",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2426"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2430"}]
     },
@@ -29720,7 +29669,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2469_TPPlace2470",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2469"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2470"}]
     },
@@ -29741,7 +29689,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2471_TPPlace2472",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2471"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2472"}]
     },
@@ -30031,7 +29978,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2503_TPPlace2504",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2503"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2504"}]
     },
@@ -30165,7 +30111,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace150_TPPlace251",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace150"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace251"}]
     },
@@ -30284,7 +30229,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2532_TPPlace2533",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2532"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2533"}]
     },
@@ -30362,7 +30306,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2520_TPPlace2541",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2520"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2541"}]
     },
@@ -30580,7 +30523,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2330_TPPlace2565",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2330"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2565"}]
     },
@@ -30594,7 +30536,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2556_TPPlace2566",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2556"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2566"}]
     },
@@ -30636,14 +30577,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace199_TPPlace256",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace199"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace256"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace255_TPPlace256",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace255"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace256"}]
     },
@@ -30699,7 +30638,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2377_TPPlace2576",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2377"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2576"}]
     },
@@ -30882,7 +30820,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2593_TPPlace2596",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2593"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2596"}]
     },
@@ -30924,7 +30861,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace199_TPPlace259",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace199"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace259"}]
     },
@@ -31038,7 +30974,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2611_TPPlace2612",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2611"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2612"}]
     },
@@ -31074,7 +31009,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2556_TPPlace2616",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2556"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2616"}]
     },
@@ -31201,7 +31135,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace260_TPPlace262",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace260"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace262"}]
     },
@@ -31243,7 +31176,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2633_TPPlace2634",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2633"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2634"}]
     },
@@ -31369,7 +31301,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace263_TPPlace264",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace263"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace264"}]
     },
@@ -31461,7 +31392,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace262_TPPlace265",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace262"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace265"}]
     },
@@ -31525,7 +31455,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2665_TPPlace2666",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2665"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2666"}]
     },
@@ -31567,14 +31496,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2670_TPPlace2671",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2670"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2671"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2650_TPPlace2672",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2650"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2672"}]
     },
@@ -31616,7 +31543,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2675_TPPlace2676",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2675"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2676"}],
       "crossesRiver": "Fl. Tygris"
@@ -31745,7 +31671,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2689_TPPlace2690",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2689"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2690"}],
       "crossesRiver": "Fl. Tygris"
@@ -31767,7 +31692,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2687_TPPlace2692",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2687"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2692"}]
     },
@@ -32020,7 +31944,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2516_TPPlace2720",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2516"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2720"}],
       "crossesRiver": "Fl. Ganges"
@@ -32308,7 +32231,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1164_TPPlace1178",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1164"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1178"}],
       "crossesRiver": "Fl. Misiv"
@@ -32402,7 +32324,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2762_TPPlace2763",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2762"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2763"}],
       "crossesRiver": "Fl. Ganges"
@@ -32537,7 +32458,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace276_TPPlace277",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace276"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace277"}]
     },
@@ -32558,7 +32478,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1179_TPPlace1180",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1179"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1180"}]
     },
@@ -32636,7 +32555,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace277_TPPlace278",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace277"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace278"}]
     },
@@ -32673,7 +32591,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace278_TPPlace279",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace278"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace279"}]
     },
@@ -32913,7 +32830,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1181_TPPlace1184",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1181"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1184"}],
       "crossesRiver": "Fl. Tinna"
@@ -33071,7 +32987,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace320_TPPlace321",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace320"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace321"}]
     },
@@ -33100,7 +33015,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1184_TPPlace1186",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1184"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1186"}],
       "crossesRiver": "Fl. Misiv"
@@ -33115,7 +33029,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace323_TPPlace325",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace323"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace325"}]
     },
@@ -33136,7 +33049,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace325_TPPlace328",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace325"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace328"}]
     },
@@ -33164,7 +33076,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace329_TPPlace330",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace329"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace330"}]
     },
@@ -33270,7 +33181,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace342_TPPlace343",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace342"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace343"}]
     },
@@ -33354,7 +33264,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace3509_TPPlace3511",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace3509"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3511"}]
     },
@@ -33389,7 +33298,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace3515_TPPlace3516",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace3515"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3516"}]
     },
@@ -33431,7 +33339,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace117_TPPlace118",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace117"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace118"}]
     },
@@ -33473,7 +33380,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace109_TPPlace3525",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace109"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3525"}]
     },
@@ -33487,7 +33393,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace3524_TPPlace3526",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace3524"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3526"}]
     },
@@ -33641,7 +33546,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2606_TPPlace3542",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2606"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3542"}],
       "crossesRiver": "Fl. Tygris"
@@ -33665,28 +33569,24 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2471_TPPlace3544",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2471"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3544"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2475_TPPlace3545",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2475"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3545"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace3544_TPPlace3546",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace3544"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3546"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace3545_TPPlace3546",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace3545"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3546"}]
     },
@@ -33700,7 +33600,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1241_TPPlace3550",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1241"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3550"}]
     },
@@ -33770,7 +33669,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace360_TPPlace361",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace360"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace361"}]
     },
@@ -33791,7 +33689,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1191_TPPlace1192",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1191"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1192"}]
     },
@@ -33826,7 +33723,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace367_TPPlace368",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace367"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace368"}]
     },
@@ -33847,14 +33743,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace369_TPPlace370",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace369"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace370"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace370_TPPlace371",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace370"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace371"}]
     },
@@ -33876,7 +33770,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace372_TPPlace374",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace372"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace374"}]
     },
@@ -34109,14 +34002,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace37_TPPlace40",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace37"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace40"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace39_TPPlace40",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace39"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace40"}]
     },
@@ -34137,7 +34028,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace411_TPPlace412",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace411"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace412"}]
     },
@@ -34165,7 +34055,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace387_TPPlace417",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace387"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace417"}]
     },
@@ -34229,14 +34118,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace421_TPPlace422",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace421"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace422"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace387_TPPlace423",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace387"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace423"}],
       "crossesRiver": "Fl. Nilvs qvi dividit asiam (et) libiam"
@@ -34266,7 +34153,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace423_TPPlace426",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace423"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace426"}]
     },
@@ -34287,7 +34173,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace427_TPPlace428",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace427"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace428"}]
     },
@@ -34301,7 +34186,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace428_TPPlace429",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace428"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace429"}]
     },
@@ -34329,7 +34213,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace431_TPPlace432",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace431"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace432"}]
     },
@@ -34406,7 +34289,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace108_TPPlace43",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace108"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace43"}]
     },
@@ -34420,7 +34302,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace440_TPPlace441",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace440"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace441"}]
     },
@@ -34490,14 +34371,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace425_TPPlace447",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace425"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace447"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace447_TPPlace448",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace447"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace448"}]
     },
@@ -34707,7 +34586,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace469_TPPlace470",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace469"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace470"}]
     },
@@ -34821,7 +34699,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1202_TPPlace1203",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1202"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1203"}]
     },
@@ -34857,7 +34734,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace484_TPPlace485",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace484"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace485"}]
     },
@@ -34908,7 +34784,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1192_TPPlace1204",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1192"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1204"}]
     },
@@ -34957,7 +34832,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace493_TPPlace497",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace493"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace497"}]
     },
@@ -35034,7 +34908,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace505_TPPlace506",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace505"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace506"}]
     },
@@ -35076,7 +34949,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1200_TPPlace1206",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1200"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1206"}]
     },
@@ -35252,7 +35124,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2443_TPPlace527",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2443"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace527"}]
     },
@@ -35287,14 +35158,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1207_TPPlace1208",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1207"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1208"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace51_TPPlace52",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace51"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace52"}]
     },
@@ -35315,7 +35184,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace2374_TPPlace532",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2374"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace532"}]
     },
@@ -35336,7 +35204,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace530_TPPlace533",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace530"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace533"}]
     },
@@ -35434,14 +35301,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace547_TPPlace549",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace547"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace549"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace119_TPPlace120",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace119"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace120"}]
     },
@@ -35589,7 +35454,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1171_TPPlace1211",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1171"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1211"}]
     },
@@ -35709,14 +35573,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace581_TPPlace582",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace581"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace582"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace582_TPPlace583",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace582"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace583"}]
     },
@@ -35815,7 +35677,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace583_TPPlace594",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace583"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace594"}]
     },
@@ -35979,7 +35840,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace599_TPPlace608",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace599"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace608"}]
     },
@@ -36346,7 +36206,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace644_TPPlace645",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace644"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace645"}]
     },
@@ -36360,7 +36219,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace645_TPPlace646",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace645"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace646"}]
     },
@@ -36375,7 +36233,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace646_TPPlace647",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace646"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace647"}],
       "crossesRiver": "Fl. Riger"
@@ -36390,14 +36247,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace648_TPPlace649",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace648"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace649"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace63_TPPlace64",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace63"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace64"}]
     },
@@ -36583,7 +36438,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace65_TPPlace66",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace65"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace66"}]
     },
@@ -36640,7 +36494,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace649_TPPlace675",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace649"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace675"}]
     },
@@ -36797,7 +36650,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace691_TPPlace692",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace691"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace692"}]
     },
@@ -36833,7 +36685,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace694_TPPlace695",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace694"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace695"}]
     },
@@ -36897,7 +36748,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace700_TPPlace702",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace700"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace702"}]
     },
@@ -36925,7 +36775,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace701_TPPlace706",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace701"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace706"}],
       "crossesRiver": "Fl. Garvnna"
@@ -36968,7 +36817,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace697_TPPlace710",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace697"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace710"}]
     },
@@ -36996,7 +36844,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace704_TPPlace713",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace704"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace713"}]
     },
@@ -37140,7 +36987,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace682_TPPlace726",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace682"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace726"}],
       "crossesRiver": "Fl. Garvnna"
@@ -37225,7 +37071,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace734_TPPlace735",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace734"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace735"}]
     },
@@ -37407,7 +37252,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace735_TPPlace757",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace735"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace757"}]
     },
@@ -37477,7 +37321,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace761_TPPlace762",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace761"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace762"}]
     },
@@ -37816,7 +37659,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace5_TPPlace7",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace5"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace7"}]
     },
@@ -37844,7 +37686,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1233_TPPlace1234",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1233"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1234"}]
     },
@@ -38040,7 +37881,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace802_TPPlace824",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace802"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace824"}]
     },
@@ -38054,7 +37894,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace817_TPPlace824",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace817"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace824"}]
     },
@@ -38113,14 +37952,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace81_TPPlace82",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace81"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace82"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace82_TPPlace83",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace82"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace83"}]
     },
@@ -38191,7 +38028,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1237_TPPlace1238",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1237"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1238"}]
     },
@@ -38319,7 +38155,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace850_TPPlace851",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace850"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace851"}]
     },
@@ -38392,7 +38227,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace857_TPPlace858",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace857"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace858"}]
     },
@@ -38495,14 +38329,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace868_TPPlace869",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace868"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace869"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1070_TPPlace869",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1070"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace869"}],
       "crossesRiver": "Fl. Tigtila"
@@ -38524,7 +38356,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace869_TPPlace870",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace869"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace870"}]
     },
@@ -38779,7 +38610,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace20_TPPlace89",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace20"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace89"}]
     },
@@ -38959,7 +38789,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace885_TPPlace918",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace885"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace918"}]
     },
@@ -39188,7 +39017,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace3509_TPPlace93",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace3509"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace93"}]
     },
@@ -39202,7 +39030,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace86_TPPlace93",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace86"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace93"}]
     },
@@ -39572,7 +39399,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace975_TPPlace976",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace975"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace976"}]
     },
@@ -39719,7 +39545,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1024_TPPlace1025",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1024"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1025"}],
       "crossesRiver": "Fl. Ticenvm"
@@ -39748,7 +39573,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace992_TPPlace993",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace992"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace993"}],
       "crossesRiver": "Fl. Ivaro"
@@ -39770,7 +39594,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace891_TPPlace994",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace891"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace994"}]
     },
@@ -39931,7 +39754,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1242_TPPlace1257",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1242"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1257"}]
     },
@@ -39987,7 +39809,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1262_TPPlace1263",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1262"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1263"}]
     },
@@ -40068,7 +39889,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1026_TPPlace1027",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1026"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1027"}]
     },
@@ -40145,7 +39965,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1027_TPPlace1028",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1027"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1028"}],
       "crossesMountains": true
@@ -40264,7 +40083,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1291_TPPlace1294",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1291"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1294"}],
       "crossesMountains": true
@@ -40279,7 +40097,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1295_TPPlace1296",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1295"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1296"}]
     },
@@ -40619,7 +40436,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1328_TPPlace1330",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1328"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1330"}]
     },
@@ -40633,7 +40449,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1301_TPPlace1332",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1301"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1332"}]
     },
@@ -40682,7 +40497,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1337_TPPlace1338",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1337"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1338"}],
       "crossesRiver": "Fl. Avfid(vs)"
@@ -40711,7 +40525,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1340_TPPlace1341",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1340"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1341"}]
     },
@@ -40726,7 +40539,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1341_TPPlace1343",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1341"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1343"}]
     },
@@ -40775,7 +40587,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1347_TPPlace1348",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1347"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1348"}]
     },
@@ -40943,14 +40754,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1354_TPPlace1365",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1354"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1365"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1365_TPPlace1366",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1365"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1366"}]
     },
@@ -40999,7 +40808,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1357_TPPlace1371",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1357"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1371"}]
     },
@@ -41084,7 +40892,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1380_TPPlace1382",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1380"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1382"}]
     },
@@ -41204,7 +41011,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1372_TPPlace1393",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1372"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1393"}]
     },
@@ -41289,7 +41095,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1401_TPPlace1402",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1401"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1402"}],
       "crossesRiver": "Fl. Tanno"
@@ -41389,7 +41194,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1380_TPPlace1414",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1380"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1414"}]
     },
@@ -41410,7 +41214,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1416_TPPlace1417",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1416"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1417"}]
     },
@@ -41424,7 +41227,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1418_TPPlace1419",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1418"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1419"}]
     },
@@ -41488,14 +41290,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1422_TPPlace1423",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1422"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1423"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1423_TPPlace1424",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1423"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1424"}]
     },
@@ -41509,7 +41309,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1425_TPPlace1426",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1425"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1426"}]
     },
@@ -41674,14 +41473,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1440_TPPlace1441",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1440"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1441"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1303_TPPlace1442",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1303"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1442"}]
     },
@@ -41695,7 +41492,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1443_TPPlace1444",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1443"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1444"}]
     },
@@ -41739,7 +41535,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1329_TPPlace1447",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1329"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1447"}]
     },
@@ -41767,7 +41562,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1443_TPPlace1451",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1443"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1451"}]
     },
@@ -41788,7 +41582,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1451_TPPlace1453",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1451"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1453"}]
     },
@@ -42043,7 +41836,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1475_TPPlace1476",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1475"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1476"}]
     },
@@ -42086,14 +41878,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1477_TPPlace1478",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1477"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1478"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1478_TPPlace1479",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1478"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1479"}]
     },
@@ -42214,7 +42004,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1492_TPPlace1493",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1492"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1493"}]
     },
@@ -42279,7 +42068,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace148_TPPlace149",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace148"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace149"}]
     },
@@ -42293,7 +42081,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1493_TPPlace1500",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1493"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1500"}],
       "crossesRiver": "Fl. Nimera"
@@ -42336,7 +42123,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1503_TPPlace1504",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1503"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1504"}]
     },
@@ -42400,7 +42186,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1512_TPPlace1513",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1512"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1513"}]
     },
@@ -42556,14 +42341,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1531_TPPlace1532",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1531"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1532"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1053_TPPlace1054",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1053"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1054"}],
       "crossesRiver": "Fl. Padvs"
@@ -42586,7 +42369,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1125_TPPlace1535",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1125"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1535"}]
     },
@@ -42841,7 +42623,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1565_TPPlace1566",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1565"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1566"}]
     },
@@ -42876,7 +42657,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace13_TPPlace156",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace13"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace156"}]
     },
@@ -42932,35 +42712,30 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1530_TPPlace1575",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1530"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1575"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1575_TPPlace1577",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1575"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1577"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1576_TPPlace1578",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1576"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1578"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1577_TPPlace1578",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1577"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1578"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1058_TPPlace1059",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1058"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1059"}],
       "crossesRiver": "Fl. Padvs"
@@ -43075,7 +42850,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace157_TPPlace158",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace157"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace158"}]
     },
@@ -43138,7 +42912,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1059_TPPlace1060",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1059"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1060"}]
     },
@@ -43265,7 +43038,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1609_TPPlace1610",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1609"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1610"}]
     },
@@ -43279,21 +43051,18 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1537_TPPlace1612",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1537"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1612"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1611_TPPlace1613",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1611"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1613"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1612_TPPlace1613",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1612"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1613"}]
     },
@@ -43344,7 +43113,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1617_TPPlace1619",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1617"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1619"}]
     },
@@ -43464,14 +43232,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1627_TPPlace1632",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1627"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1632"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1631_TPPlace1632",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1631"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1632"}]
     },
@@ -43704,7 +43470,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace164_TPPlace165",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace164"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace165"}]
     },
@@ -43755,7 +43520,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1662_TPPlace1664",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1662"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1664"}]
     },
@@ -43799,7 +43563,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1668_TPPlace1669",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1668"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1669"}]
     },
@@ -43883,7 +43646,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1678_TPPlace1679",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1678"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1679"}]
     },
@@ -43970,14 +43732,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace167_TPPlace168",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace167"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace168"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace105_TPPlace106",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace105"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace106"}]
     },
@@ -44005,7 +43765,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1669_TPPlace1693",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1669"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1693"}]
     },
@@ -44062,7 +43821,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace168_TPPlace169",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace168"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace169"}]
     },
@@ -44132,14 +43890,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1703_TPPlace1707",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1703"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1707"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1707_TPPlace1708",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1707"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1708"}]
     },
@@ -44625,7 +44381,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1077_TPPlace1078",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1077"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1078"}]
     },
@@ -45105,7 +44860,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1815_TPPlace1818",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1815"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1818"}]
     },
@@ -45393,14 +45147,12 @@
     {
       "@id": "https://omnesviae.org/#TPPlace183_TPPlace184",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace183"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace184"}]
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1841_TPPlace1850",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1841"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1850"}]
     },
@@ -45826,7 +45578,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1897_TPPlace1898",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1897"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1898"}]
     },
@@ -45862,7 +45613,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1900_TPPlace1901",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1900"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1901"}]
     },
@@ -45877,7 +45627,6 @@
     {
       "@id": "https://omnesviae.org/#TPPlace1902_TPPlace1903",
       "@type": "TravelAction",
-      "dist": 0,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1902"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1903"}]
     },

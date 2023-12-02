@@ -145,8 +145,10 @@ class Tabula
                 $feature['geometry']['coordinates'][] = $value['lat'];
                 $feature['properties'] = array();
                 $feature['properties']['name'] = $value['label'];
-                $feature['properties']['description'] = $value['modern'];
                 $feature['properties']['id'] = $localName;
+                if (isset($value['modern'])) {
+                    $feature['properties']['description'] = $value['modern'];
+                }
                 if (isset($value['symbol'])) {
                     $feature['properties']['symbol'] = $value['symbol'];
                 }
