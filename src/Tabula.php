@@ -12,7 +12,7 @@ namespace OmnesViae;
 class Tabula
 {
     const PLACE_KEYS = ['label', 'classic', 'modern', 'alt', 'lat', 'lng', 'symbol'];
-    const OPTIONAL_ROAD_KEYS = ['dist', 'overSea', 'isEstimatedDistance', 'crossesMountains', 'crossesRiver'];
+    const OPTIONAL_ROAD_KEYS = ['overSea', 'isEstimatedDistance', 'crossesMountains', 'crossesRiver'];
 
     public array $data;
     private array $routeNetwork;
@@ -41,7 +41,7 @@ class Tabula
         $this->places = array();
         foreach ($this->data['@graph'] as $value) {
             if ($value['@type'] === 'Place') {
-                $localName = self::getLocalName($value['@id']);
+                $localName = self::getLocalPlaceId($value['@id']);
                 foreach (self::PLACE_KEYS as $key) {
                     if (isset($value[$key])) {
                         $this->places[$localName][$key] = $value[$key];
@@ -78,6 +78,12 @@ class Tabula
             $this->setupRouteNetwork();
         }
         return $this->routeNetwork;
+    }
+
+    private function getDistance(string $from, string $to) : int
+    {
+        $routeNetwork = $this->getRouteNetwork();
+        return $routeNetwork[$from][$to] ?? 0;
     }
 
     /**
@@ -133,7 +139,7 @@ class Tabula
         foreach ($this->data['@graph'] as $value) {
             // process places first:
             if ($value['@type'] === 'Place' && isset($value['lat']) && isset($value['lng'])) {
-                $localName = self::getLocalName($value['@id']);
+                $localName = self::getLocalPlaceId($value['@id']);
                 $placesIndexed[$localName]['lat'] = $value['lat'];
                 $placesIndexed[$localName]['lng'] = $value['lng'];
                 $feature = array();
@@ -158,13 +164,13 @@ class Tabula
         foreach ($this->data['@graph'] as $value) {
             // process roads:
             if ($value['@type'] === 'TravelAction'
-                && isset($placesIndexed[self::getLocalName($value['from'][0]['@id'])])
+                && isset($placesIndexed[self::getLocalPlaceId($value['from'][0]['@id'])])
             ) {
-                if (!isset($placesIndexed[self::getLocalName($value['to'][0]['@id'])])) {
-                    $nextPlace = $this->nextLocatedPlaceOnRoad(self::getLocalName($value['from'][0]['@id']), self::getLocalName($value['to'][0]['@id']));
+                if (!isset($placesIndexed[self::getLocalPlaceId($value['to'][0]['@id'])])) {
+                    $nextPlace = $this->nextLocatedPlaceOnRoad(self::getLocalPlaceId($value['from'][0]['@id']), self::getLocalPlaceId($value['to'][0]['@id']));
                     $extrapolated = true;
                 } else {
-                    $nextPlace = self::getLocalName($value['to'][0]['@id']);
+                    $nextPlace = self::getLocalPlaceId($value['to'][0]['@id']);
                     $extrapolated = false;
                 }
                 if (!empty($nextPlace)) {
@@ -174,11 +180,11 @@ class Tabula
                     $feature['geometry']['type'] = 'LineString';
                     $feature['geometry']['coordinates'] = array();
                     $feature['geometry']['coordinates'][] =
-                        array($placesIndexed[self::getLocalName($value['from'][0]['@id'])]['lng'], $placesIndexed[self::getLocalName($value['from'][0]['@id'])]['lat']);
+                        array($placesIndexed[self::getLocalPlaceId($value['from'][0]['@id'])]['lng'], $placesIndexed[self::getLocalPlaceId($value['from'][0]['@id'])]['lat']);
                     $feature['geometry']['coordinates'][] =
                         array($placesIndexed[$nextPlace]['lng'], $placesIndexed[$nextPlace]['lat']);
                     $feature['properties'] = array();
-                    $feature['properties']['id'] = self::getLocalName($value['@id']);
+                    $feature['properties']['id'] = self::getLocalPlaceId($value['@id']);
                     if ($extrapolated) {
                         $feature['properties']['extrapolated'] = true;
                     }
@@ -189,18 +195,33 @@ class Tabula
                     }
                     $geoFeatures['features'][] = $feature;
                 }
-
             }
         }
         return $geoFeatures;
     }
+
+    public function getRouteList(array $places) : ?array
+    {
+        $routeList = array();
+        $routeParts = array();
+        $previousPlace = '';
+        foreach ($places as $place) {
+            $routeParts[] = array('to' => $place, 'dist' => $this->getDistance($previousPlace, $place));
+            $previousPlace = $place;
+        }
+
+        $routeList['route'] = $routeParts;
+        return $routeList;
+    }
+
+
 
     /**
      * Return the local name of a URI
      * @param string $uri the URI, assuming the local name is a fragment
      * @return string
      */
-    public static function getLocalName(string $uri) : string
+    public static function getLocalPlaceId(string $uri) : string
     {
         $parsedUri = parse_url($uri);
         return $parsedUri['fragment'] ?? '';

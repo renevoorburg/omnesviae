@@ -345,12 +345,17 @@
         return Array(+digits.join("") + 1).join("M") + roman_num;
     }
 
-    function showRouteOnMap(places) {
-        const coordinates = places.map(element => getCoordinatesById(element)).filter(coord => coord !== null);
+    function showRouteOnMap(routeData) {
+        const routePoints = routeData.route.map(routePart => ({
+            id: routePart.to,
+            coords: getCoordinatesById(routePart.to),
+            dist: routePart.dist
+        })).filter(obj => obj.coords !== null);
+
         routeVectorSource.clear();
-        if (coordinates.length > 1) {
+        if (routePoints.length > 1) {
             const routeLineStringFeature = new ol.Feature({
-                geometry: new ol.geom.LineString(coordinates),
+                geometry: new ol.geom.LineString(routePoints.map(obj => obj.coords)),
             });
             routeVectorSource.addFeature(routeLineStringFeature);
             map.getView().fit(routeLineStringFeature.getGeometry(), {
@@ -360,8 +365,41 @@
             });
         }
 
-        showRoutelist(places);
+        showRoutelist(routeData);
     }
+
+
+    function showRoutelist(routeData) {
+        const resultBox = document.getElementById("results-container");
+        let htmlString = '<br><h2>Iter brevissimum</h2>';
+        htmlString += '<p>Iter facere potes per:</p>';
+        htmlString += '<ul>';
+        let previousPlace = null;
+        for (const routePart of routeData.route) {
+            if (previousPlace !== null) {
+                // let distanceNumber = getDistanceNumber(previousPlace, place);
+                let distanceNumber = routePart.dist;
+                // let distance = getDistance(previousPlace, place);
+                // let unit = getDistanceUnit(distanceNumber, distance);
+                if (distanceNumber) {
+                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}. <span class="estimated"></span></li>`;
+                } else {
+                    htmlString += `<li class="distance"><span class="estimated">sine mensura</span></li>`;
+                }
+            }
+            previousPlace = routePart.to;
+            // let placeName = getPropertyById(place, 'name');
+            let symbolChar = getSymbolChar(routePart.to);
+            let placeName = getPropertyById(routePart.to, 'name');
+            if (!placeName) {
+                placeName = '<span class="estimated">sine nomine</span>';
+            }
+            htmlString += `<li class="symbol${symbolChar}"><span onclick="showPlace('${routePart.to}')">${placeName}</span></li>`;
+        }
+        htmlString += '</ul>';
+        resultBox.innerHTML = htmlString
+    }
+
 
     function getDistance(place1, place2) {
         const coordinates1 = getCoordinatesById(place1);
@@ -395,37 +433,9 @@
         }
         return unit;
     }
-
-    function showRoutelist(places) {
-        const resultBox = document.getElementById("results-container");
-        let htmlString = '<br><h2>Iter brevissimum</h2>';
-        htmlString += '<p>Iter facere potes per:</p>';
-        htmlString += '<ul>';
-        let previousPlace = null;
-        for (const place of places) {
-            if (previousPlace !== null) {
-                let distanceNumber = getDistanceNumber(previousPlace, place);
-                let distance = getDistance(previousPlace, place);
-                let unit = getDistanceUnit(distanceNumber, distance);
-                if (distanceNumber) {
-                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}. <span class="estimated">${unit}</span></li>`;
-                } else {
-                    htmlString += `<li class="distance"><span class="estimated">sine mensura</span></li>`;
-                }
-            }
-            previousPlace = place;
-            let placeName = getPropertyById(place, 'name');
-            let symbolChar = getSymbolChar(place);
-            if(!placeName) {
-                placeName = '<span class="estimated">sine nomine</span>';
-            }
-            htmlString += `<li class="symbol${symbolChar}"><span onclick="showPlace('${place}')">${placeName}</span></li>`;
-        }
-        htmlString += '</ul>';
-        resultBox.innerHTML = htmlString
-    }
-
+    
     function showPlace(placeId) {
+        console.log(placeId);
         if (!popupOverlay.getPosition()) {
             storedZoom = map.getView().getZoom();
         }
@@ -441,12 +451,16 @@
 
         const feature = getFeatureById(placeId);
         let content = '<h2>' + feature.get('name') + '</h2>';
-        content += '<img src="/images/TPP/' + placeId + '.jpg">';
-        content += '<p>' + feature.get('description') + '</p>';
+        if (placeId.charAt(0) === 'T') {
+            content += '<img src="/images/TPP/' + placeId + '.jpg">';
+        }
+        const description = getPropertyById(placeId, 'description');
+        if (description) {
+            content += '<p>' + description + '</p>';
+        }
         popupOverlay.setPosition(coordinates);
         document.getElementById('popup-content').innerHTML = content;
         window.location = '#' + placeId;
-
     }
 
     function getSymbolChar(id) {
@@ -675,7 +689,6 @@
                 submitBtn.disabled = !(place1Value && place2Value);
             }
 
-            // Example fetch call
             fetch(`/api/labels/${inputValue}`)
                 .then(response => response.json())
                 .then(data => handleApiResponse(data))

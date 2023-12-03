@@ -2,7 +2,7 @@
 
 namespace OmnesViae;
 
-class Route {
+class Dijkstra {
 
     protected array $visited;
     protected array $distance;
@@ -20,7 +20,27 @@ class Route {
         $this->findShortestPath($start, $this->to);
     }
 
-    public function getResults() {
+    public function getShortestPath() :?array
+//    {
+//        $results = array();
+//        foreach (array_keys($this->map) as $i) {
+//            if ($this->to !== null && $this->to !== $i) {
+//                continue;
+//            }
+//            $results[$i] = array();
+//            $endNode = null;
+//            $currNode = $i;
+//            $results[$i][] = $i;
+//            while ($endNode === null || $endNode != $this->startnode) {
+//                $results[$i][] = $this->previousNode[$currNode];
+//                $endNode = $this->previousNode[$currNode];
+//                $currNode = $this->previousNode[$currNode];
+//            }
+//            $results[$i] = array_reverse($results[$i]);
+//        }
+//        return $results[$i];
+//    }
+    {
         $ourShortestPath = array();
 
         foreach (array_keys($this->map) as $i) {
@@ -38,8 +58,10 @@ class Route {
             }
             $ourShortestPath[$i] = array_reverse($ourShortestPath[$i]);
 
-            echo json_encode($ourShortestPath[$i], false);
+            return $ourShortestPath[$i];
+//            echo json_encode($ourShortestPath[$i], false);
         }
+        return null;
     }
 
     private function findShortestPath($start, $to = null) : void

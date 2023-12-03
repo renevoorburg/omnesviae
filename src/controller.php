@@ -20,8 +20,8 @@ switch ($action) {
         // return the shortest route as json:
         // example: /api/route/TPPlace558/TPPlace1203
         $model = new OmnesViae\Tabula();
-        $route = new OmnesViae\Route($model->getRouteNetwork(), $urlParts[3] ?? '', $urlParts[4] ?? '');
-        $route->getResults();
+        $route = new OmnesViae\Dijkstra($model->getRouteNetwork(), $urlParts[3] ?? '', $urlParts[4] ?? '');
+        echo json_encode($model->getRouteList($route->getShortestPath()));
         break;
     case "api/geofeatures":
         $model = new OmnesViae\Tabula();
