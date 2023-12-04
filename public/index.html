@@ -378,11 +378,11 @@
         for (const routePart of routeData.route) {
             if (previousPlace !== null) {
                 // let distanceNumber = getDistanceNumber(previousPlace, place);
-                let distanceNumber = routePart.dist;
+                let distanceNumber = routePart.dist.numeral;
                 // let distance = getDistance(previousPlace, place);
-                // let unit = getDistanceUnit(distanceNumber, distance);
+                let unit = routePart.dist.possibleUnit ? routePart.dist.possibleUnit : '';
                 if (distanceNumber) {
-                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}. <span class="estimated"></span></li>`;
+                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}. <span class="estimated">${unit}</span></li>`;
                 } else {
                     htmlString += `<li class="distance"><span class="estimated">sine mensura</span></li>`;
                 }
@@ -400,40 +400,6 @@
         resultBox.innerHTML = htmlString
     }
 
-
-    function getDistance(place1, place2) {
-        const coordinates1 = getCoordinatesById(place1);
-        const coordinates2 = getCoordinatesById(place2);
-
-        if (coordinates1 && coordinates2) {
-            const transformedCoords1 = ol.proj.transform(coordinates1, 'EPSG:3857', 'EPSG:4326');
-            const transformedCoords2 = ol.proj.transform(coordinates2, 'EPSG:3857', 'EPSG:4326');
-            return ol.sphere.getDistance(transformedCoords1, transformedCoords2);
-        }
-        return null;
-    }
-
-
-    function getDistanceNumber(place1, place2) {
-        if (place1 > place2) {
-            return getDistanceNumber(place2, place1);
-        }
-        return getPropertyById(place1 + '_' + place2, 'dist');
-    }
-
-    function getDistanceUnit(distanceNumber, distance) {
-        const meanderFactor = 1.25;
-        let unit = '';
-        let ratio = ( distance * meanderFactor) /  (1000 * distanceNumber ) ;
-        if ( 1.1 < ratio && ratio < 2.2  ) {
-            unit = 'm.p.';
-        }
-        if ( 2.2 < ratio && ratio < 3.8 ) {
-            unit = 'l.';
-        }
-        return unit;
-    }
-    
     function showPlace(placeId) {
         console.log(placeId);
         if (!popupOverlay.getPosition()) {

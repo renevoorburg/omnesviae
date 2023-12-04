@@ -23,7 +23,6 @@ class GeoTools
         $angle = 2 * asin(sqrt(pow(sin($latDelta / 2), 2) +
                 cos($lat1) * cos($lat2) * pow(sin($lngDelta / 2), 2)));
         return $angle * $earthRadius;
-
     }
 
 }

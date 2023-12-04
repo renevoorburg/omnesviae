@@ -9,7 +9,7 @@ class LabelList
 
     public function __construct(Tabula $model)
     {
-        foreach ($model->data['@graph'] as $value) {
+        foreach ($model->tabula['@graph'] as $value) {
             foreach (self::LABEL_FILTER_KEYS as $key) {
                 if (!empty($value[$key])) {
                     $this->labels[self::simplifyString($value[$key])] = array('@id' => Tabula::getLocalPlaceId($value['@id']), 'display' => $value[$key]);
