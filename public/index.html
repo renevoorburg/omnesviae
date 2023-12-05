@@ -161,12 +161,18 @@
         }
 
         span.estimated {
-            color: #999;
+            color: #AAA;
         }
 
         li.distance {
             padding-left: 21px;
             margin-left: 14px;
+        }
+
+        li.extra {
+            padding-left: 21px;
+            margin-left: 14px;
+            color: #b43636;
         }
 
         li.symbol0 {
@@ -381,10 +387,16 @@
                 let distanceNumber = routePart.dist.numeral;
                 // let distance = getDistance(previousPlace, place);
                 let unit = routePart.dist.possibleUnit ? routePart.dist.possibleUnit : '';
-                if (distanceNumber) {
-                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}. <span class="estimated">${unit}</span></li>`;
-                } else {
-                    htmlString += `<li class="distance"><span class="estimated">sine mensura</span></li>`;
+                if (distanceNumber && routePart.dist.isReconstructed) {
+                    htmlString += `<li class="distance"><span class="estimated">${integerToRoman(distanceNumber)}. mensura aestimata</span></li>`;
+                } else if (distanceNumber) {
+                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}.</li>`;
+                }
+                else {
+                    htmlString += `<li class="distance"><span class="estimated">[sine mensura]</span></li>`;
+                }
+                if (routePart.dist.crossesRiver) {
+                    htmlString += `<li class="extra">${routePart.dist.crossesRiver}</li>`;
                 }
             }
             previousPlace = routePart.to;
@@ -392,7 +404,7 @@
             let symbolChar = getSymbolChar(routePart.to);
             let placeName = getPropertyById(routePart.to, 'name');
             if (!placeName) {
-                placeName = '<span class="estimated">sine nomine</span>';
+                placeName = '<span class="estimated">[sine nomine]</span>';
             }
             htmlString += `<li class="symbol${symbolChar}"><span onclick="showPlace('${routePart.to}')">${placeName}</span></li>`;
         }
@@ -401,7 +413,6 @@
     }
 
     function showPlace(placeId) {
-        console.log(placeId);
         if (!popupOverlay.getPosition()) {
             storedZoom = map.getView().getZoom();
         }

@@ -13,7 +13,7 @@
     "to": "http://www.schema.org/toLocation",
     "dist": "http://www.schema.org/distance",
     "overSea": "http://omnesviae.org/def#overSea",
-    "isEstimatedDistance": "http://omnesviae.org/def#isEstimatedDistance",
+    "isReconstructed": "http://omnesviae.org/def#isReconstructed",
     "crossesMountains": "http://omnesviae.org/def#crossesMountains",
     "crossesRiver": "http://omnesviae.org/def#crossesRiver"
   } ,
@@ -28926,7 +28926,7 @@
       "dist": 85,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1047"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1140"}],
-      "isEstimatedDistance": true,
+      "isReconstructed": true,
       "crossesRiver": "Fl. Padvs"
     },
     {
@@ -35421,7 +35421,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace552"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace563"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace563_TPPlace564",
@@ -35686,7 +35686,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace585"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace595"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace594_TPPlace595",
@@ -35729,7 +35729,7 @@
       "dist": 16,
       "from": [{"@id": "https://omnesviae.org/#TPPlace596"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace598"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1213_TPPlace1214",
@@ -35821,7 +35821,7 @@
       "dist": 30,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1100"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1215"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace599_TPPlace607",
@@ -35849,7 +35849,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace608"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace609"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace241_TPPlace60",
@@ -35949,7 +35949,7 @@
       "dist": 69,
       "from": [{"@id": "https://omnesviae.org/#TPPlace616"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace617"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1215_TPPlace1216",
@@ -36006,7 +36006,7 @@
       "dist": 26,
       "from": [{"@id": "https://omnesviae.org/#TPPlace601"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace624"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace623_TPPlace624",
@@ -36021,7 +36021,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#TPPlace620"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace625"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace625_TPPlace626",
@@ -36057,7 +36057,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace623"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace629"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace37_TPPlace62",
@@ -36107,7 +36107,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace633"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace634"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace634_TPPlace635",
@@ -36115,7 +36115,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace634"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace635"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1217_TPPlace1218",
@@ -36151,7 +36151,7 @@
       "dist": 10,
       "from": [{"@id": "https://omnesviae.org/#TPPlace633"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace639"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace638_TPPlace639",
@@ -36166,7 +36166,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace608"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace640"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace635_TPPlace640",
@@ -36320,7 +36320,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace636"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace655"}],
-      "isEstimatedDistance": true,
+      "isReconstructed": true,
       "crossesRiver": "Fl. Riger"
     },
     {
@@ -36559,7 +36559,7 @@
       "dist": 11,
       "from": [{"@id": "https://omnesviae.org/#TPPlace679"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace680"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace658_TPPlace681",
@@ -36938,7 +36938,7 @@
       "dist": 28,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1225"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1226"}],
-      "isEstimatedDistance": true,
+      "isReconstructed": true,
       "crossesRiver": "Fl. Pallia"
     },
     {
@@ -36975,7 +36975,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace720"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace724"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace724_TPPlace725",
@@ -37365,7 +37365,7 @@
       "dist": 7,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1229"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1230"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace767_TPPlace768",
@@ -38236,7 +38236,7 @@
       "dist": 34,
       "from": [{"@id": "https://omnesviae.org/#TPPlace830"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace859"}],
-      "isEstimatedDistance": true,
+      "isReconstructed": true,
       "crossesRiver": "Fl. Padvs"
     },
     {
@@ -38310,7 +38310,7 @@
       "dist": 18,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1235"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1241"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace867_TPPlace868",
@@ -38562,7 +38562,7 @@
       "dist": 3,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1243"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1244"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace894_TPPlace895",
@@ -38669,7 +38669,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1244"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1245"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace903_TPPlace904",
@@ -38691,7 +38691,7 @@
       "dist": 67,
       "from": [{"@id": "https://omnesviae.org/#TPPlace902"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace907"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace905_TPPlace908",
@@ -38805,7 +38805,7 @@
       "dist": 41,
       "from": [{"@id": "https://omnesviae.org/#TPPlace609"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace919"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace919_TPPlace920",
@@ -39640,7 +39640,7 @@
       "dist": 5,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1253"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1254"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace997_TPPlace998",
@@ -39691,7 +39691,7 @@
       "dist": 9,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1254"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1255"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace7_TPPlace751",
@@ -39699,7 +39699,7 @@
       "dist": 17,
       "from": [{"@id": "https://omnesviae.org/#OVPlace7"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace751"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace4_OVPlace7",
@@ -39735,7 +39735,7 @@
       "dist": 24,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1000"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1026"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1242_TPPlace1256",
@@ -40241,7 +40241,7 @@
       "dist": 3,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1306"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1310"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1203_TPPlace1311",
@@ -40347,7 +40347,7 @@
       "dist": 19,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1318"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1321"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1320_TPPlace1321",
@@ -41431,7 +41431,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1329"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1439"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1438_TPPlace1439",
@@ -41439,7 +41439,7 @@
       "dist": 12,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1438"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1439"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1039_TPPlace1044",
@@ -41796,7 +41796,7 @@
       "dist": 2,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1466"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace3564"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1473_TPPlace3564",
@@ -44544,7 +44544,7 @@
       "dist": 40,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1079"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1080"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1781_TPPlace1782",
@@ -44974,7 +44974,7 @@
       "dist": 60,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1791"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1830"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1829_TPPlace1830",
@@ -45538,7 +45538,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1086"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1092"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1893_TPPlace1894",
@@ -45622,7 +45622,7 @@
       "dist": 15,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1086"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1093"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1902_TPPlace1903",
@@ -45814,7 +45814,7 @@
       "dist": 56,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1094"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1095"}],
-      "isEstimatedDistance": true
+      "isReconstructed": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1921_TPPlace1922",
