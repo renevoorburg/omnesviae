@@ -7,17 +7,20 @@ class Dijkstra {
     protected array $visited;
     protected array $distance;
     protected array $previousNode;
-    protected $startnode = null;
+
+    protected $startnode ;
+    protected $to;
 
     protected array $map;
     protected $bestPath = 0;
 
-    protected $to;
 
-    public function __construct($map, $start, $to = null) {
+
+    public function __construct($map, $start, $to) {
         $this->map = $map;
+        $this->startnode = $start;
         $this->to = $to;
-        $this->findShortestPath($start, $this->to);
+        $this->findShortestPath();
     }
 
     public function getShortestPath() :array
@@ -39,7 +42,7 @@ class Dijkstra {
             }
             $ourShortestPath[$i] = array_reverse($ourShortestPath[$i]);
 
-            if ($this->distance[$i] >= INF) {
+            if ($this->distance[$i] >= INF || $this->startnode === $this->to) {
                 return [];
             }
             return $ourShortestPath[$i];
@@ -47,9 +50,8 @@ class Dijkstra {
         return [];
     }
 
-    private function findShortestPath($start, $to = null) : void
+    private function findShortestPath() : void
     {
-        $this->startnode = $start;
         // initialize $visited, $distance and $previousNode arrays
         foreach (array_keys($this->map) as $i) {
             if ($i == $this->startnode) {
@@ -64,7 +66,7 @@ class Dijkstra {
         $maxTries = count($this->map);
         for ($tries = 0; in_array(false, $this -> visited,true) && $tries <= $maxTries; $tries++) {
             $this->bestPath = $this->findBestPath($this->distance, array_keys($this->visited,false,true));
-            if ($to !== null && $this->bestPath === $to) {
+            if ($this->to !== null && $this->bestPath === $this->to) {
                 break;
             }
             $this->updateDistanceAndPrevious($this->bestPath);
