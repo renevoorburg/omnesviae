@@ -86,7 +86,6 @@ class Tabula
                             $this->roads[self::getLocalId($value['@id'])][$key] = $value[$key];
                         }
                     }
-
                     $this->routingMatrix[$matches[1]][$matches[2]] = $distance;
                     $this->routingMatrix[$matches[2]][$matches[1]] = $distance;
                 }
@@ -284,6 +283,9 @@ class Tabula
                     if ($extrapolated) {
                         $feature['properties']['extrapolated'] = true;
                     }
+                    if (isset($value['overSea'])) {
+                        $feature['properties']['overSea'] = true;
+                    }
                     $geoFeatures['features'][] = $feature;
                 }
             }
@@ -296,26 +298,12 @@ class Tabula
         $routeList = array();
         $routeParts = array();
         $previousPlace = '';
-        $previousUnit = '';
         foreach ($places as $place) {
-
-
             $dist = array();
             $numeral = $this->getDistance($previousPlace, $place);
-//            $estimatedRoadDistance = $this->getEstimatedRoadDistanceMeters(
-//                [$this->places[$previousPlace]['lng'], $this->places[$previousPlace]['lat']],
-//                [$this->places[$place]['lng'], $this->places[$place]['lat']]
-//            );
-
             if (isset($numeral)) {
                 $dist['numeral'] = $numeral;
             }
-//            if (isset($estimatedRoadDistance)) {
-//                $dist['estimatedMP'] = $this->metersToRomanMiles($estimatedRoadDistance);
-//                if ($numeral >= 1) {
-//                    $dist['possibleUnit'] = $this->getDistanceUnit($numeral, $estimatedRoadDistance/1000);
-//                }
-//            }
             if (isset($this->roads[self::getRoadId($previousPlace, $place)]['isReconstructed'])) {
                 $dist['isReconstructed'] = true;
             }
@@ -324,12 +312,10 @@ class Tabula
                     $dist[$key] = $this->roads[self::getRoadId($previousPlace, $place)][$key];
                 }
             }
-
             $routeParts[] = array(
                 'to' => $place,
                 'dist' => $dist
             );
-
             $previousPlace = $place;
         }
 

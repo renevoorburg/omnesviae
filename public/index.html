@@ -378,37 +378,44 @@
     function showRoutelist(routeData) {
         const resultBox = document.getElementById("results-container");
         let htmlString = '<br><h2>Iter brevissimum</h2>';
-        htmlString += '<p>Iter facere potes per:</p>';
-        htmlString += '<ul>';
-        let previousPlace = null;
-        for (const routePart of routeData.route) {
-            if (previousPlace !== null) {
-                // let distanceNumber = getDistanceNumber(previousPlace, place);
-                let distanceNumber = routePart.dist.numeral;
-                // let distance = getDistance(previousPlace, place);
-                let unit = routePart.dist.possibleUnit ? routePart.dist.possibleUnit : '';
-                if (distanceNumber && routePart.dist.isReconstructed) {
-                    htmlString += `<li class="distance"><span class="estimated">${integerToRoman(distanceNumber)}. mensura aestimata</span></li>`;
-                } else if (distanceNumber) {
-                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}.</li>`;
+
+        if (routeData.route.length === 0) {
+            htmlString += '<p>Nullum iter est.</p>';
+        } else {
+            htmlString += '<p>Iter facere potes per:</p>';
+            htmlString += '<ul>';
+            let previousPlace = null;
+            for (const routePart of routeData.route) {
+                if (previousPlace !== null) {
+                    // let distanceNumber = getDistanceNumber(previousPlace, place);
+                    let distanceNumber = routePart.dist.numeral;
+                    // let distance = getDistance(previousPlace, place);
+                    let unit = routePart.dist.possibleUnit ? routePart.dist.possibleUnit : '';
+                    if (distanceNumber && routePart.dist.isReconstructed) {
+                        htmlString += `<li class="distance"><span class="estimated">${integerToRoman(distanceNumber)}. mensura aestimata</span></li>`;
+                    } else if (distanceNumber) {
+                        htmlString += `<li class="distance">${integerToRoman(distanceNumber)}.</li>`;
+                    } else {
+                        htmlString += `<li class="distance"><span class="estimated">[sine mensura]</span></li>`;
+                    }
+                    if (routePart.dist.crossesRiver) {
+                        htmlString += `<li class="extra">${routePart.dist.crossesRiver}</li>`;
+                    }
+                    if (routePart.dist.crossesMountains) {
+                        htmlString += `<li class="extra">trans montes</li>`;
+                    }
                 }
-                else {
-                    htmlString += `<li class="distance"><span class="estimated">[sine mensura]</span></li>`;
+                previousPlace = routePart.to;
+                // let placeName = getPropertyById(place, 'name');
+                let symbolChar = getSymbolChar(routePart.to);
+                let placeName = getPropertyById(routePart.to, 'name');
+                if (!placeName) {
+                    placeName = '<span class="estimated">[sine nomine]</span>';
                 }
-                if (routePart.dist.crossesRiver) {
-                    htmlString += `<li class="extra">${routePart.dist.crossesRiver}</li>`;
-                }
+                htmlString += `<li class="symbol${symbolChar}"><span onclick="showPlace('${routePart.to}')">${placeName}</span></li>`;
             }
-            previousPlace = routePart.to;
-            // let placeName = getPropertyById(place, 'name');
-            let symbolChar = getSymbolChar(routePart.to);
-            let placeName = getPropertyById(routePart.to, 'name');
-            if (!placeName) {
-                placeName = '<span class="estimated">[sine nomine]</span>';
-            }
-            htmlString += `<li class="symbol${symbolChar}"><span onclick="showPlace('${routePart.to}')">${placeName}</span></li>`;
+            htmlString += '</ul>';
         }
-        htmlString += '</ul>';
         resultBox.innerHTML = htmlString
     }
 
@@ -441,12 +448,11 @@
     }
 
     function getSymbolChar(id) {
+        const allowedSymbolChars = ['0', '1', 'A', 'B', 'C', 'D', 'Q'];
         const defaultSymbolChar = id.charAt(0) === 'O' ? '1' : '0';
-        const symbol = getPropertyById(id, 'symbol');
-        if (symbol === undefined || symbol === null) {
-            return defaultSymbolChar;
-        }
-        return symbol.charAt(0);
+        const symbol = getPropertyById(id, 'symbol') || defaultSymbolChar
+        const symbolChar = symbol.charAt(0);
+        return allowedSymbolChars.includes(symbolChar) ? symbolChar : defaultSymbolChar;
     }
 
     function getFeatureById(id) {
@@ -484,11 +490,9 @@
         const id = feature.get('id');
         const symbolChar = getSymbolChar(id);
         const iconPath = `/images/symbols/${symbolChar}.png`;
+        const lineColor = feature.get('extrapolated') === true ? 'rgba(180, 54, 54, 0.5)' : 'rgba(180, 54, 54, 1)';
+        const lineDash = feature.get('overSea') === true ? [10, 10] : null;
 
-        let lineColor = 'rgba(180, 54, 54, 1)';
-        if (feature.getGeometry().getType() === 'LineString' && feature.get('extrapolated') === true) {
-            lineColor = 'rgba(180, 54, 54, 0.5)';
-        }
         return new ol.style.Style({
             image: new ol.style.Icon({
                 src: iconPath,
@@ -500,6 +504,7 @@
             }),
             stroke: new ol.style.Stroke({
                 color: lineColor,
+                lineDash: lineDash,
                 width: 3,
             }),
         });

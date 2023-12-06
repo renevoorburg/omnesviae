@@ -20,26 +20,7 @@ class Dijkstra {
         $this->findShortestPath($start, $this->to);
     }
 
-    public function getShortestPath() :?array
-//    {
-//        $results = array();
-//        foreach (array_keys($this->map) as $i) {
-//            if ($this->to !== null && $this->to !== $i) {
-//                continue;
-//            }
-//            $results[$i] = array();
-//            $endNode = null;
-//            $currNode = $i;
-//            $results[$i][] = $i;
-//            while ($endNode === null || $endNode != $this->startnode) {
-//                $results[$i][] = $this->previousNode[$currNode];
-//                $endNode = $this->previousNode[$currNode];
-//                $currNode = $this->previousNode[$currNode];
-//            }
-//            $results[$i] = array_reverse($results[$i]);
-//        }
-//        return $results[$i];
-//    }
+    public function getShortestPath() :array
     {
         $ourShortestPath = array();
 
@@ -58,10 +39,12 @@ class Dijkstra {
             }
             $ourShortestPath[$i] = array_reverse($ourShortestPath[$i]);
 
+            if ($this->distance[$i] >= INF) {
+                return [];
+            }
             return $ourShortestPath[$i];
-//            echo json_encode($ourShortestPath[$i], false);
         }
-        return null;
+        return [];
     }
 
     private function findShortestPath($start, $to = null) : void
