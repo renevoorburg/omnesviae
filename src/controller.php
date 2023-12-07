@@ -25,14 +25,13 @@ switch ($action) {
         break;
     case "api/geofeatures":
         $model = new OmnesViae\Tabula();
-        $model->setupPlaces();
         $view = new OmnesViae\GeoFeatures($model);
 //        $view->render();
         break;
     case "test":
         $model = new OmnesViae\Tabula();
         $model->setupRoutingMatrix();
-        $model->setupPlaces();
+
         //echo $model->nextLocatedPlaceOnRoad('TPPlace997', 'TPPlace998');
 //        echo count($network['TPPlace558']);
 //        print_r($network['TPPlace558']);
