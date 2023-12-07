@@ -15,12 +15,10 @@ class Tabula
 {
 
     const ROAD_KEYS = ['overWater', 'isReconstructed', 'crossesMountains', 'crossesRiver'];
-
     public array $tabula;
     private array $roads;
     private array $routingMatrix;
-    private Places $places;
-
+    protected Places $places;
 
     /**
      * Tabula constructor.
@@ -102,11 +100,11 @@ class Tabula
         return ceil($meters / 1000 / $MILE_FACTOR);
     }
 
-    /*
+    /**
      * Return the estimated road distance in meters
-     * @param array $place1 [lng, lat]
-     * @param array $place2 [lng, lat]
-     * @return int
+     * @param array $lnglat1 [lng, lat]
+     * @param array $lnglat2 [lng, lat]
+     * @return int|null
      */
     private function getEstimatedRoadDistanceMeters(array $lnglat1, array $lnglat2) : ?int
     {
@@ -117,114 +115,6 @@ class Tabula
             return ceil($MEANDER_FACTOR * $distance);
         }
         return null;
-    }
-
-    /**
-     * Return the neighbouring place on the road, coming from $previousPlace
-     * @param string $previousPlace
-     * @param string $currentPlace
-     * @return string the neighbouring place on the road, may be empty string when road diverges or ends.
-     */
-    private function nextPlaceOnRoad(string $previousPlace, string $currentPlace) : string
-    {
-        $routeNetwork = $this->getRoutingMatrix();
-        $nextPlace = '';
-        if (count($routeNetwork[$currentPlace])===2) {
-            $nextPlace = array_values(array_diff(array_keys($routeNetwork[$currentPlace]), [$previousPlace]))[0];
-        }
-        return $nextPlace;
-    }
-
-    /**
-     * Return the next place on the road that has a lat/lng, coming from $previousPlace
-     * @param string $previousPlace
-     * @param string $currentPlace
-     * @return string the next place on the road that has a lat/lng , may be empty string when road diverges or ends.
-     */
-    private function nextLocatedPlaceOnRoad(string $previousPlace, string $currentPlace) : string
-    {
-        $foundLocatedPlace = '';
-        while (true) {
-            $nextPlace = $this->nextPlaceOnRoad($previousPlace, $currentPlace);
-            if (empty($nextPlace)) {
-                break;
-            }
-            if ($this->places->hasCoordinates($nextPlace)) {
-                $foundLocatedPlace = $nextPlace;
-                break;
-            }
-            $previousPlace = $currentPlace;
-            $currentPlace = $nextPlace;
-        }
-        return $foundLocatedPlace;
-    }
-
-    /**
-     * Build a GeoJSON FeatureCollection of places and roads
-     * @return array
-     */
-    public function getGeofeatures() : array
-    {
-        $geoFeatures = array();
-        $geoFeatures['type'] = 'FeatureCollection';
-        $geoFeatures['features'] = array();
-        foreach ($this->tabula['@graph'] as $value) {
-            // process places first:
-            if ($value['@type'] === 'Place' && isset($value['lat']) && isset($value['lng'])) {
-                $feature = array();
-                $feature['type'] = 'Feature';
-                $feature['geometry'] = array();
-                $feature['geometry']['type'] = 'Point';
-                $feature['geometry']['coordinates'] = array();
-                $feature['geometry']['coordinates'][] = $value['lng'];
-                $feature['geometry']['coordinates'][] = $value['lat'];
-                $feature['properties'] = array();
-                $feature['properties']['name'] = $value['label'];
-                $feature['properties']['id'] = self::getLocalId($value['@id']);
-                if (isset($value['modern'])) {
-                    $feature['properties']['description'] = $value['modern'];
-                }
-                if (isset($value['symbol'])) {
-                    $feature['properties']['symbol'] = $value['symbol'];
-                }
-                $geoFeatures['features'][] = $feature;
-            }
-        }
-        foreach ($this->tabula['@graph'] as $value) {
-            // process roads:
-            if ($value['@type'] === 'TravelAction') {
-                $from = self::getLocalId($value['from'][0]['@id']);
-                $to = self::getLocalId($value['to'][0]['@id']);
-                if ( $this->places->hasCoordinates($from)) {
-                    if (!$this->places->hasCoordinates($to)) {
-                        $nextPlace = $this->nextLocatedPlaceOnRoad($from, $to);
-                        $extrapolated = true;
-                    } else {
-                        $nextPlace = $to;
-                        $extrapolated = false;
-                    }
-                    if (!empty($nextPlace)) {
-                        $feature = array();
-                        $feature['type'] = 'Feature';
-                        $feature['geometry'] = array();
-                        $feature['geometry']['type'] = 'LineString';
-                        $feature['geometry']['coordinates'] = array();
-                        $feature['geometry']['coordinates'][] = $this->places->getCoordinates($from);
-                        $feature['geometry']['coordinates'][] = $this->places->getCoordinates($nextPlace);
-                        $feature['properties'] = array();
-                        $feature['properties']['id'] = self::getLocalId($value['@id']);
-                        if ($extrapolated) {
-                            $feature['properties']['extrapolated'] = true;
-                        }
-                        if (isset($value['overWater'])) {
-                            $feature['properties']['overWater'] = true;
-                        }
-                        $geoFeatures['features'][] = $feature;
-                    }
-                }
-            }
-        }
-        return $geoFeatures;
     }
 
     public function getRouteList(array $places) : ?array

@@ -24,13 +24,11 @@ switch ($action) {
         echo json_encode($model->getRouteList($route->getShortestPath()));
         break;
     case "api/geofeatures":
-        $model = new OmnesViae\Tabula();
-        $view = new OmnesViae\GeoFeatures($model);
-//        $view->render();
+        $geoFeatures = new OmnesViae\GeoFeatures();
+        $geoFeatures->render();
         break;
     case "test":
-        $model = new OmnesViae\Tabula();
-        $model->setupRoutingMatrix();
+        echo "test";
 
         //echo $model->nextLocatedPlaceOnRoad('TPPlace997', 'TPPlace998');
 //        echo count($network['TPPlace558']);
