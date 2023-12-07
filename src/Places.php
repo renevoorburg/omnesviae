@@ -35,7 +35,7 @@ class Places
      */
     public function getProperty(string $place, string $property) : ?string
     {
-        return isset($this->places[$place][$property]) ? $this->places[$place][$property] : null;
+        return $this->places[$place][$property] ?? null;
     }
 
     /**

@@ -11,7 +11,7 @@ class GeoTools
      * @param array $point2 [lng, lat]
      * @return float in meters
      */
-    public static function distanceBetweenPoints($point1, $point2) : float
+    public static function distanceBetweenPoints(array $point1, array $point2) : float
     {
         $earthRadius = 6371000;
         $lat1 = deg2rad($point1[1]);
