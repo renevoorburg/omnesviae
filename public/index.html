@@ -491,7 +491,7 @@
         const symbolChar = getSymbolChar(id);
         const iconPath = `/images/symbols/${symbolChar}.png`;
         const lineColor = feature.get('extrapolated') === true ? 'rgba(180, 54, 54, 0.5)' : 'rgba(180, 54, 54, 1)';
-        const lineDash = feature.get('overSea') === true ? [10, 10] : null;
+        const lineDash = feature.get('overWater') === true ? [10, 10] : null;
 
         return new ol.style.Style({
             image: new ol.style.Icon({

@@ -13,7 +13,7 @@ class Tabula
 {
     const PLACE_KEYS = ['label', 'classic', 'modern', 'alt', 'lat', 'lng', 'symbol'];
 
-    const ROAD_KEYS = ['overSea', 'isReconstructed', 'crossesMountains', 'crossesRiver'];
+    const ROAD_KEYS = ['overWater', 'isReconstructed', 'crossesMountains', 'crossesRiver'];
 
     public array $tabula;
     private array $places;
@@ -33,6 +33,7 @@ class Tabula
             echo 'Caught exception: ', $e->getMessage(), "\n";
         }
 
+        $this->setupPlaces();
     }
 
     /**
@@ -62,10 +63,6 @@ class Tabula
      */
     public function setupRouting(): void
     {
-        if (!isset($this->places)) {
-            $this->setupPlaces();
-        }
-
         $this->routingMatrix = array();
         foreach ($this->tabula['@graph'] as $value) {
             if ($value['@type'] === 'TravelAction') {
@@ -227,16 +224,12 @@ class Tabula
      */
     public function getGeofeatures() : array
     {
-        $placesIndexed = array();
         $geoFeatures = array();
         $geoFeatures['type'] = 'FeatureCollection';
         $geoFeatures['features'] = array();
         foreach ($this->tabula['@graph'] as $value) {
             // process places first:
             if ($value['@type'] === 'Place' && isset($value['lat']) && isset($value['lng'])) {
-                $localName = self::getLocalId($value['@id']);
-                $placesIndexed[$localName]['lat'] = $value['lat'];
-                $placesIndexed[$localName]['lng'] = $value['lng'];
                 $feature = array();
                 $feature['type'] = 'Feature';
                 $feature['geometry'] = array();
@@ -246,7 +239,7 @@ class Tabula
                 $feature['geometry']['coordinates'][] = $value['lat'];
                 $feature['properties'] = array();
                 $feature['properties']['name'] = $value['label'];
-                $feature['properties']['id'] = $localName;
+                $feature['properties']['id'] = self::getLocalId($value['@id']);
                 if (isset($value['modern'])) {
                     $feature['properties']['description'] = $value['modern'];
                 }
@@ -258,35 +251,37 @@ class Tabula
         }
         foreach ($this->tabula['@graph'] as $value) {
             // process roads:
-            if ($value['@type'] === 'TravelAction'
-                && isset($placesIndexed[self::getLocalId($value['from'][0]['@id'])])
-            ) {
-                if (!isset($placesIndexed[self::getLocalId($value['to'][0]['@id'])])) {
-                    $nextPlace = $this->nextLocatedPlaceOnRoad(self::getLocalId($value['from'][0]['@id']), self::getLocalId($value['to'][0]['@id']));
-                    $extrapolated = true;
-                } else {
-                    $nextPlace = self::getLocalId($value['to'][0]['@id']);
-                    $extrapolated = false;
-                }
-                if (!empty($nextPlace)) {
-                    $feature = array();
-                    $feature['type'] = 'Feature';
-                    $feature['geometry'] = array();
-                    $feature['geometry']['type'] = 'LineString';
-                    $feature['geometry']['coordinates'] = array();
-                    $feature['geometry']['coordinates'][] =
-                        array($placesIndexed[self::getLocalId($value['from'][0]['@id'])]['lng'], $placesIndexed[self::getLocalId($value['from'][0]['@id'])]['lat']);
-                    $feature['geometry']['coordinates'][] =
-                        array($placesIndexed[$nextPlace]['lng'], $placesIndexed[$nextPlace]['lat']);
-                    $feature['properties'] = array();
-                    $feature['properties']['id'] = self::getLocalId($value['@id']);
-                    if ($extrapolated) {
-                        $feature['properties']['extrapolated'] = true;
+            if ($value['@type'] === 'TravelAction') {
+                $from = self::getLocalId($value['from'][0]['@id']);
+                $to = self::getLocalId($value['to'][0]['@id']);
+                if ( $this->hasCoordinates($from)) {
+                    if (!$this->hasCoordinates($to)) {
+                        $nextPlace = $this->nextLocatedPlaceOnRoad($from, $to);
+                        $extrapolated = true;
+                    } else {
+                        $nextPlace = self::getLocalId($value['to'][0]['@id']);
+                        $extrapolated = false;
                     }
-                    if (isset($value['overSea'])) {
-                        $feature['properties']['overSea'] = true;
+                    if (!empty($nextPlace)) {
+                        $feature = array();
+                        $feature['type'] = 'Feature';
+                        $feature['geometry'] = array();
+                        $feature['geometry']['type'] = 'LineString';
+                        $feature['geometry']['coordinates'] = array();
+                        $feature['geometry']['coordinates'][] =
+                            array($this->places[$from]['lng'], $this->places[$from]['lat']);
+                        $feature['geometry']['coordinates'][] =
+                            array($this->places[$nextPlace]['lng'], $this->places[$nextPlace]['lat']);
+                        $feature['properties'] = array();
+                        $feature['properties']['id'] = self::getLocalId($value['@id']);
+                        if ($extrapolated) {
+                            $feature['properties']['extrapolated'] = true;
+                        }
+                        if (isset($value['overWater'])) {
+                            $feature['properties']['overWater'] = true;
+                        }
+                        $geoFeatures['features'][] = $feature;
                     }
-                    $geoFeatures['features'][] = $feature;
                 }
             }
         }
@@ -334,6 +329,11 @@ class Tabula
     {
         $parsedUri = parse_url($uri);
         return $parsedUri['fragment'] ?? '';
+    }
+
+    private function hasCoordinates(string $place) : bool
+    {
+        return isset($this->places[$place]['lat']) && isset($this->places[$place]['lng']);
     }
 
     private static function getRoadId(string $from, string $to) : string

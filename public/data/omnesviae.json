@@ -12,7 +12,7 @@
     "from": "http://www.schema.org/fromLocation",
     "to": "http://www.schema.org/toLocation",
     "dist": "http://www.schema.org/distance",
-    "overSea": "http://omnesviae.org/def#overSea",
+    "overWater": "http://omnesviae.org/def#overWater",
     "isReconstructed": "http://omnesviae.org/def#isReconstructed",
     "crossesMountains": "http://omnesviae.org/def#crossesMountains",
     "crossesRiver": "http://omnesviae.org/def#crossesRiver"
@@ -26180,7 +26180,7 @@
       "dist": 2,
       "from": [{"@id": "https://omnesviae.org/#TPPlace2082"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace2084"}],
-      "overSea": true
+      "overWater": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace2084_TPPlace2085",
@@ -42056,7 +42056,7 @@
       "dist": 6,
       "from": [{"@id": "https://omnesviae.org/#TPPlace1408"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace1499"}],
-      "overSea": true
+      "overWater": true
     },
     {
       "@id": "https://omnesviae.org/#TPPlace1498_TPPlace1499",
@@ -48150,7 +48150,7 @@
       "dist": 56,
       "from": [{"@id": "https://omnesviae.org/#TPPlace548"}],
       "to": [{"@id": "https://omnesviae.org/#TPPlace582"}],
-      "overSea": true
+      "overWater": true
     },
     {
       "@id": "https://omnesviae.org/#OVPlace390_OVPlace391",
