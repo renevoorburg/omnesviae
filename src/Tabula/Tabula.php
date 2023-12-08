@@ -13,7 +13,8 @@ use Exception;
  */
 class Tabula
 {
-    public array $tabula; 
+    const DATASOURCE = '../public/data/omnesviae.json';
+    public array $tabula;
     protected Places $places;
 
     /**
@@ -21,18 +22,18 @@ class Tabula
      * Reads the schema.org JSON-LD file in $this->tabula
      * Sets up the Places object
      */
-    public function __construct(string $source = '../public/data/omnesviae.json')
+    public function __construct(?string $source = null)
     {
+        $source = $source ?? self::DATASOURCE;
+        if ($source !== self::DATASOURCE && !filter_var($source, FILTER_VALIDATE_URL)) {
+            fprintf(STDERR, 'Invalid source URL provided: %s' . PHP_EOL, $source);
+            exit(1);
+        }
         try {
-            if (filter_var($source, FILTER_VALIDATE_URL)) {
-                $jsonData = file_get_contents($source);
-            } else {
-                $jsonData = file_get_contents($source);
-            }
-            $this->tabula = json_decode($jsonData, true);
+            $this->tabula = json_decode(file_get_contents($source), true);
         } catch (Exception $e) {
-            echo 'Caught exception: ', $e->getMessage(), "\n";
-            exit;
+            fprintf(STDERR, 'Caught exception: %s' . PHP_EOL, $e->getMessage());
+            exit(1);
         }
         $this->places = new Places($this->tabula);
     }
