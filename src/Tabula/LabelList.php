@@ -1,6 +1,6 @@
 <?php
 
-namespace OmnesViae;
+namespace OmnesViae\Tabula;
 
 class LabelList
 {

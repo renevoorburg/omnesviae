@@ -1,10 +1,10 @@
 <?php
 
-namespace OmnesViae;
+namespace OmnesViae\Tabula;
 
-class GeoFeatures extends Tabula
+class GeoFeatures extends Roads
 {
-    protected array $geoFeatures;
+    private array $geoFeatures;
 
     /**
      * Build a GeoJSON FeatureCollection of places and roads
@@ -84,46 +84,6 @@ class GeoFeatures extends Tabula
             $this->setupGeofeatures();
         }
         echo json_encode($this->geoFeatures, true);
-    }
-
-    /**
-     * Return the next place on the road that has a lat/lng, coming from $previousPlace
-     * @param string $previousPlace
-     * @param string $currentPlace
-     * @return string the next place on the road that has a lat/lng , may be empty string when road diverges or ends.
-     */
-    private function nextLocatedPlaceOnRoad(string $previousPlace, string $currentPlace) : string
-    {
-        $foundLocatedPlace = '';
-        while (true) {
-            $nextPlace = $this->nextPlaceOnRoad($previousPlace, $currentPlace);
-            if (empty($nextPlace)) {
-                break;
-            }
-            if ($this->places->hasCoordinates($nextPlace)) {
-                $foundLocatedPlace = $nextPlace;
-                break;
-            }
-            $previousPlace = $currentPlace;
-            $currentPlace = $nextPlace;
-        }
-        return $foundLocatedPlace;
-    }
-
-    /**
-     * Return the neighbouring place on the road, coming from $previousPlace
-     * @param string $previousPlace
-     * @param string $currentPlace
-     * @return string the neighbouring place on the road, may be empty string when road diverges or ends.
-     */
-    private function nextPlaceOnRoad(string $previousPlace, string $currentPlace) : string
-    {
-        $routeNetwork = $this->getRoutingMatrix();
-        $nextPlace = '';
-        if (count($routeNetwork[$currentPlace])===2) {
-            $nextPlace = array_values(array_diff(array_keys($routeNetwork[$currentPlace]), [$previousPlace]))[0];
-        }
-        return $nextPlace;
     }
 
 }

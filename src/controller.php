@@ -11,20 +11,21 @@ if ($action == "api" && isset($urlParts[2])) {
 switch ($action) {
     case "api/labels":
         // returns matching place labels as json  for form autocomplete:
-        // example /api/labels/forum
-        $model = new OmnesViae\Tabula();
-        $view = new OmnesViae\LabelList($model);
+        // example: /api/labels/forum
+        $model = new \OmnesViae\Tabula\Tabula();
+        $view = new \OmnesViae\Tabula\LabelList($model);
         $view->render($urlParts[3] ?? '');
         break;
     case "api/route":
         // return the shortest route as json:
         // example: /api/route/TPPlace558/TPPlace1203
-        $model = new OmnesViae\Tabula();
-        $route = new OmnesViae\Dijkstra($model->getRoutingMatrix(), $urlParts[3] ?? '', $urlParts[4] ?? '');
-        echo json_encode($model->getRouteList($route->getShortestPath()));
+        $model = new \OmnesViae\Tabula\Routing();
+        $model->setRoute($urlParts[3] ?? '', $urlParts[4] ?? '');
+        $model->render();
         break;
     case "api/geofeatures":
-        $geoFeatures = new OmnesViae\GeoFeatures();
+        // example: /api/geofeatures
+        $geoFeatures = new \OmnesViae\Tabula\GeoFeatures();
         $geoFeatures->render();
         break;
     case "test":

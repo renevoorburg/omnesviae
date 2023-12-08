@@ -1,21 +1,21 @@
 <?php
 
-namespace OmnesViae;
+namespace OmnesViae\Tabula;
 
 class Places
 {
     const PLACE_KEYS = ['label', 'classic', 'modern', 'alt', 'lat', 'lng', 'symbol'];
-    protected array $places;
+    private array $places;
 
     /**
      * Builds an indexed array of places in $this->places
      * @param array $data the Tabula data
      * @return void .
      */
-    public function __construct(array $data)
+    public function __construct(array $tabulaData)
     {
         $this->places = array();
-        foreach ($data['@graph'] as $value) {
+        foreach ($tabulaData['@graph'] as $value) {
             if ($value['@type'] === 'Place') {
                 $localName = Tabula::getLocalId($value['@id']);
                 foreach (self::PLACE_KEYS as $key) {
