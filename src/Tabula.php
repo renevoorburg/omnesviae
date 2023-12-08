@@ -128,12 +128,12 @@ class Tabula
             if ($numeral) {
                 $dist['numeral'] = $numeral;
             }
-            if (isset($this->roads[self::getRoadId($previousPlace, $place)]['isReconstructed'])) {
+            if (isset($this->roads[self::constructRoadId($previousPlace, $place)]['isReconstructed'])) {
                 $dist['isReconstructed'] = true;
             }
             foreach (self::ROAD_KEYS as $key) {
-                if (isset($this->roads[self::getRoadId($previousPlace, $place)][$key])) {
-                    $dist[$key] = $this->roads[self::getRoadId($previousPlace, $place)][$key];
+                if (isset($this->roads[self::constructRoadId($previousPlace, $place)][$key])) {
+                    $dist[$key] = $this->roads[self::constructRoadId($previousPlace, $place)][$key];
                 }
             }
             $routeParts[] = array(
@@ -157,10 +157,16 @@ class Tabula
         return $parsedUri['fragment'] ?? '';
     }
 
-    private static function getRoadId(string $from, string $to) : string
+    /**
+     * Create a local road id from two place names
+     * @param string $from
+     * @param string $to
+     * @return string
+     */
+    private static function constructRoadId(string $from, string $to) : string
     {
         if ($from > $to) {
-            return self::getRoadId($to, $from);
+            return self::constructRoadId($to, $from);
         }
         return $from . '_' . $to;
     }
