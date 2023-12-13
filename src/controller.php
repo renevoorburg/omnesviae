@@ -9,6 +9,10 @@ if ($action == "api" && isset($urlParts[2])) {
 }
 
 switch ($action) {
+    case "":
+        include __DIR__ . '/../public/index.html';
+//        echo "empty";
+        break;
     case "api/labels":
         // returns matching place labels as json  for form autocomplete:
         // example: /api/labels/forum
