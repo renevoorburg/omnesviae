@@ -32,8 +32,13 @@ switch ($action) {
         $geoFeatures = new \OmnesViae\Tabula\GeoFeatures();
         $geoFeatures->render();
         break;
-    case "test":
-        echo "test";
+    case "tabula":
+        $page = new \OmnesViae\Templating\Page();
+        $page->assign('name', 'Tabula Peutingeriana');
+
+        $page->display('index.tpl');
+
+        break;
 
         //echo $model->nextLocatedPlaceOnRoad('TPPlace997', 'TPPlace998');
 //        echo count($network['TPPlace558']);

@@ -1,0 +1,265 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: env(safe-area-inset-top);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    height: 1.3em;
+    background-color: #b43636;
+    color: #fff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3em;
+    order: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+    color: #b43636;
+}
+
+h3 {
+    margin: 1em 0 0.5em 0;
+    font-size: 1.2em;
+    color: #b43636;
+}
+
+#map {
+    flex-grow: 1;
+}
+
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 1em ;
+    border-radius: 1em;
+    border: 1px solid #cccccc;
+    bottom: 1em;
+    left: -50px;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    color: #bababc;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.ol-popup-closer:hover {
+    color: #b43636;
+}
+
+#popup-content {
+    margin-top: -1em;
+    overflow: hidden;
+}
+
+#popup-content h2  {
+    margin-bottom: 0.1em;
+}
+
+#popup-content p {
+    margin: 0.5em 0 0 0;
+}
+
+#popup-content img {
+    max-width: 90vw;
+    max-height: 40vh;
+}
+
+
+.routebox {
+    z-index: 2;
+    position: absolute;
+    top: 2.8em;
+    left: 0.5em;
+    width: 280px;
+    bottom: 1em;
+    background-color: white;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    opacity: 0.95;
+    border-color: #999;
+    border-style: solid;
+    border-width: 1px;
+    overflow:auto;
+    transition: top 0.3s;
+}
+
+
+.routebox.moved-down {
+    top: calc(100% - 3.5em);
+    bottom: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    /*top: 400px;*/
+}
+
+#handle {
+    position: sticky;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width:  80px;
+    height: 5px;
+    background-color: #999;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#handle:hover {
+    background-color: #b43636;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 93%;
+    font-size: 16px;
+}
+
+.suggestions {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    border: 1px solid #d4d4d4;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1;
+    width: 88%;
+}
+
+#legenda {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#results-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    line-height: 1.5;
+}
+
+#results-container li {
+    line-height: 2;
+}
+
+#results-container li span:hover {
+    cursor: pointer;
+    color: #b43636;
+}
+
+span.estimated {
+    color: #AAA;
+}
+
+li.distance {
+    padding-left: 21px;
+    margin-left: 14px;
+}
+
+li.extra {
+    padding-left: 21px;
+    margin-left: 14px;
+    color: #b43636;
+}
+
+li.symbol0 {
+    background: url("/images/symbols/0.png") no-repeat left center;
+    padding-left: 21px;
+    margin-left: 14px;
+}
+
+li.symbol1 {
+    background: url("/images/symbols/1.png") no-repeat left center;
+    padding-left: 21px;
+    margin-left: 14px;
+}
+
+li.symbolA {
+    background: url("/images/symbols/A.png") no-repeat left center;
+    padding-left: 34px;
+    margin-left: 2px;
+}
+
+li.symbolO {
+    background: url("/images/symbols/O.png") no-repeat left center;
+    padding-left: 34px;
+    margin-left: 2px;
+}
+
+li.symbolB {
+    background: url("/images/symbols/B.png") no-repeat left center;
+    padding-left: 36px;
+}
+
+li.symbolC {
+    background: url("/images/symbols/C.png") no-repeat left center;
+    padding-left: 56px;
+    line-height: 2.5;
+}
+
+li.symbolQ {
+    background: url("/images/symbols/Q.png") no-repeat left center;
+    padding-left: 56px;
+    line-height: 2.5;
+}
+
+li.symbolD {
+    background: url("/images/symbols/D.png") no-repeat left center;
+    padding-left: 56px;
+    line-height: 3;
+}
+
+.suggestion {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion:hover {
+    background-color: #ddd;
+}
+
+.error-text {
+    color: #b43636;
+}

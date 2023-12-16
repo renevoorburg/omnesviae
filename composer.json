@@ -6,7 +6,8 @@
     },
     "require": {
         "ext-json": "*",
-        "ext-mbstring": "*"
+        "ext-mbstring": "*",
+        "smarty/smarty": "*"
     },
     "autoload": {
         "psr-4": {
