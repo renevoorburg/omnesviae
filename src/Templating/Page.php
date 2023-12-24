@@ -5,6 +5,13 @@ namespace OmnesViae\Templating;
 class Page extends \Smarty
 {
 
+    private $menuItems = [
+        '/' => 'Iter',
+        '/tabula' => 'Tabula',
+        '/nobis' => 'De Nobis'
+    ];
+
+
     public function __construct()
     {
         parent::__construct();
@@ -12,14 +19,13 @@ class Page extends \Smarty
         $this->setCompileDir(__DIR__ . '/../../templates_c');
         $this->setCacheDir(__DIR__ . '/../../cache');
         $this->setConfigDir(__DIR__ . '/../../configs');
-//        $this->assign('app_name', 'OmnesViae');
+
+        $this->assign('menuItems', $this->menuItems);
     }
 
-//    public function display($template = null, $cache_id = null, $compile_id = null, $parent = null)
-//    {
-//        $this->assign('app_name', 'OmnesViae');
-//        parent::display($template, $cache_id, $compile_id, $parent);
-//    }
-
+    public function display($template = 'base.tpl', $cache_id = null, $compile_id = null, $parent = null)
+    {
+        parent::display($template, $cache_id, $compile_id, $parent);
+    }
 
 }

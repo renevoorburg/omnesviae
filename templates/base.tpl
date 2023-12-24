@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{$title}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {block name=libraries}<!-- libraries -->{/block}
+        {block name=stylesheets}<link rel="stylesheet" href="/css/omnesviae.css" type="text/css">{/block}
+
+    </head>
+    <body>
+        {include file="header.tpl"}
+        {block name=body}Default Body{/block}
+        {block name=footer}{/block}
+    </body>
+</html>

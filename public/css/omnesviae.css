@@ -35,6 +35,10 @@ nav li {
     margin-right: 15px;
 }
 
+.active {
+    text-decoration: underline;
+}
+
 nav a {
     color: #fff;
     text-decoration: none;

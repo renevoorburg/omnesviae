@@ -10,8 +10,9 @@ if ($action == "api" && isset($urlParts[2])) {
 
 switch ($action) {
     case "":
-        include __DIR__ . '/../public/index.html';
-//        echo "empty";
+        $page = new \OmnesViae\Templating\Page();
+        $page->assign('currentPage', '/');
+        $page->display('home.tpl');
         break;
     case "api/labels":
         // returns matching place labels as json  for form autocomplete:
@@ -34,16 +35,22 @@ switch ($action) {
         break;
     case "tabula":
         $page = new \OmnesViae\Templating\Page();
+        $page->assign('currentPage', '/tabula');
+        $page->assign('title', 'OmnesViae: Tabula Peutingeriana');
         $page->assign('name', 'Tabula Peutingeriana');
 
-        $page->display('index.tpl');
-
+        $page->display('base.tpl');
         break;
-
-        //echo $model->nextLocatedPlaceOnRoad('TPPlace997', 'TPPlace998');
-//        echo count($network['TPPlace558']);
-//        print_r($network['TPPlace558']);
-//        $view->render();
+    case "nobis":
+        $page = new \OmnesViae\Templating\Page();
+        $page->assign('currentPage', '/nobis');
+        $page->assign('name', 'OmnesViae');
+        $page->display('base.tpl');
+        break;
+    case "test":
+        $page = new \OmnesViae\Templating\Page();
+        $page->assign('currentPage', '/test');
+        $page->display('home.tpl');
         break;
     default:
         echo "default";
