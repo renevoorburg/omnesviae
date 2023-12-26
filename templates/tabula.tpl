@@ -2,35 +2,18 @@
 
 
 {block name=libraries}
-    <script src="/js/vendor/ruven/iipmooviewer/mootools-core-1.6.0-compressed.js"></script>
-    <script src="/js/vendor/ruven/iipmooviewer/iipmooviewer-2.0-min.js"></script>
+    <script src="/vendor/iipmooviewer/js/mootools-core-1.6.0-compressed.js"></script>
+    <script src="/vendor/iipmooviewer/js/iipmooviewer-2.0-min.js"></script>
 {/block}
 
 
 {block name=stylesheets}
     <link rel="stylesheet" href="/css/omnesviae.css" type="text/css">
-    <link rel="stylesheet" href="/css/vendor/ruven/iipmooviewer/iip.css" type="text/css">
+    <link rel="stylesheet" href="/vendor/iipmooviewer/css/iip.css" type="text/css">
 {/block}
 
 
 {block name=body}
-    <div id="map" class="map"></div>
-
-    <script>
-        var server = 'https://omnesviae.org/fcgi-bin/iipsrv.fcgi';
-        var image = 'peutinger.tiff';
-        var credit = 'IIIF: http://omnesviae.org/image/peutinger.tiff';
-
-        new IIPMooViewer( "map", {
-            server: server,
-            image: image,
-            credit: credit,
-            showCoords: true,
-            navigation: {
-                buttons: ['zoomIn','zoomOut','reset','rotateLeft','rotateRight']
-            },
-            scale: 9.24
-        });
-    </script>
+    <iframe src="/viewer.html" style="height: 100%"></iframe>
 
 {/block}
