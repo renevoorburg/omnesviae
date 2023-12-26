@@ -39,7 +39,7 @@ switch ($action) {
         $page->assign('title', 'OmnesViae: Tabula Peutingeriana');
         $page->assign('name', 'Tabula Peutingeriana');
 
-        $page->display('base.tpl');
+        $page->display('tabula.tpl');
         break;
     case "nobis":
         $page = new \OmnesViae\Templating\Page();

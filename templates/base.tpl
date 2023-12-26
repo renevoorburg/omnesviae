@@ -10,7 +10,7 @@
 
     </head>
     <body>
-        {include file="header.tpl"}
+        {include file="parts/header.tpl"}
         {block name=body}Default Body{/block}
         {block name=footer}{/block}
     </body>
