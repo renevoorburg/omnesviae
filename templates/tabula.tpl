@@ -17,7 +17,7 @@
     <div id="map" class="map"></div>
 
     <script>
-        var server = '/fcgi-bin/iipsrv.fcgi';
+        var server = 'https://omnesviae.org/fcgi-bin/iipsrv.fcgi';
         var image = 'peutinger.tiff';
         var credit = 'IIIF: http://omnesviae.org/image/peutinger.tiff';
 
