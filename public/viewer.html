@@ -16,12 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
     <link rel="stylesheet" type="text/css" media="all" href="css/iip.min.css" />
-    <!--[if lt IE 10]>
-    <meta http-equiv="X-UA-Compatible" content="IE=9" >
-    <link rel="stylesheet" type="text/css" media="all" href="css/ie.min.css" />
-    <![endif]-->
 
-    <!-- Basic example style for a 100% view -->
     <style>
         body{
             height: 100%;
@@ -38,6 +33,8 @@
             margin: 0;
             padding: 0;
         }
+
+        .iipmooviewer { background: white}
     </style>
 
     <link rel="shortcut icon" href="images/iip-favicon.png" />
@@ -48,9 +45,6 @@
     <script src="js/mootools-core-1.6.0-compressed.js"></script>
     <script src="js/iipmooviewer-2.0-min.js"></script>
 
-    <!--[if lt IE 7]>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js">IE7_PNG_SUFFIX = ".png";</script>
-    <![endif]-->
 
     <script>
 
@@ -64,7 +58,7 @@
         var image = 'peutinger.tiff';
 
         // Copyright or information message
-        var credit = 'IIIF: http://omnesviae.org/image/peutinger.tiff';
+        var credit = 'IIIF: https://omnesviae.org/image/peutinger.tiff';
 
         // Create our iipmooviewer object
         new IIPMooViewer( "viewer", {
@@ -73,7 +67,7 @@
             credit: credit,
             showCoords: true,
             navigation: {
-                buttons: ['zoomIn','zoomOut','reset','rotateLeft','rotateRight']
+                buttons: ['zoomIn','zoomOut']
             },
             viewport: {resolution:7, x:0.354, y:0.5, rotation:0},
             scale: 7
