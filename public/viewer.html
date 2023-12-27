@@ -1,84 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <base href="/vendor/iipmooviewer/">
-    <meta charset="utf-8" />
-    <meta name="DC.creator" content="Ruven Pillay &lt;ruven@users.sourceforge.netm&gt;"/>
-    <meta name="DC.title" content="IIPMooViewer 2.0: HTML5 High Resolution Image Viewer"/>
-    <meta name="DC.subject" content="IIPMooViewer; IIPImage; Visualization; HTML5; Ajax; High Resolution; Internet Imaging Protocol; IIP"/>
-    <meta name="DC.description" content="IIPMooViewer is an advanced javascript HTML5 image viewer for streaming high resolution scientific images"/>
-    <meta name="DC.rights" content="Copyright &copy; 2003-2016 Ruven Pillay"/>
-    <meta name="DC.source" content="http://iipimage.sourceforge.net"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-
-    <link rel="stylesheet" type="text/css" media="all" href="css/iip.min.css" />
-
+    <title>OpenSeadragon IIIF Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
     <style>
-        body{
+
+        html, body {
             height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-        div#viewer{
-            height: 100%;
-            min-height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
             margin: 0;
             padding: 0;
         }
 
-        .iipmooviewer { background: white}
+        #openseadragon {
+            width: 100vw;
+            height: 100vw;
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
     </style>
-
-    <link rel="shortcut icon" href="images/iip-favicon.png" />
-    <link rel="apple-touch-icon" href="images/iip.png" />
-
-    <title>IIPMooViewer 2.0 :: HTML5 High Resolution Image Viewer</title>
-
-    <script src="js/mootools-core-1.6.0-compressed.js"></script>
-    <script src="js/iipmooviewer-2.0-min.js"></script>
-
-
-    <script>
-
-        // IIPMooViewer options: See documentation at http://iipimage.sourceforge.net for more details
-        // Server path: set if not using default path
-        var server = 'https://omnesviae.org/fcgi-bin/iipsrv.fcgi';
-
-        // The *full* image path on the server. This path does *not* need to be in the web
-        // server root directory. On Windows, use Unix style forward slash paths without
-        // the "c:" prefix
-        var image = 'peutinger.tiff';
-
-        // Copyright or information message
-        var credit = 'IIIF: https://omnesviae.org/image/peutinger.tiff';
-
-        // Create our iipmooviewer object
-        new IIPMooViewer( "viewer", {
-            server: server,
-            image: image,
-            credit: credit,
-            showCoords: true,
-            navigation: {
-                buttons: ['zoomIn','zoomOut']
-            },
-            viewport: {resolution:7, x:0.354, y:0.5, rotation:0},
-            scale: 7
-        });
-
-    </script>
-
 </head>
-
 <body>
-<div id="viewer"></div>
-</body>
 
+<div id="openseadragon"></div>
+
+<script>
+    var viewer = OpenSeadragon({
+        id: "openseadragon",
+        prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/",
+        tileSources: "https://omnesviae.org/image/peutinger.tiff/info.json",
+        defaultZoomLevel: 14
+    });
+</script>
+
+</body>
 </html>
