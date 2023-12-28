@@ -103,17 +103,16 @@ function showPlace(placeId) {
     if (placeId.charAt(0) === 'T') {
         content += '<img src="/images/TPP/' + placeId + '.jpg">';
     }
-    const description = getPropertyById(placeId, 'description');
-    if (description) {
-        content += '<p>' + description + '</p>';
-    }
+    const description = getPropertyById(placeId, 'description') || ' &nbsp;&nbsp;&nbsp;&nbsp; ';
+    content += '<p><img class="origodest" src="/images/origo.png">&nbsp;' + description + '&nbsp;<img class="origodest" src="/images/destinatio.png"></p>';
+
     popupOverlay.setPosition(coordinates);
     document.getElementById('popup-content').innerHTML = content;
     window.location = '#' + placeId;
 }
 
 function getSymbolChar(id) {
-    const allowedSymbolChars = ['0', '1', 'A', 'B', 'C', 'D', 'Q'];
+    const allowedSymbolChars = ['0', '1', 'A', 'B', 'C', 'D', 'E', 'F', 'Q'];
     const defaultSymbolChar = id.charAt(0) === 'O' ? '1' : '0';
     const symbol = getPropertyById(id, 'symbol') || defaultSymbolChar
     const symbolChar = symbol.charAt(0);

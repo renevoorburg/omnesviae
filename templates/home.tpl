@@ -2,7 +2,7 @@
 
 
 {block name=libraries}
-<script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ol@v8.2.0/dist/ol.js"></script>
 {/block}
 
 

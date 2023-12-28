@@ -92,6 +92,7 @@ h3 {
 
 #popup-content h2  {
     margin-bottom: 0.1em;
+    margin-right: 1em;
 }
 
 #popup-content p {
@@ -101,6 +102,15 @@ h3 {
 #popup-content img {
     max-width: 90vw;
     max-height: 40vh;
+}
+
+.origodest {
+    width: 2em;
+    vertical-align: bottom;
+}
+
+#popup-content p {
+    white-space: nowrap;
 }
 
 
@@ -153,7 +163,7 @@ input[type="text"] {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 93%;
+    width: 92%;
     font-size: 16px;
 }
 
@@ -166,6 +176,18 @@ input[type="text"] {
     overflow-y: auto;
     z-index: 1;
     width: 88%;
+}
+
+#place1 {
+    background: url("/images/origo.png") no-repeat right center;
+    background-size: 2em;
+    margin-right: 2.5em;
+}
+
+#place2 {
+    background: url("/images/destinatio.png") no-repeat right center;
+    background-size: 2em;
+    margin-right: 2.5em;
 }
 
 #legenda {
