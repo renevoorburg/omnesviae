@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OpenSeadragon IIIF Demo</title>
+    <title>Tabula Peutingeriana</title>
+    <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/openseadragon@4.1/build/openseadragon/openseadragon.min.js"></script>
     <style>
 
@@ -28,8 +29,23 @@
     var viewer = OpenSeadragon({
         id: "openseadragon",
         prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/",
-        tileSources: "https://omnesviae.org/image/peutinger.tiff/info.json"
+        tileSources: "https://omnesviae.org/image/peutinger.tiff/info.json",
+        defaultZoomLevel: 1,
+        navigationControlAnchor: OpenSeadragon.ControlAnchor.TOP_RIGHT,
+        showFullPageControl: false,
+        showHomeControl: false,
     });
+
+    // zoom to Rome
+    // from https://stackoverflow.com/questions/63037117/using-openseadragon-how-can-set-it-to-load-the-image-at-a-specific-set-of-coord
+    viewer.addHandler('open', function() {
+        var tiledImage = viewer.world.getItemAt(0);
+        var imageRect = new OpenSeadragon.Rect(21700, 1800, 1000, 1000);
+        var viewportRect = tiledImage.imageToViewportRectangle(imageRect);
+        viewer.viewport.fitBounds(viewportRect, true);
+    });
+
+
 </script>
 
 </body>

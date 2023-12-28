@@ -267,3 +267,9 @@ li.symbolD {
 .error-text {
     color: #b43636;
 }
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
