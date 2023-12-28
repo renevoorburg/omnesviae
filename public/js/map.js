@@ -36,7 +36,6 @@ function showRouteOnMap(routeData) {
             maxZoom: 12
         });
     }
-
     showRoutelist(routeData);
 }
 
@@ -166,7 +165,7 @@ function getFeatureStyle(feature) {
             anchorXUnits: 'fraction',
             anchorYUnits: 'fraction',
             opacity: 1,
-            scale: 0.8,
+            scale: 1.0,
         }),
         stroke: new ol.style.Stroke({
             color: lineColor,
