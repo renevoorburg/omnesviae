@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>OpenSeadragon IIIF Demo</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/openseadragon@4.1/build/openseadragon/openseadragon.min.js"></script>
     <style>
 
         html, body {
@@ -28,8 +28,7 @@
     var viewer = OpenSeadragon({
         id: "openseadragon",
         prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/",
-        tileSources: "https://omnesviae.org/image/peutinger.tiff/info.json",
-        defaultZoomLevel: 14
+        tileSources: "https://omnesviae.org/image/peutinger.tiff/info.json"
     });
 </script>
 

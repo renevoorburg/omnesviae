@@ -1,6 +1,0 @@
-[submodule "public/iipmooviewer"]
-	path = public/iipmooviewer
-	url = https://github.com/ruven/iipmooviewer
-[submodule "public/vendor/iipmooviewer"]
-	path = public/vendor/iipmooviewer
-	url = https://github.com/ruven/iipmooviewer
