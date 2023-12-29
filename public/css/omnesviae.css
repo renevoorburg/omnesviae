@@ -109,6 +109,10 @@ h3 {
     vertical-align: bottom;
 }
 
+.origodest:hover {
+    cursor: pointer;
+}
+
 #popup-content p {
     white-space: nowrap;
 }

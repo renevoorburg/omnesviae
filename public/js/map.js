@@ -2,6 +2,20 @@
 // displaying and managing the openlayers map
 let storedZoom = 7.8;
 
+// function setFrom(placeId, name) {
+//     document.getElementById('place1Value').value = placeId;
+//     document.getElementById('place1').value = name;
+//     // hideSuggestions();
+//     // updateSubmitButton();
+// }
+//
+// function setTo(placeId, name) {
+//     document.getElementById('place2Value').value = placeId;
+//     document.getElementById('place2').value = name;
+//     // hideSuggestions();
+//     // updateSubmitButton();
+// }
+
 function integerToRoman(num) {
     if (typeof num !== 'number')
         return false;
@@ -99,12 +113,14 @@ function showPlace(placeId) {
     }
 
     const feature = getFeatureById(placeId);
-    let content = '<h2>' + feature.get('name') + '</h2>';
+    const name = feature.get('name')
+    let content = `<h2>${name}</h2>`;
     if (placeId.charAt(0) === 'T') {
         content += '<img src="/images/TPP/' + placeId + '.jpg">';
     }
     const description = getPropertyById(placeId, 'description') || ' &nbsp;&nbsp;&nbsp;&nbsp; ';
-    content += '<p><img class="origodest" src="/images/origo.png">&nbsp;' + description + '&nbsp;<img class="origodest" src="/images/destinatio.png"></p>';
+    content += `<p><img class="origodest" onclick="setFrom('${placeId}', '${name}')" src="/images/origo.png">&nbsp;${description}&nbsp;<img class="origodest" onclick="setTo('${placeId}', '${name}')"  src="/images/destinatio.png"></p>`;
+
 
     popupOverlay.setPosition(coordinates);
     document.getElementById('popup-content').innerHTML = content;

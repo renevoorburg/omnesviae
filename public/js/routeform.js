@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const hasExactMatch = data.some(item => item.exact);
 
             if (!hasExactMatch) {
-                inputField.classList.add('error-text');
+                invalidateInput(inputField);
                 hiddenField.value = '';
             } else {
                 const exactMatch = data.find(item => item.exact);
                 hiddenField.value = exactMatch.value;
-                inputField.classList.remove('error-text');
+                validateInput(inputField);
             }
 
             if (data.length === 1 && hasExactMatch) {
@@ -43,17 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     inputField.value = item.label;
                     hiddenField.value = item.value;
                     suggestionsContainer.style.display = 'none';
-                    inputField.classList.remove('error-text');
+                    validateInput(inputField);
                     updateSubmitButton();
                 });
                 suggestionsContainer.appendChild(suggestionDiv);
             });
-        }
-
-        function updateSubmitButton() {
-            const place1Value = document.getElementById('place1Value').value;
-            const place2Value = document.getElementById('place2Value').value;
-            submitBtn.disabled = !(place1Value && place2Value);
         }
 
         fetch(`/api/labels/${inputValue}`)
@@ -64,6 +58,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
+    function updateSubmitButton() {
+        const place1Value = document.getElementById('place1Value').value;
+        const place2Value = document.getElementById('place2Value').value;
+        submitBtn.disabled = !(place1Value && place2Value);
+    }
+
     function handleOutsideClick(event) {
         // Check if the click was outside the suggestion box and input field
         if (!event.target.closest('.autocomplete-container')) {
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function hideSuggestions() {
-        // Hide suggestion boxes
         document.querySelectorAll('.suggestions').forEach(suggestionsContainer => {
             suggestionsContainer.style.display = 'none';
         });
@@ -98,6 +97,33 @@ document.addEventListener('DOMContentLoaded', function () {
         routebox.classList.toggle('moved-down');
     }
 
-    window.moveRoutebox = moveRoutebox; // Expose handleInput globally for the oninput attribute in the HTML
-    window.handleInput = handleInput; // Expose handleInput globally for the oninput attribute in the HTML
+    function invalidateInput(element) {
+        element.classList.add('error-text');
+    }
+
+    function validateInput(element) {
+        element.classList.remove('error-text');
+    }
+
+    function setFrom(placeId, name) {
+        document.getElementById('place1Value').value = placeId;
+        document.getElementById('place1').value = name;
+        validateInput(document.getElementById('place1'));
+        updateSubmitButton();
+    }
+
+    function setTo(placeId, name) {
+        document.getElementById('place2Value').value = placeId;
+        document.getElementById('place2').value = name;
+        validateInput(document.getElementById('place2'));
+        updateSubmitButton();
+    }
+
+    // expose globally:
+    window.setTo = setTo;
+    window.setFrom = setFrom;
+    window.moveRoutebox = moveRoutebox;
+    window.handleInput = handleInput;
 });
+
+
