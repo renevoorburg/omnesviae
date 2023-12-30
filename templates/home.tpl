@@ -18,19 +18,19 @@
         <h2>Iter vestrum</h2>
         <form action="#" method="get">
             <div class="autocomplete-container">
-                <label for="place1">Origo:</label><br>
-                <input type="text" id="place1" name="place1" required autocomplete="off"
-                       oninput="handleInput(this.value, 'place1', 'place1Value')">
-                <div id="suggestions-place1" class="suggestions"></div>
-                <input type="hidden" id="place1Value" name="place1Value">
+                <label for="origin">Origo:</label><br>
+                <input type="text" id="origin" name="origin" required autocomplete="off"
+                       oninput="handleInput(this.value, 'origin', 'originId')">
+                <div id="suggestions-origin" class="suggestions" role="listbox"></div>
+                <input type="hidden" id="originId" name="origin1Id">
             </div>
             <br>
             <div class="autocomplete-container">
-                <label for="place2">Destinatio:</label><br>
-                <input type="text" id="place2" name="place2" required autocomplete="off"
-                       oninput="handleInput(this.value, 'place2', 'place2Value')">
-                <div id="suggestions-place2" class="suggestions"></div>
-                <input type="hidden" id="place2Value" name="place2Value">
+                <label for="destination">Destinatio:</label><br>
+                <input type="text" id="destination" name="destination" required autocomplete="off"
+                       oninput="handleInput(this.value, 'destination', 'destinationId')">
+                <div id="suggestions-destination" class="suggestions" role="listbox"></div>
+                <input type="hidden" id="destinationId" name="destinationId">
             </div>
             <br>
             <input type="submit" id="submitBtn" value=" Iter Faciam " disabled>
@@ -39,15 +39,15 @@
         <div>
             <h3>Explicatio clavium</h3>
             <ul id="legenda">
-                <li><img src="/images/symbols/0.png"> fons Tabula Peutingeriana</li>
-                <li><img src="/images/symbols/1.png"> fons principalis Itinerarium Antonini</li>
+                <li><img src="/images/symbols/0_noborder.png"> fons Tabula Peutingeriana</li>
+                <li><img src="/images/symbols/1_noborder.png"> fons principalis Itinerarium Antonini</li>
 
             </ul>
         </div>
     </div>
     <div id="map" class="map"></div>
     <div id="popup" class="ol-popup">
-        <a href="#" id="popup-closer" class="ol-popup-closer">X</a>
+        <a href="#" id="popup-closer" class="ol-popup-closer" aria-label="close button">X</a>
         <div id="popup-content"></div>
     </div>
 

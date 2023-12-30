@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const suggestionDiv = document.createElement("div");
                 suggestionDiv.classList.add("suggestion");
                 suggestionDiv.textContent = item.label;
+                suggestionDiv.setAttribute('role', 'option');
                 suggestionDiv.addEventListener("click", () => {
                     inputField.value = item.label;
                     hiddenField.value = item.value;
@@ -59,9 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateSubmitButton() {
-        const place1Value = document.getElementById('place1Value').value;
-        const place2Value = document.getElementById('place2Value').value;
-        submitBtn.disabled = !(place1Value && place2Value);
+        const originId = document.getElementById('originId').value;
+        const destinationId = document.getElementById('destinationId').value;
+        submitBtn.disabled = !(originId && destinationId);
     }
 
     function handleOutsideClick(event) {
@@ -80,10 +81,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function submitForm(event) {
         event.preventDefault();
 
-        const place1Value = document.getElementById('place1Value').value;
-        const place2Value = document.getElementById('place2Value').value;
+        const originId = document.getElementById('originId').value;
+        const destinationId = document.getElementById('destinationId').value;
 
-        fetch(`/api/route/${place1Value}/${place2Value}`)
+        fetch(`/api/route/${originId}/${destinationId}`)
             .then(response => response.json())
             .then(data => showRouteOnMap(data))
             .catch(error => {
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function moveRoutebox() {
-        var routebox = document.getElementById('route');
+        const routebox = document.getElementById('route');
         routebox.classList.toggle('moved-down');
     }
 
@@ -106,16 +107,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setFrom(placeId, name) {
-        document.getElementById('place1Value').value = placeId;
-        document.getElementById('place1').value = name;
-        validateInput(document.getElementById('place1'));
+        document.getElementById('originId').value = placeId;
+        document.getElementById('origin').value = name;
+        validateInput(document.getElementById('origin'));
         updateSubmitButton();
     }
 
     function setTo(placeId, name) {
-        document.getElementById('place2Value').value = placeId;
-        document.getElementById('place2').value = name;
-        validateInput(document.getElementById('place2'));
+        document.getElementById('destinationId').value = placeId;
+        document.getElementById('destination').value = name;
+        validateInput(document.getElementById('destination'));
         updateSubmitButton();
     }
 

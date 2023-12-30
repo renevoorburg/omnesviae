@@ -2,20 +2,6 @@
 // displaying and managing the openlayers map
 let storedZoom = 7.8;
 
-// function setFrom(placeId, name) {
-//     document.getElementById('place1Value').value = placeId;
-//     document.getElementById('place1').value = name;
-//     // hideSuggestions();
-//     // updateSubmitButton();
-// }
-//
-// function setTo(placeId, name) {
-//     document.getElementById('place2Value').value = placeId;
-//     document.getElementById('place2').value = name;
-//     // hideSuggestions();
-//     // updateSubmitButton();
-// }
-
 function integerToRoman(num) {
     if (typeof num !== 'number')
         return false;

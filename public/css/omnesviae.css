@@ -182,13 +182,13 @@ input[type="text"] {
     width: 88%;
 }
 
-#place1 {
+#origin {
     background: url("/images/origo.png") no-repeat right center;
     background-size: 2em;
     margin-right: 2.5em;
 }
 
-#place2 {
+#destination {
     background: url("/images/destinatio.png") no-repeat right center;
     background-size: 2em;
     margin-right: 2.5em;
