@@ -1,6 +1,9 @@
 // code for the autocomplete and form handling:
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
+    const originHidden = document.getElementById('originId');
+    const destinationHidden = document.getElementById('destinationId');
+
     document.addEventListener('click', handleOutsideClick);
     document.querySelector('form').addEventListener('submit', submitForm);
 
@@ -34,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function populateSuggestions(data) {
             suggestionsContainer.innerHTML = '';
-
             data.forEach(item => {
                 const suggestionDiv = document.createElement("div");
                 suggestionDiv.classList.add("suggestion");
@@ -60,13 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateSubmitButton() {
-        const originId = document.getElementById('originId').value;
-        const destinationId = document.getElementById('destinationId').value;
-        submitBtn.disabled = !(originId && destinationId);
+        submitBtn.disabled = !(originHidden.value && destinationHidden.value);
     }
 
     function handleOutsideClick(event) {
-        // Check if the click was outside the suggestion box and input field
         if (!event.target.closest('.autocomplete-container')) {
             hideSuggestions();
         }
@@ -80,18 +79,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function submitForm(event) {
         event.preventDefault();
-
-        const originId = document.getElementById('originId').value;
-        const destinationId = document.getElementById('destinationId').value;
-
-        fetch(`/api/route/${originId}/${destinationId}`)
+        fetch(`/api/route/${originHidden.value}/${destinationHidden.value}`)
             .then(response => response.json())
             .then(data => showRouteOnMap(data))
             .catch(error => {
                 console.error("Error fetching route:", error);
             })
     }
-
 
     function moveRoutebox() {
         const routebox = document.getElementById('route');
@@ -106,18 +100,21 @@ document.addEventListener('DOMContentLoaded', function () {
         element.classList.remove('error-text');
     }
 
-    function setFrom(placeId, name) {
-        document.getElementById('originId').value = placeId;
-        document.getElementById('origin').value = name;
-        validateInput(document.getElementById('origin'));
+    function setInputName(element, name, id) {
+        const nameInput = document.getElementById(`${element}`);
+        const nameIdInput = document.getElementById(`${element}Id`);
+        nameInput.value = name;
+        nameIdInput.value = id;
+        validateInput(nameInput);
         updateSubmitButton();
     }
 
+    function setFrom(placeId, name) {
+        setInputName('origin', name, placeId);
+    }
+
     function setTo(placeId, name) {
-        document.getElementById('destinationId').value = placeId;
-        document.getElementById('destination').value = name;
-        validateInput(document.getElementById('destination'));
-        updateSubmitButton();
+        setInputName('destination', name, placeId);
     }
 
     // expose globally:
