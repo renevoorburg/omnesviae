@@ -3,8 +3,7 @@
 let storedZoom = 7.8;
 
 function integerToRoman(num) {
-    if (typeof num !== 'number')
-        return false;
+    if (typeof num !== 'number') return false;
 
     let digits = String(+num).split(""),
         key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
@@ -39,7 +38,6 @@ function showRouteOnMap(routeData) {
     showRoutelist(routeData);
 }
 
-
 function showRoutelist(routeData) {
     const resultBox = document.getElementById("results-container");
     let htmlString = '<br><h2>Iter brevissimum</h2>';
@@ -55,7 +53,7 @@ function showRoutelist(routeData) {
                 // let distanceNumber = getDistanceNumber(previousPlace, place);
                 let distanceNumber = routePart.dist.numeral;
                 // let distance = getDistance(previousPlace, place);
-                let unit = routePart.dist.possibleUnit ? routePart.dist.possibleUnit : '';
+                // let unit = routePart.dist.possibleUnit ? routePart.dist.possibleUnit : '';
                 if (distanceNumber && routePart.dist.isReconstructed) {
                     htmlString += `<li class="distance"><span class="estimated">${integerToRoman(distanceNumber)}. mensura aestimata</span></li>`;
                 } else if (distanceNumber) {
@@ -102,15 +100,14 @@ function showPlace(placeId) {
     const name = feature.get('name')
     let content = `<h2>${name}</h2>`;
     if (placeId.charAt(0) === 'T') {
-        content += '<img src="/images/TPP/' + placeId + '.jpg">';
+        content += `<img src="/images/TPP/${placeId}.jpg">`
     }
     const description = getPropertyById(placeId, 'description') || ' &nbsp;&nbsp;&nbsp;&nbsp; ';
     content += `<p><img class="origodest" onclick="setFrom('${placeId}', '${name}')" src="/images/origo.png">&nbsp;${description}&nbsp;<img class="origodest" onclick="setTo('${placeId}', '${name}')"  src="/images/destinatio.png"></p>`;
 
-
     popupOverlay.setPosition(coordinates);
     document.getElementById('popup-content').innerHTML = content;
-    window.location = '#' + placeId;
+    window.location = `#${placeId}`;
 }
 
 function getSymbolChar(id) {
@@ -194,11 +191,19 @@ const geojson = new ol.layer.Vector({
     zIndex: 2
 });
 
+// Process the URI request, when we have the GeoJSON data ready:
 geojson.getSource().on('change', function (event) {
     if (event.target.getState() === 'ready') {
-        const place1 = window.location.hash.substring(1);
-        if (place1) {
-            showPlace(place1);
+        let query = window.location.hash.substring(1);
+        // we don't really check the syntax, other than route vs place request:
+        let placeIds = query.split("_");
+        if (placeIds.length === 2) {
+            console.log('2');
+            setFrom(placeIds[0], getPropertyById(placeIds[0], 'name'));
+            setTo(placeIds[1], getPropertyById(placeIds[1], 'name'));
+            getRoute();
+        } else if (placeIds.length === 1) {
+            showPlace(placeIds[0]);
         }
     }
 });

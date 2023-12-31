@@ -1,4 +1,5 @@
 // code for the autocomplete and form handling:
+
 document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
     const originHidden = document.getElementById('originId');
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const hiddenField = document.getElementById(hiddenFieldId);
         const inputField = document.getElementById(inputId);
 
-        function handleApiResponse(data) {
+        function handleLabelsApiResponse(data) {
             const hasExactMatch = data.some(item => item.exact);
 
             if (!hasExactMatch) {
@@ -23,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 hiddenField.value = exactMatch.value;
                 validateInput(inputField);
             }
-
             if (data.length === 1 && hasExactMatch) {
                 suggestionsContainer.style.display = 'none';
             } else if (data.length >= 1) {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         fetch(`/api/labels/${inputValue}`)
             .then(response => response.json())
-            .then(data => handleApiResponse(data))
+            .then(data => handleLabelsApiResponse(data))
             .catch(error => {
                 console.error("Error fetching suggestions:", error);
             });
@@ -77,14 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function submitForm(event) {
-        event.preventDefault();
+    function getRoute() {
         fetch(`/api/route/${originHidden.value}/${destinationHidden.value}`)
             .then(response => response.json())
             .then(data => showRouteOnMap(data))
             .catch(error => {
                 console.error("Error fetching route:", error);
             })
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        getRoute();
+        window.location = `#${originHidden.value}_${destinationHidden.value}`;
     }
 
     function moveRoutebox() {
@@ -122,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.setFrom = setFrom;
     window.moveRoutebox = moveRoutebox;
     window.handleInput = handleInput;
+    window.getRoute = getRoute;
 });
 
 
