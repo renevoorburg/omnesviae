@@ -1,5 +1,12 @@
 // code for the autocomplete and form handling:
 
+const datasourceQueryParam = (function(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const param = urlParams.get('datasource');
+    return param ? `?datasource=${param}` : '';
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
     const originHidden = document.getElementById('originId');
@@ -53,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        fetch(`/api/labels/${inputValue}`)
+        fetch(`/api/labels/${inputValue}${datasourceQueryParam}`)
             .then(response => response.json())
             .then(data => handleLabelsApiResponse(data))
             .catch(error => {
@@ -78,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getRoute() {
-        fetch(`/api/route/${originHidden.value}/${destinationHidden.value}`)
+        fetch(`/api/route/${originHidden.value}/${destinationHidden.value}${datasourceQueryParam}`)
             .then(response => response.json())
             .then(data => showRouteOnMap(data))
             .catch(error => {

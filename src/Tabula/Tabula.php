@@ -22,15 +22,15 @@ class Tabula
      * Reads the schema.org JSON-LD file in $this->tabula
      * Sets up the Places object
      */
-    public function __construct(?string $source = null)
+    public function __construct(?string $datasource = null)
     {
-        $source = $source ?? self::DATASOURCE;
-        if ($source !== self::DATASOURCE && !filter_var($source, FILTER_VALIDATE_URL)) {
-            fprintf(STDERR, 'Invalid source URL provided: %s' . PHP_EOL, $source);
+        $datasource = $datasource ?? self::DATASOURCE;
+        if ($datasource !== self::DATASOURCE && !filter_var($datasource, FILTER_VALIDATE_URL)) {
+            fprintf(STDERR, 'Invalid source URL provided: %s' . PHP_EOL, $datasource);
             exit(1);
         }
         try {
-            $this->tabula = json_decode(file_get_contents($source), true);
+            $this->tabula = json_decode(file_get_contents($datasource), true);
         } catch (Exception $e) {
             fprintf(STDERR, 'Caught exception: %s' . PHP_EOL, $e->getMessage());
             exit(1);

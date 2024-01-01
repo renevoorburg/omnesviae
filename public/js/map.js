@@ -185,7 +185,7 @@ const popupOverlay = new ol.Overlay({
 const geojson = new ol.layer.Vector({
     source: new ol.source.Vector({
         format: new ol.format.GeoJSON(),
-        url: '/api/geofeatures'
+        url: `/api/geofeatures${datasourceQueryParam}`
     }),
     style: getFeatureStyle,
     zIndex: 2

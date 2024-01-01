@@ -8,6 +8,8 @@ if ($action == "api" && isset($urlParts[2])) {
     $action = "api/" . $urlParts[2];
 }
 
+$datasource = $_GET['datasource'] ?? null;
+
 switch ($action) {
     case "":
         $page = new \OmnesViae\Templating\Page();
@@ -17,20 +19,20 @@ switch ($action) {
     case "api/labels":
         // returns matching place labels as json  for form autocomplete:
         // example: /api/labels/forum
-        $model = new \OmnesViae\Tabula\Tabula();
+        $model = new \OmnesViae\Tabula\Tabula($datasource);
         $view = new \OmnesViae\Tabula\LabelList($model);
         $view->render($urlParts[3] ?? '');
         break;
     case "api/route":
         // return the shortest route as json:
         // example: /api/route/TPPlace558/TPPlace1203
-        $model = new \OmnesViae\Tabula\Routing();
+        $model = new \OmnesViae\Tabula\Routing($datasource);
         $model->setRoute($urlParts[3] ?? '', $urlParts[4] ?? '');
         $model->render();
         break;
     case "api/geofeatures":
         // example: /api/geofeatures
-        $geoFeatures = new \OmnesViae\Tabula\GeoFeatures();
+        $geoFeatures = new \OmnesViae\Tabula\GeoFeatures($datasource);
         $geoFeatures->render();
         break;
     case "tabula":
@@ -48,9 +50,7 @@ switch ($action) {
         $page->display('base.tpl');
         break;
     case "test":
-        $page = new \OmnesViae\Templating\Page();
-        $page->assign('currentPage', '/test');
-        $page->display('home.tpl');
+        phpinfo();
         break;
     default:
         echo "default";

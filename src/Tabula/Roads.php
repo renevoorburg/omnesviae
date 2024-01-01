@@ -14,9 +14,9 @@ class Roads extends Tabula
     protected array $roads;
 
 
-    public function __construct()
+    public function __construct(?string $datasource = null)
     {
-        parent::__construct();
+        parent::__construct($datasource);
         $this->setup();
     }
 

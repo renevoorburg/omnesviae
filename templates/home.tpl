@@ -51,7 +51,7 @@
         <div id="popup-content"></div>
     </div>
 
-    <script src="/js/map.js"></script>
     <script src="/js/routeform.js"></script>
+    <script src="/js/map.js"></script>
 
 {/block}
