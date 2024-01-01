@@ -1,5 +1,5 @@
-// code for the autocomplete and form handling:
 
+// an alternative jsonld datasource may be specified, that needs to be passed to the api calls:
 const datasourceQueryParam = (function(){
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -7,6 +7,7 @@ const datasourceQueryParam = (function(){
     return param ? `?datasource=${param}` : '';
 })();
 
+// code for the autocomplete and form handling:
 document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submitBtn');
     const originHidden = document.getElementById('originId');
