@@ -14,21 +14,19 @@
 
 {block name=body}
     <div id="route" class="routebox">
-        <div id="handle" onclick="moveRoutebox()"></div>
+        <div id="handle"></div>
         <h2>Iter vestrum</h2>
         <form action="#" method="get">
             <div class="autocomplete-container">
                 <label for="origin">Origo:</label><br>
-                <input type="text" id="origin" name="origin" required autocomplete="off"
-                       oninput="handleInput(this.value, 'origin', 'originId')">
+                <input type="text" id="origin" name="origin" required autocomplete="off">
                 <div id="suggestions-origin" class="suggestions" role="listbox"></div>
                 <input type="hidden" id="originId" name="origin1Id">
             </div>
             <br>
             <div class="autocomplete-container">
                 <label for="destination">Destinatio:</label><br>
-                <input type="text" id="destination" name="destination" required autocomplete="off"
-                       oninput="handleInput(this.value, 'destination', 'destinationId')">
+                <input type="text" id="destination" name="destination" required autocomplete="off">
                 <div id="suggestions-destination" class="suggestions" role="listbox"></div>
                 <input type="hidden" id="destinationId" name="destinationId">
             </div>

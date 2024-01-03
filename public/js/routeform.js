@@ -1,8 +1,7 @@
 
-// an alternative jsonld datasource may be specified, that needs to be passed to the api calls:
-const datasourceQueryParam = (function(){
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
+// an alternative jsonld datasource may be specified, capture param to pass to api calls:
+const datasourceQueryParam = (() => {
+    const urlParams = new URLSearchParams(window.location.search);
     const param = urlParams.get('datasource');
     return param ? `?datasource=${param}` : '';
 })();
@@ -15,6 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', handleOutsideClick);
     document.querySelector('form').addEventListener('submit', submitForm);
+    document.getElementById('origin').oninput = (event) => {
+        handleInput(event.target.value, 'origin', 'originId');
+    };
+    document.getElementById('destination').oninput = (event) => {
+        handleInput(this.value, 'destination', 'destinationId')
+    };
+    document.getElementById('handle').onclick = (event) => {
+        moveRoutebox();
+    };
 
     function handleInput(inputValue, inputId, hiddenFieldId) {
         const suggestionsContainer = document.getElementById(`suggestions-${inputId}`);
@@ -133,8 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // expose globally:
     window.setTo = setTo;
     window.setFrom = setFrom;
-    window.moveRoutebox = moveRoutebox;
-    window.handleInput = handleInput;
     window.getRoute = getRoute;
 });
 
