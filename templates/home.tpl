@@ -16,7 +16,7 @@
     <div id="route" class="routebox">
         <div id="handle"></div>
         <h2>Iter vestrum</h2>
-        <form action="#" method="get">
+        <form action="#" method="get" id="routeform">
             <div class="autocomplete-container">
                 <label for="origin">Origo:</label><br>
                 <input type="text" id="origin" name="origin" required autocomplete="off">

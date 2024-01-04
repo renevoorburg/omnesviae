@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const destinationHidden = document.getElementById('destinationId');
 
     document.addEventListener('click', handleOutsideClick);
-    document.querySelector('form').addEventListener('submit', submitForm);
+    document.getElementById('routeform').addEventListener('submit', submitForm);
     document.getElementById('origin').oninput = (event) => {
         handleInput(event.target.value, 'origin', 'originId');
     };
     document.getElementById('destination').oninput = (event) => {
-        handleInput(this.value, 'destination', 'destinationId')
+        handleInput(event.target.value, 'destination', 'destinationId')
     };
     document.getElementById('handle').onclick = (event) => {
         moveRoutebox();
