@@ -4,7 +4,7 @@ namespace OmnesViae;
 
 class LanguageSelector
 {
-    const AVAILABLE_LANGUAGES = array("en", "de", "el", "es", "fr", "it", "nl");
+    const AVAILABLE_LANGUAGES = array("en", "de", "el", "es", "fr", "it", "la", "nl");
     const GET_PARAMETER = 'lang';
     private string $selectedLanguage;
 
