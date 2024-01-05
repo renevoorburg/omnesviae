@@ -12,7 +12,7 @@ class Page extends \Smarty
     ];
 
 
-    public function __construct()
+    public function __construct(string $page = "/")
     {
         parent::__construct();
         $this->setTemplateDir(__DIR__ . '/../../templates');
@@ -20,7 +20,19 @@ class Page extends \Smarty
         $this->setCacheDir(__DIR__ . '/../../cache');
         $this->setConfigDir(__DIR__ . '/../../configs');
 
+        $this->assign('currentPage', $page);
         $this->assign('menuItems', $this->menuItems);
+
+        $langSelector = new \OmnesViae\LanguageSelector();
+        $language = $langSelector->getSelectedLanguage();
+        $this->assign('lang',$language);
+
+        $translations = new \OmnesViae\Translations($page, $language);
+        foreach ($translations as $key => $value) {
+            $this->assign($key, $value);
+        }
+
+
     }
 
     public function display($template = 'base.tpl', $cache_id = null, $compile_id = null, $parent = null)

@@ -4,7 +4,6 @@ let storedZoom = 7.8;
 
 function integerToRoman(num) {
     if (typeof num !== 'number') return false;
-
     let digits = String(+num).split(""),
         key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
             "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",

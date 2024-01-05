@@ -12,8 +12,8 @@ $datasource = $_GET['datasource'] ?? null;
 
 switch ($action) {
     case "":
-        $page = new \OmnesViae\Templating\Page();
-        $page->assign('currentPage', '/');
+        $page = new \OmnesViae\Templating\Page('/');
+//        $page->assign('currentPage', '/');
         $page->display('home.tpl');
         break;
     case "api/labels":
@@ -36,21 +36,23 @@ switch ($action) {
         $geoFeatures->render();
         break;
     case "tabula":
-        $page = new \OmnesViae\Templating\Page();
-        $page->assign('currentPage', '/tabula');
+        $page = new \OmnesViae\Templating\Page('/tabula');
+//        $page->assign('currentPage', '/tabula');
         $page->assign('title', 'OmnesViae: Tabula Peutingeriana');
         $page->assign('name', 'Tabula Peutingeriana');
 
         $page->display('tabula.tpl');
         break;
     case "nobis":
-        $page = new \OmnesViae\Templating\Page();
-        $page->assign('currentPage', '/nobis');
+        $page = new \OmnesViae\Templating\Page('/nobis');
+//        $page->assign('currentPage', '/nobis');
         $page->assign('name', 'OmnesViae');
         $page->display('base.tpl');
         break;
     case "test":
-        phpinfo();
+//        phpinfo();
+        $lang = new \OmnesViae\LanguageSelector();
+        echo $lang->getSelectedLanguage();
         break;
     default:
         echo "default";
