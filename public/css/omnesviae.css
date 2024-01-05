@@ -142,8 +142,6 @@ h3 {
     bottom: 0px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-
-    /*top: 400px;*/
 }
 
 #handle {
@@ -165,7 +163,6 @@ h3 {
 input[type="text"] {
     padding: 8px;
     margin-top: 5px;
-    margin-right:0;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 92%;
@@ -186,13 +183,11 @@ input[type="text"] {
 #origin {
     background: url("/images/origo.png") no-repeat right center;
     background-size: 2em;
-    margin-right: 2.5em;
 }
 
 #destination {
     background: url("/images/destinatio.png") no-repeat right center;
     background-size: 2em;
-    margin-right: 2.5em;
 }
 
 #legenda {
