@@ -5,18 +5,24 @@ $data = array(
         "title"
         => "OmnesViae: Romeinse Routeplanner",
         "description"
-         => "OmnesViae: Routeplanner met de voornaamste wegen en steden van het Romeinse Rijk, gebaseerd op de Tabula Peutingeriana en het Itinerarium van Antoninus."
+         => "Plan je reis als een Romein, met een routeplanner gebaseerd op de Romeinse bronnen, de wegenkaart Tabula Peutingerina en de reisgids van Antoninius.",
+        "keywords"
+         => "Romeinse routeplanner, Romeinse wegenkaart, Tabula Peutingeriana, Itinerarium Antonini, Romeinse reisgids, Romeinse reisroute, Romeinse wegen, Romeinse wegenkaart, Romeinse wegenplanner, Romeinse wegenroute, Romeinse wegenrouteplanner, itinerarium, Antoninus"
     ),
     "/tabula" => array (
         "title"
         => "OmnesViae: Tabula Peutingeriana",
         "description"
-         => "OmnesViae: Tabula Peutingeriana, een middeleeuwse kopie van een Romeinse wegenkaart."
+         => "Bekijk de Tabula Peutingeriana, een middeleeuwse kopie van een meterslangs Romeinse wegenkaart van het Romeinse rijk.",
+        "keywords"
+        => "Tabula Peutingeriana, IIIF, Romeinse wegenkaart, Romeinse wegen, Romeinse wegenkaart",
     ),
     "/nobis" => array (
         "title"
-        => "OmnesViae: Over OmnesViae",
+        => "Over OmnesViae.org",
         "description"
-        => "OmnesViae: Over OmnesViae en het gebruik van de website."
+        => "Over OmnesViae.org en het gebruik van de website.",
+        "keywords"
+        => "OmnesViae, gebruik, achtergrond, makers, rechten, donaties, github, René Voorburg"
     )
 );

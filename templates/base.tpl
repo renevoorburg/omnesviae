@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta name="description" content="{$description}" />
+        <meta name="keywords" content="{$keywords}" />
 
         <meta property="og:image" content=/images/omnesviae_og.jpg">
         <meta property="og:image:width" content="1200">
