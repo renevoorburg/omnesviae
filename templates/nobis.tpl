@@ -12,12 +12,16 @@
         </div>
         <div class="sidenote"><h2>navigating the empire</h2></div>
         <div class="paragraph"><img src="/images/omnesviae_og.jpg" alt="Descriptive Alt Text"></div>
+        <div class="sidenote"><h2>participate</h2></div>
+        <div class="paragraph">
+            <p>The OmnesViae code is available on <a href="">GitHub</a> under a open source license. </p>
+        </div>
         <div class="sidenote"><h2>honori, quem honor meretur</h2></div>
         <div class="paragraph">
             <p>OmnesViae was created by René Voorburg. Most data behind OmnesViae is based on Richard Talbert's work on the TP, <a href="https://www.cambridge.org/us/talbert/">Rome's World: The Peutinger Map Reconsidered</a>.
                 The identification of the locations of the places is largely based on the <a href="http://pleiades.stoa.org/">Pleiades project</a> and on Martin Weber's <a href="https://tabula-peutingeriana.de/">Tabvla Pevtingeriana</a>.
                 OmnesViae does add a few connections over sea that dont appear on the TP. These can be recognized by the dashed lines.
-                Many helped me with the translations for the first version of OmnesViae that existed from 2011 to 2024.
+                Many helped me with the translations in the first version of OmnesViae that existed from 2011 to 2024.
                 This version of OmnesViae is a complete rewrite of the original version. AI was used for the illustration on this page and the translations.
             </p>
         </div>
