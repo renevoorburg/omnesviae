@@ -345,3 +345,17 @@ iframe {
     display: block;
     /*margin: 1em 0;*/
 }
+
+.github {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+}
+
+.bmc {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 2em 0;
+}
