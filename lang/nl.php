@@ -27,7 +27,7 @@ $data = array(
         "intro"
         => "OmnesViae is een <a href=\"/\">routeplanner voor het Romeinse Rijk</a>, gebaseerd op historische gegevens.
             De belangrijkste bron is een (middeleeuwse kopie van) een Romeinse kaart, bekend als de <a href=\"/tabula\">Tabula Peutingeriana</a> (TP), die het <em>cursus publicus</em>, het wegennet van het Romeinse Rijk, toont.
-            Aangezien het meest westelijke deel van de kaart verloren is gegaan, zijn de plaatsen en routes in dat deel van het rijk afkomstig uit de <em>Antonine Itinerary</em> (Itinerarium Antonini).<br />
+            Aangezien het meest westelijke deel van de kaart verloren is gegaan, zijn de plaatsen en routes in dat deel van het rijk afkomstig uit het Itinerarium Antonini (reisgids van Antoninus).<br />
             De kortste route wordt berekend met behulp van de afstanden vermeld in deze antieke bronnen.",
         "subtitle"
         => "navigeer door het Romeinse rijk",
