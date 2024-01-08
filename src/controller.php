@@ -37,7 +37,6 @@ switch ($action) {
         break;
     case "tabula":
         $page = new \OmnesViae\Templating\Page('/tabula');
-//        $page->assign('currentPage', '/tabula');
         $page->assign('title', 'OmnesViae: Tabula Peutingeriana');
         $page->assign('name', 'Tabula Peutingeriana');
 
@@ -45,9 +44,8 @@ switch ($action) {
         break;
     case "nobis":
         $page = new \OmnesViae\Templating\Page('/nobis');
-//        $page->assign('currentPage', '/nobis');
         $page->assign('name', 'OmnesViae');
-        $page->display('base.tpl');
+        $page->display('nobis.tpl');
         break;
     case "test":
 //        phpinfo();

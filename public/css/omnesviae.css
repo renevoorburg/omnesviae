@@ -295,3 +295,53 @@ iframe {
     width: 100%;
     height: 100%;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em 1em;
+    max-width: 1024px;
+    margin: 0.5em;
+    align-items: start;
+    line-height: 1.3;
+}
+
+.grid-container h1,h2{
+    margin: 0;
+}
+
+.grid-container p {
+    margin: 0;
+}
+
+@media screen and (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr 3fr; /* 1 part for sidenotes, 3 parts for paragraphs */
+    }
+
+    .sidenote {
+        grid-column: 1; /* Sidenotes in the first column */
+    }
+
+    .paragraph {
+        grid-column: 2; /* Paragraphs in the second column */
+    }
+}
+
+/* Additional styling for readability */
+.sidenote, .paragraph {
+    padding: 0.5em;
+    /*border: 1px solid #ddd;*/
+}
+
+.sidenote {
+    font-family: times, times new roman, serif;
+    font-style: italic;
+}
+
+.paragraph img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /*margin: 1em 0;*/
+}
