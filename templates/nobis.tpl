@@ -4,16 +4,23 @@
     <div class="grid-container">
         <div class="sidenote"><h1>The OmnesViae route planner</h1></div>
         <div class="paragraph">
-            <p>OmnesViae is a route planner for the Roman Empire, entirely based on historical data sources.<br />
-                The main source is a medieval copy of a (copy of) a Roman map, known as the <em>Tabula Peutingeriana</em>, showing the layout of the <em>cursus publicus</em>, the road network of the Roman Empire.
-                Because the most western part of the map has been lost, the places and routes in that part of the empire have been added using the <em>Antonine Itinerary</em> (Itinerarium Antonini).
-                Together, these sources provide both the possible connections between places and the distances for the calculation the shortest route.
+            <p>OmnesViae is a <a href="/">route planner for the Roman Empire</a>, based on historical data.
+                Its main source is a (medieval copy of) a Roman map, known as the <a href="/tabula">Tabula Peutingeriana</a> (TP), showing the <em>cursus publicus</em>, the road network of the Roman Empire.
+                Since the western most part of the map has been lost, places and routes in that part of the empire are from the <em>Antonine Itinerary</em> (Itinerarium Antonini).
+                Routes are calculated using the distances mentioned in the antique sources.
             </p>
         </div>
         <div class="sidenote"><h2>navigating the empire</h2></div>
         <div class="paragraph"><img src="/images/omnesviae_og.jpg" alt="Descriptive Alt Text"></div>
         <div class="sidenote"><h2>honori, quem honor meretur</h2></div>
-        <div class="paragraph"><p>Lorem dolor</p></div>
+        <div class="paragraph">
+            <p>OmnesViae was created by René Voorburg. Most data behind OmnesViae is based on Richard Talbert's work on the TP, <a href="https://www.cambridge.org/us/talbert/">Rome's World: The Peutinger Map Reconsidered</a>.
+                The identification of the locations of the places is largely based on the <a href="http://pleiades.stoa.org/">Pleiades project</a> and on Martin Weber's <a href="https://tabula-peutingeriana.de/">Tabvla Pevtingeriana</a>.
+                OmnesViae does add a few connections over sea that dont appear on the TP. These can be recognized by the dashed lines.
+                Many helped me with the translations for the first version of OmnesViae that existed from 2011 to 2024.
+                This version of OmnesViae is a complete rewrite of the original version. AI was used for the illustration on this page and the translations.
+            </p>
+        </div>
     </div>
 
 
