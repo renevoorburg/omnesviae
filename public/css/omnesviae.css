@@ -306,7 +306,7 @@ iframe {
     line-height: 1.3;
 }
 
-.grid-container h1,h2{
+.sidenote h1, .sidenote h2 {
     margin: 0;
 }
 
