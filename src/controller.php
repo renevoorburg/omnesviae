@@ -10,9 +10,13 @@ if ($action == "api" && isset($urlParts[2])) {
 
 $datasource = $_GET['datasource'] ?? null;
 
+$languageNegotiator = new \OmnesViae\Negotiator\LanguageNegotiator(['en', 'de', 'el', 'es', 'fr', 'it', 'la', 'nl']);
+$language = $languageNegotiator->negotiate();
+
+
 switch ($action) {
     case "":
-        $page = new \OmnesViae\Templating\Page('/');
+        $page = new \OmnesViae\Templating\Page('/', $language);
 //        $page->assign('currentPage', '/');
         $page->display('home.tpl');
         break;
@@ -36,14 +40,14 @@ switch ($action) {
         $geoFeatures->render();
         break;
     case "tabula":
-        $page = new \OmnesViae\Templating\Page('/tabula');
+        $page = new \OmnesViae\Templating\Page('/tabula', $language);
         $page->assign('title', 'OmnesViae: Tabula Peutingeriana');
         $page->assign('name', 'Tabula Peutingeriana');
 
         $page->display('tabula.tpl');
         break;
     case "nobis":
-        $page = new \OmnesViae\Templating\Page('/nobis');
+        $page = new \OmnesViae\Templating\Page('/nobis', $language);
         $page->assign('name', 'OmnesViae');
         $page->display('nobis.tpl');
         break;

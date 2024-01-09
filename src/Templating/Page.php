@@ -12,7 +12,7 @@ class Page extends \Smarty
     ];
 
 
-    public function __construct(string $page = "/")
+    public function __construct(string $page = "/", string $language = 'en')
     {
         parent::__construct();
         $this->setTemplateDir(__DIR__ . '/../../templates');
@@ -23,8 +23,6 @@ class Page extends \Smarty
         $this->assign('currentPage', $page);
         $this->assign('menuItems', $this->menuItems);
 
-        $langSelector = new \OmnesViae\LanguageSelector();
-        $language = $langSelector->getSelectedLanguage();
         $this->assign('lang',$language);
 
         $translations = new \OmnesViae\Translations($page, $language);
