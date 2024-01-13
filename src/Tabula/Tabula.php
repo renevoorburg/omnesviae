@@ -49,4 +49,9 @@ class Tabula
         return $parsedUri['fragment'] ?? '';
     }
 
+    public static function getDataSource() : string
+    {
+        return self::DATASOURCE;
+    }
+
 }

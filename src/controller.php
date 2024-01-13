@@ -13,12 +13,24 @@ $datasource = $_GET['datasource'] ?? null;
 $languageNegotiator = new \OmnesViae\Negotiator\LanguageNegotiator(['en', 'de', 'el', 'es', 'fr', 'it', 'la', 'nl']);
 $language = $languageNegotiator->negotiate();
 
-
 switch ($action) {
     case "":
-        $page = new \OmnesViae\Templating\Page('/', $language);
-//        $page->assign('currentPage', '/');
-        $page->display('home.tpl');
+        $mimeTypeNegotiator = new \OmnesViae\Negotiator\MimeTypeNegotiator(['text/html', 'application/ld+json', 'text/turtle', 'application/rdf+xml', 'application/n-triples', 'text/n3', 'application/json']);
+        $mimeType = $mimeTypeNegotiator->negotiate();
+        if ($mimeType === 'text/html') {
+            $page = new \OmnesViae\Templating\Page('/', $language);
+            $page->display('home.tpl');
+        } else if (!empty($mimeType)) {
+            $data = json_decode(file_get_contents(\OmnesViae\Tabula\Tabula::getDataSource()), false);
+            $context = $data->{'@context'};
+            $compacted = jsonld_compact($data, (object)['@context' => $context]);
+            $expanded = jsonld_expand($compacted);
+            $expandedJson = json_encode($expanded, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+            $graph = new \EasyRdf\Graph();
+            $graph->parse($expandedJson, 'jsonld');
+            header('Content-Type: '.$mimeType.'; charset=UTF-8');
+            echo $graph->serialise($mimeType);
+        }
         break;
     case "api/labels":
         // returns matching place labels as json  for form autocomplete:
@@ -50,11 +62,6 @@ switch ($action) {
         $page = new \OmnesViae\Templating\Page('/nobis', $language);
         $page->assign('name', 'OmnesViae');
         $page->display('nobis.tpl');
-        break;
-    case "test":
-//        phpinfo();
-        $lang = new \OmnesViae\LanguageSelector();
-        echo $lang->getSelectedLanguage();
         break;
     default:
         echo "default";
