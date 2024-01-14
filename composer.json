@@ -9,7 +9,6 @@
         "ext-mbstring": "*",
         "smarty/smarty": "*",
         "easyrdf/easyrdf": "^1.1",
-        "digitalbazaar/json-ld": "^0.4.8",
         "ml/json-ld": "^1.2"
     },
     "autoload": {
