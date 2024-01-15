@@ -46,6 +46,8 @@ switch ($action) {
             $graph->parse($expandedJson, 'jsonld');
             header('Content-Type: '.$mimeType.'; charset=UTF-8');
             echo $graph->serialise($mimeType);
+        } else {
+            \OmnesViae\Util::showErrorPage(406, "Not Acceptable");
         }
         break;
     case "tabula":
@@ -61,7 +63,7 @@ switch ($action) {
         $page->display('nobis.tpl');
         break;
     default:
-        echo "default";
+        \OmnesViae\Util::showErrorPage(404, "Not Found- Quo Vadis?");
         break;
 }
 
