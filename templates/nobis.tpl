@@ -23,7 +23,7 @@
             <p>{$credits}</p>
         </div>
         <div class="paragraph">
-            <p><em>René Voorburg, January 2024</em><br />voorburg (at) xs4all.nl</p>
+            <p><em>René Voorburg, Martius A.D. MMXXIV. </em><br />voorburg (at) xs4all.nl</p>
         </div>
     </div>
 
