@@ -8,7 +8,7 @@
         <meta name="description" content="{$description}" />
         <meta name="keywords" content="{$keywords}" />
 
-        <meta property="og:image" content="/images/omnesviae_og.jpg">
+        <meta property="og:image" content="https://omnesviae.org/images/omnesviae_og.jpg">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="675">
 
