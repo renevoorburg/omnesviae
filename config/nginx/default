@@ -1,0 +1,24 @@
+server {
+    listen 80;
+    server_name localhost;
+
+    root /var/www/public;
+
+    location ~ ^/(.*)$ {
+        try_files $uri @controller;
+    }
+
+    location @controller {
+        include snippets/fastcgi-php.conf;
+        fastcgi_param SCRIPT_FILENAME /var/www/src/controller.php;
+        fastcgi_param QUERY_STRING q=$uri&$args;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    }
+
+}

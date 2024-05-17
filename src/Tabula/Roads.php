@@ -32,7 +32,7 @@ class Roads extends Tabula
         foreach ($this->tabula['@graph'] as $value) {
             if ($value['@type'] === 'TravelAction') {
                 if (preg_match('@^.*#(.*)_(.*)$@', $value['@id'], $matches)) {
-                    $distance = (int)$value['dist'];
+                    $distance = (int)($value['dist'] ?? 0);
                     if ($distance === 0) {
                         $distanceMeters = $this->getEstimatedRoadDistanceMeters(
                             [$this->places->getProperty($matches[1], 'lng'), $this->places->getProperty($matches[1], 'lat')],
