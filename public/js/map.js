@@ -201,7 +201,7 @@ geojson.getSource().on('change', function (event) {
             setFrom(placeIds[0], getPropertyById(placeIds[0], 'name'));
             setTo(placeIds[1], getPropertyById(placeIds[1], 'name'));
             getRoute();
-        } else if (placeIds.length === 1) {
+        } else if (placeIds.length === 1 && placeIds[0].length > 0) {
             showPlace(placeIds[0]);
         }
     }
