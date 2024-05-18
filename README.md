@@ -11,7 +11,8 @@ OmnesViae is online at [omnesviae.org](https://omnesviae.org).
 
 ### Your local copy of OmnesViae
 
-You can run OmnesViae on your local compute using `docker`. To run it, build the image and start the containers required. This is done by executing these commands, while in the project directory:
+You can run OmnesViae on your local computer using `docker`.  Make sure you run `composer` first (instructions to follow...).
+After that, build the image and start the containers required. This is done by executing these commands, while in the project directory:
 
 	docker-compose build
 	docker-compose up -d
