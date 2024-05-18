@@ -38,7 +38,7 @@ $data = array(
         "datasource"
         => "Fons dati pro itinerario ducente et rete viarum ostentata est lima JSON-LD apud <a href=\"/data/omnesviae.json\">https://omnesviae.org/data/omnesviae.json</a>.
             Hanc limam depromere potes, mutare ut tua interpretatio TP congruat, deinde in OmnesViae onerare designando <strong>?datasource</strong> parametrum ad eam.
-            Exempli gratia, utere <a href=\"https://omnesviae.org/?datasource=https://omnesviae.org/data/omnesviae.json\">https://omnesviae.org/?datasource=https://omnesviae.org/data/omnesviae.json</a> ad definitionem praedefinitam onerandam.
+            Exempli gratia, utere <a href=\"/?datasource=https://omnesviae.org/data/omnesviae.json\">https://omnesviae.org/?datasource=https://omnesviae.org/data/omnesviae.json</a> ad definitionem praedefinitam onerandam.
             Vide <a href=\"https://github.com/renevoorburg/omnesviae\">GitHub</a> ad plura cognoscenda.",
         "sourcecode"
         => "Codex fons OmnesViae invenitur in <a href=\"https://github.com/renevoorburg/omnesviae\">GitHub</a> sub licentia fontis aperti.",

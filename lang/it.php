@@ -38,7 +38,7 @@ $data = array(
         "datasource"
         => "La fonte dei dati per il pianificatore di rotte e la rete stradale visualizzata è un file JSON-LD su <a href=\"/data/omnesviae.json\">https://omnesviae.org/data/omnesviae.json</a>.
             Puoi scaricare questo file, modificarlo per adattarlo alla tua interpretazione della TP e poi caricarlo su OmnesViae puntando il parametro <strong>?datasource</strong> verso di esso.
-            Ad esempio, usa <a href=\"https://omnesviae.org/?datasource=https://omnesviae.org/data/omnesviae.json\">https://omnesviae.org/?datasource=https://omnesviae.org/data/omnesviae.json</a> per caricare la definizione predefinita.
+            Ad esempio, usa <a href=\"/?datasource=https://omnesviae.org/data/omnesviae.json\">https://omnesviae.org/?datasource=https://omnesviae.org/data/omnesviae.json</a> per caricare la definizione predefinita.
             Consulta <a href=\"https://github.com/renevoorburg/omnesviae\">GitHub</a> per maggiori informazioni.",
         "sourcecode"
         => "Il codice sorgente di OmnesViae è disponibile su <a href=\"https://github.com/renevoorburg/omnesviae\">GitHub</a> sotto una licenza open source.",

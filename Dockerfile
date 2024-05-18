@@ -20,5 +20,5 @@ RUN echo "php_admin_value[error_log] = /proc/self/fd/2" >> /usr/local/etc/php-fp
 RUN echo "php_admin_flag[log_errors] = on" >> /usr/local/etc/php-fpm.d/www.conf
 
 EXPOSE 80
-#CMD service nginx start && php-fpm
-CMD ["tail", "-f", "/dev/null"]
+CMD service nginx start && php-fpm
+#CMD ["tail", "-f", "/dev/null"]

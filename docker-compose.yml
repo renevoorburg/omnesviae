@@ -3,11 +3,26 @@ services:
   web:
     build: .
     ports:
-      - "80:80"
+      - "8080:80"
     volumes:
       - .:/var/www
+    networks:
+      - webnet
+    environment:
+      - TABULA_URI=http://localhost:8081/iiif/peutinger.jp2/info.json
+
+  iipsrv:
+    image: iipsrv/iipsrv
+    ports:
+      - "8081:80"
+    volumes:
+      - ./images/:/images
+    environment:
+    - CORS=*
+    restart: always 
     networks:
       - webnet
 
 networks:
   webnet:
+

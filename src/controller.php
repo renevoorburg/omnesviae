@@ -62,6 +62,9 @@ switch ($action) {
         $page->assign('name', 'OmnesViae');
         $page->display('nobis.tpl');
         break;
+    case "viewer":
+        include 'viewer.php';
+        break;    
     default:
         \OmnesViae\Util::showErrorPage(404, "Not Found- Quo Vadis?");
         break;
