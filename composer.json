@@ -1,13 +1,13 @@
 {
     "config": {
         "platform": {
-            "php": "7.4.21"
+            "php": "8.0"
         }
     },
     "require": {
         "ext-json": "*",
         "ext-mbstring": "*",
-        "smarty/smarty": "*",
+        "smarty/smarty": "^5.1",
         "easyrdf/easyrdf": "^1.1",
         "ml/json-ld": "^1.2"
     },

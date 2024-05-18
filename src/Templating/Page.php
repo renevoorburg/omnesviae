@@ -2,7 +2,9 @@
 
 namespace OmnesViae\Templating;
 
-class Page extends \Smarty
+use Smarty\Smarty;
+
+class Page extends Smarty
 {
 
     private $menuItems = [
