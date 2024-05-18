@@ -1,5 +1,5 @@
 {extends file="base.tpl"}
 
 {block name=body}
-    <iframe src="/viewer.html"></iframe>
+    <iframe src="/viewer"></iframe>
 {/block}
