@@ -4,7 +4,7 @@ COPY composer.json composer.lock ./
 RUN composer install --no-dev --no-scripts --prefer-dist
 
 
-FROM php:8.0-fpm
+FROM php:8.3-fpm
 RUN apt-get update && apt-get install -y nginx
 
 COPY ./config/nginx/default /etc/nginx/sites-available/default
