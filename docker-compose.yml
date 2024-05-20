@@ -1,15 +1,22 @@
-version: '3'
+version: '3.9'
 services:
-  web:
+  web-dev:
     build: .
     ports:
       - "8080:80"
     volumes:
       - .:/var/www
-    networks:
-      - webnet
     environment:
       - TABULA_URI=http://localhost:8081/iiif/peutinger.jp2/info.json
+    profiles:
+      - dev
+
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    profiles:
+      - prod
 
   iipsrv:
     image: iipsrv/iipsrv
@@ -19,10 +26,8 @@ services:
       - ./images/:/images
     environment:
     - CORS=*
-    restart: always 
-    networks:
-      - webnet
-
-networks:
-  webnet:
+    restart: always
+    profiles:
+      - dev
+      - prod
 
