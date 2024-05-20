@@ -15,9 +15,8 @@ You can run OmnesViae on your local computer using `docker` ([get Docker](https:
 
     git clone http://github.com/renevoorburg/omnesviae.git
 
-Now you can build the image and start the containers required. This is done by executing these commands, while in the project directory:
+Now you can build the image and start the containers required. While in the project directory, run this command:
 
-	docker-compose build
 	docker-compose --profile dev up -d
 
 Two containers are started. The OmnesViae PHP application will be available at [http://localhost:8080/](http://localhost:8080/) . It uses the *iipsrv* iiif image server, running at port `8081`. The base URI of the high resolution image of the tabula peutingeriana is [http://localhost:8081/iiif/peutinger.jp2/info.json](http://localhost:8081/iiif/peutinger.jp2/info.json).
