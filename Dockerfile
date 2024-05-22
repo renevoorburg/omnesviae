@@ -5,7 +5,7 @@ RUN composer install --no-dev --no-scripts --prefer-dist
 
 
 FROM php:8.3-fpm
-RUN apt-get update && apt-get install -y nginx
+RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
 
 COPY ./config/nginx/default /etc/nginx/sites-available/default
 COPY ./config/nginx/fastcgi-php.conf /etc/nginx/snippets/fastcgi-php.conf
