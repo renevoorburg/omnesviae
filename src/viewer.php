@@ -44,7 +44,7 @@ $tabulaUri = $_ENV['TABULA_URI'] ?? 'https://iiif.omnesviae.org/image/peutinger.
     // from https://stackoverflow.com/questions/63037117/using-openseadragon-how-can-set-it-to-load-the-image-at-a-specific-set-of-coord
     viewer.addHandler('open', function() {
         var tiledImage = viewer.world.getItemAt(0);
-        var xPos = 0.336 * tiledImage.getContentSize().x;
+        var xPos = 0.342 * tiledImage.getContentSize().x;
         var yPos = 0.33 * tiledImage.getContentSize().y;
         var imageRect = new OpenSeadragon.Rect(xPos, yPos, 1000, 1000);
         var viewportRect = tiledImage.imageToViewportRectangle(imageRect);

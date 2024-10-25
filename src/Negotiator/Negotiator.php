@@ -29,7 +29,7 @@ abstract class Negotiator {
             }
         }
 
-        return null; // No acceptable value found
+        return $this->supportedValues[0]; // No acceptable value found, first as a default
     }
 
     protected function parseHeaderValue($headerValue) {
