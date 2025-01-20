@@ -352,3 +352,8 @@ iframe {
     display: block;
     margin: 2em 0;
 }
+
+.route-info {
+    line-height: 1.5;
+    margin-bottom: 1em;
+}

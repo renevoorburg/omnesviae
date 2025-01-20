@@ -11,7 +11,7 @@ if ($action == "api" && isset($urlParts[2])) {
 $datasource = $_GET['datasource'] ?? null;
 
 $languageNegotiator = new \OmnesViae\Negotiator\LanguageNegotiator(['en', 'de', 'el', 'es', 'fr', 'it', 'la', 'nl']);
-$language = $languageNegotiator->negotiate() ?? 'en' ;
+$language = $languageNegotiator->negotiate();
 
 switch ($action) {
     case "api/labels":

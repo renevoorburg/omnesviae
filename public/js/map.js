@@ -1,8 +1,47 @@
-
 // displaying and managing the openlayers map
 let storedZoom = 7.8;
 
-function integerToRoman(num) {
+function intToLatin(num) {
+    const latinNumerals = {
+        1: "unus",
+        2: "duo",
+        3: "tres",
+        4: "quattuor",
+        5: "quinque",
+        6: "sex",
+        7: "septem",
+        8: "octo",
+        9: "novem",
+        10: "decem",
+        20: "viginti",
+        30: "triginta",
+        40: "quadraginta",
+        50: "quinquaginta",
+        60: "sexaginta",
+        70: "septuaginta",
+        80: "octoginta",
+        90: "nonaginta",
+        100: "centum",
+        200: "ducenti",
+        300: "trecenti"
+    };
+
+    if (latinNumerals[num]) {
+        return latinNumerals[num];
+    } else if (num < 100) {
+        const tens = Math.floor(num / 10) * 10;
+        const units = num % 10;
+        return latinNumerals[tens] + (units ? " " + latinNumerals[units] : "");
+    } else if (num <= 300) {
+        const hundreds = Math.floor(num / 100) * 100;
+        const remainder = num % 100;
+        return latinNumerals[hundreds] + (remainder ? " " + intToLatin(remainder) : "");
+    } else {
+        return "numerus nimis magnus"; // Limiet op 300
+    }
+}
+
+function intToRoman(num) {
     if (typeof num !== 'number') return false;
     let digits = String(+num).split(""),
         key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
@@ -44,7 +83,19 @@ function showRoutelist(routeData) {
     if (routeData.route.length === 0) {
         htmlString += '<p>Nullum iter est.</p>';
     } else {
-        htmlString += '<p>Iter facere potes per:</p>';
+        // Bereken totale afstand
+        let totalDistance = 0;
+        for (const routePart of routeData.route) {
+            if (routePart.dist && routePart.dist.numeral) {
+                totalDistance += routePart.dist.numeral;
+            }
+        }
+        
+        // Bereken aantal reisdagen (25 eenheden per dag)
+        const daysNeeded = Math.ceil(totalDistance / 25);
+        
+        htmlString += `<p class="route-info">Longitudo itineris est ${intToRoman(totalDistance)} milia passuum, quod iter ${intToLatin(daysNeeded)} diebus confici potest.</p>`;
+        htmlString += '<p>Iter per haec loca procedit:</p>';
         htmlString += '<ul>';
         let previousPlace = null;
         for (const routePart of routeData.route) {
@@ -54,9 +105,9 @@ function showRoutelist(routeData) {
                 // let distance = getDistance(previousPlace, place);
                 // let unit = routePart.dist.possibleUnit ? routePart.dist.possibleUnit : '';
                 if (distanceNumber && routePart.dist.isReconstructed) {
-                    htmlString += `<li class="distance"><span class="estimated">${integerToRoman(distanceNumber)}. mensura aestimata</span></li>`;
+                    htmlString += `<li class="distance"><span class="estimated">${intToRoman(distanceNumber)}. mensura aestimata</span></li>`;
                 } else if (distanceNumber) {
-                    htmlString += `<li class="distance">${integerToRoman(distanceNumber)}.</li>`;
+                    htmlString += `<li class="distance">${intToRoman(distanceNumber)}.</li>`;
                 } else {
                     htmlString += `<li class="distance"><span class="estimated">[sine mensura]</span></li>`;
                 }
@@ -278,4 +329,3 @@ map.on('pointermove', function (event) {
         map.getTargetElement().style.cursor = '';
     }
 });
-
