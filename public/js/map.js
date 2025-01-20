@@ -32,21 +32,36 @@ function intToLatin(num) {
         90: "nonaginta",
         100: "centum",
         200: "ducenti",
-        300: "trecenti"
+        300: "trecenti",
+        1000: "mille"
     };
 
     if (latinNumerals[num]) {
-        return latinNumerals[num];
+        return latinNumerals[num]; // Directe match
     } else if (num < 100) {
+        // Getallen kleiner dan 100
         const tens = Math.floor(num / 10) * 10;
         const units = num % 10;
+        if (units === 1) {
+            return latinNumerals[tens] + " unus"; // Speciale regel voor eenheden van 1
+        }
         return latinNumerals[tens] + (units ? " " + latinNumerals[units] : "");
+    } else if (num <= 199) {
+        // Getallen tussen 101 en 199
+        const remainder = num % 100;
+        if (remainder >= 11 && remainder <= 19) {
+            return "centum " + intToLatin(remainder); // Gebruik de 'teen'-regels
+        } else if (remainder) {
+            return "centum " + intToLatin(remainder);
+        }
+        return "centum"; // Exact 100
     } else if (num <= 399) {
+        // Getallen tussen 200 en 399
         const hundreds = Math.floor(num / 100) * 100;
         const remainder = num % 100;
         return latinNumerals[hundreds] + (remainder ? " " + intToLatin(remainder) : "");
     } else {
-        return "numerus nimis magnus"; // Voor eenvoud beperken we tot 399
+        return "numerus nimis magnus"; // Limiet op 399
     }
 }
 
