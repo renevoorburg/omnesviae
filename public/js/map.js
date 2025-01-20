@@ -13,6 +13,15 @@ function intToLatin(num) {
         8: "octo",
         9: "novem",
         10: "decem",
+        11: "undecim",
+        12: "duodecim",
+        13: "tredecim",
+        14: "quattuordecim",
+        15: "quindecim",
+        16: "sedecim",
+        17: "septendecim",
+        18: "duodeviginti",
+        19: "undeviginti",
         20: "viginti",
         30: "triginta",
         40: "quadraginta",
@@ -32,12 +41,12 @@ function intToLatin(num) {
         const tens = Math.floor(num / 10) * 10;
         const units = num % 10;
         return latinNumerals[tens] + (units ? " " + latinNumerals[units] : "");
-    } else if (num <= 300) {
+    } else if (num <= 399) {
         const hundreds = Math.floor(num / 100) * 100;
         const remainder = num % 100;
         return latinNumerals[hundreds] + (remainder ? " " + intToLatin(remainder) : "");
     } else {
-        return "numerus nimis magnus"; // Limiet op 300
+        return "numerus nimis magnus"; // Voor eenvoud beperken we tot 399
     }
 }
 
