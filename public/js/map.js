@@ -78,6 +78,14 @@ function intToRoman(num) {
     return Array(+digits.join("") + 1).join("M") + roman_num;
 }
 
+function formatMiliaPassuum(distance) {
+    return distance === 1 ? "mille passus" : `${intToRoman(distance)} milia passuum`;
+}
+
+function formatDies(days) {
+    return days === 1 ? "uno die" : `${intToLatin(days)} diebus`;
+}
+
 function showRouteOnMap(routeData) {
     const routePoints = routeData.route.map(routePart => ({
         id: routePart.to,
@@ -118,7 +126,7 @@ function showRoutelist(routeData) {
         // Bereken aantal reisdagen (25 eenheden per dag)
         const daysNeeded = Math.ceil(totalDistance / 25);
         
-        htmlString += `<p class="route-info">Longitudo itineris est ${intToRoman(totalDistance)} milia passuum, quod iter ${intToLatin(daysNeeded)} diebus confici potest.</p>`;
+        htmlString += `<p class="route-info">Longitudo itineris est ${formatMiliaPassuum(totalDistance)}, quod iter ${formatDies(daysNeeded)} confici potest.</p>`;
         htmlString += '<p>Iter per haec loca procedit:</p>';
         htmlString += '<ul>';
         let previousPlace = null;
