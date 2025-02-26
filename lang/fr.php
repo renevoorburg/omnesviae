@@ -45,7 +45,7 @@ $data = array(
         "credits"
         => "OmnesViae a été créé par <a href=\"https://www.linkedin.com/in/rené-voorburg-aa54a93/\">René Voorburg</a>. 
             La plupart des données derrière OmnesViae sont basées sur le travail académique de Richard Talbert sur la TP, <a href=\"https://www.cambridge.org/us/talbert/\">Rome's World: The Peutinger Map Reconsidered</a>.
-            L'identification des emplacements des lieux est largement basée sur des données du <a href=\"http://pleiades.stoa.org/\">Projet Pleiades</a> et sur l'œuvre de Martin Weber <a href=\"https://tabula-peutingeriana.de/\">Tabvla Pevtingeriana</a>.<br />
+            L'identification des emplacements des lieux est largement basée sur des données du <a href=\"http://pleiades.stoa.org/\">Projet Pleiades</a> et sur l'œuvre de Martin Weber <a href=\"https://tabula-peutingeriana.de/\">Tabvla Pevtingeriana</a>. Une ressource précieuse pour la recherche sur la Tabula est la <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>.<br />
             OmnesViae ajoute quelques connexions maritimes qui n'apparaissent pas sur la TP (reconnaissables par les lignes pointillées).<br />
             Beaucoup m'ont aidé avec les traductions dans la première version de OmnesViae, qui existait de 2011 à 2024.
             Cette version de OmnesViae est une réécriture complète de l'originale.
