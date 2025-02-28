@@ -16,6 +16,8 @@ $data = array(
         => "Inspecta Tabula Peutingeriana, exemplar medievale longae tabulae viarum Romanae Imperii Romani.",
         "keywords"
         => "Tabula Peutingeriana, IIIF, viae Romanae, tabula viarum Romana",
+        "credits"
+        => "Editio Tabulae Peutingerianae a <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>"
     ),
     "/nobis" => array (
         "title"

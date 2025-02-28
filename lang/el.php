@@ -16,6 +16,8 @@ $data = array(
         => "Δείτε την Tabula Peutingeriana, ένα μεσαιωνικό αντίγραφο ενός μακρύς ρωμαϊκού χάρτη δρόμων της Ρωμαϊκής Αυτοκρατορίας.",
         "keywords"
         => "Tabula Peutingeriana, IIIF, ρωμαϊκός χάρτης δρόμων, ρωμαϊκοί δρόμοι, ρωμαϊκός χάρτης δρόμων",
+        "credits"
+        => "Επεξεργασία Tabula Peutingeriana από <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>"
     ),
     "/nobis" => array (
         "title" => "Ο Σχεδιαστής Διαδρομών OmnesViae",

@@ -16,6 +16,8 @@ $data = array(
         => "Consultez la Tabula Peutingeriana, une copie médiévale d'une longue carte routière romaine de l'Empire Romain.",
         "keywords"
         => "Tabula Peutingeriana, IIIF, carte routière romaine, routes romaines, carte routière romaine",
+        "credits"
+        => "Édition de la Tabula Peutingeriana par <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>"
     ),
     "/nobis" => array (
         "title"

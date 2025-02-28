@@ -16,6 +16,8 @@ $data = array(
         => "Betrachte die Tabula Peutingeriana, eine mittelalterliche Kopie einer meterlangen römischen Straßenkarte des Römischen Reiches.",
         "keywords"
         => "Tabula Peutingeriana, IIIF, Römische Straßenkarte, Römische Straßen, Römische Straßenkarte",
+        "credits"
+        => "Zusammensetzung der Tabula Peutingeriana durch <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>"
     ),
     "/nobis" => array (
         "title" => "Der OmnesViae Routenplaner",

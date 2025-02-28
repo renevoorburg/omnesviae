@@ -16,6 +16,8 @@ $data = array(
         => "View the Tabula Peutingeriana, a medieval copy of a meters-long Roman road map of the Roman Empire.",
         "keywords"
         => "Tabula Peutingeriana, IIIF, Roman road map, Roman roads, Roman road map",
+        "credits"
+        => "Tabula Peutingeriana composed by <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>"
     ),
     "/nobis" => array (
         "title"

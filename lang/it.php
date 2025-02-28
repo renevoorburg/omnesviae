@@ -16,6 +16,8 @@ $data = array(
         => "Consulta la Tabula Peutingeriana, una copia medieval de un extenso mapa de carreteras romano del Imperio Romano.",
         "keywords"
         => "Tabula Peutingeriana, IIIF, mapa de carreteras romano, carreteras romanas, mapa de carreteras romano",
+        "credits"
+        => "Edizione della Tabula Peutingeriana a cura di <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>"
     ),
     "/nobis" => array (
         "title"

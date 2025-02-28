@@ -16,6 +16,8 @@ $data = array(
          => "Bekijk de Tabula Peutingeriana, een middeleeuwse kopie van een meterslangs Romeinse wegenkaart van het Romeinse rijk.",
         "keywords"
         => "Tabula Peutingeriana, IIIF, Romeinse wegenkaart, Romeinse wegen, Romeinse wegenkaart",
+        "credits"
+        => "Bewerking Tabula Peutingeriana door <a href='https://www.ku.de/ggf/geschichte/alte-geschichte/forschung/datenbank-tp-online'>Datenbank tp-online</a>"
     ),
     "/nobis" => array (
         "title"
